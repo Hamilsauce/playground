@@ -104,14 +104,14 @@ pixelEditor.pixelLayer.addEventListener('pointerup', e => {
   pixelEditor.isDrawing = false;
 });
 
-event.longPress(pixelEditor.pixelLayer, 300, e => {
-  const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY);
-  start = pixel // { x: pixel.x, y: pixel.y }
-  console.log('start', start)
-  // pixel
-  // line = [start]
-  pixelEditor.setDrawMode(DRAW_MODE.line);
-});
+// event.longPress(pixelEditor.pixelLayer, 300, e => {
+//   const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY);
+//   start = pixel // { x: pixel.x, y: pixel.y }
+//   console.log('start', start)
+//   // pixel
+//   // line = [start]
+//   pixelEditor.setDrawMode(DRAW_MODE.line);
+// });
 
 
 

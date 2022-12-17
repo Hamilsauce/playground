@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  /* user-select: all; */
+
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: #383B39;
+}
+
+#app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  overflow: scroll;
+}
+
+#folders {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-item: flex-start;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  list-style: none;
+  background: #1F2421;
+  overflow: scroll;
+}
+
+.folder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  padding-right: 16px;
+  text-align: right;
+  border-bottom: 2px solid #90909057;
+
+}
+
+.folder:active {
+  backdrop-filter: brightness(160%);
+}
+
+.folder a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+  padding: 12px 0 6px 16px;
+  /* width: 100%; */
+  color: #E6E6E6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}

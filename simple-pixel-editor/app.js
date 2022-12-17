@@ -52,7 +52,7 @@ pixelEditor.pixelLayer.addEventListener('pointerdown', e => {
 });
 
 pixelEditor.pixelLayer.addEventListener('pointermove', e => {
- if (!pixelEditor.isDrawing) return;
+  if (!pixelEditor.isDrawing) return;
   if (pixelEditor.drawMode === DRAW_MODE.point) {
     const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
     pixelEditor.fillPixel(pixel)
@@ -92,7 +92,6 @@ pixelEditor.pixelLayer.addEventListener('pointerup', e => {
       // const pixel = pixelEditor.getPixelAtPoint(x, y)
       pixelEditor.fillPixel(px);
     });
-pixelEditor.isDrawing = false;
   }
 
   const pt = pixelEditor.canvas.createSVGPoint();
@@ -102,6 +101,7 @@ pixelEditor.isDrawing = false;
   const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
 
   pixelEditor.fillPixel(pixel)
+  pixelEditor.isDrawing = false;
 });
 
 event.longPress(pixelEditor.pixelLayer, 300, e => {

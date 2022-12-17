@@ -117,6 +117,7 @@ pixelEditor.pixelLayer.addEventListener('pointerup', e => {
 
 const fillPicker = document.querySelector('#color-picker');
 const pixelSizeInput = document.querySelector('#pixel-size');
+const clearButton = document.querySelector('#clear-pixels');
 
 
 pixelSizeInput.addEventListener('change', e => {
@@ -125,8 +126,12 @@ pixelSizeInput.addEventListener('change', e => {
   pixelEditor.setPixelSize(size)
 })
 
+clearButton.addEventListener('click', e => {
+  pixelEditor.clear()
+})
+
 fillPicker.addEventListener('change', e => {
   const color = e.target.value
 
-  pixelEditor.setFillColor(color)
+  pixelEditor.setPixelColor(color)
 })

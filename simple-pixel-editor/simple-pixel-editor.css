@@ -60,7 +60,7 @@ body {
 }
 
 #scene {
-  /* fill: #DADADA; */
+  fill: #FFFFFF;
   /* fill: none */
   touch-action: none;
 }
@@ -99,6 +99,15 @@ body {
   overflow: hidden;
 }
 #pixel-size {
+  width: 40px;
+  /* height: 30px; */
+  padding: 2px;
+  border: 1px solid #00000075;
+  /* border-radius: 50%; */
+  background: #FFFFFF;
+  overflow: hidden;
+}
+#zoom {
   width: 40px;
   /* height: 30px; */
   padding: 2px;

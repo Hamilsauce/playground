@@ -16,12 +16,13 @@ export class PixelEditor extends EventEmitter {
   #height;
   #scale;
   #self;
-  #fillColor;
+  #pixelColor;
+  #fillColor = '#FFFFFF'
   #drawMode = DRAW_MODE.point;
   #isDrawing = false;
 
 
-  constructor(svg, { width, height, scale, fillColor }) {
+  constructor(svg, { width, height, scale, pixelColor }) {
     super();
 
     this.#self = svg;
@@ -29,7 +30,8 @@ export class PixelEditor extends EventEmitter {
     this.#width = width;
     this.#height = height;
     this.#scale = scale;
-    this.#fillColor = fillColor || '#000000'
+    this.#pixelColor = pixelColor || '#000000'
+    this.#fillColor = '#FFFFFF';
     this.render()
     // for (let x = 0; x < width; x++) {
     //   for (let y = 0; y < height; y++) {
@@ -55,7 +57,7 @@ export class PixelEditor extends EventEmitter {
         this.createPixel({ x, y, color });
       }
     }
-
+    this.pixelLayer.setAttribute('fill', '#FFFFFF')
     this.pixelLayer.append(...this.#pixels.keys());
 
     return this.#self;
@@ -99,7 +101,9 @@ export class PixelEditor extends EventEmitter {
     return start * (1.0 - t) + t * end;
   }
 
-  setFillColor(color) { this.#fillColor = color; }
+  setPixelColor(color) { this.#pixelColor = color; }
+
+  setFillColor(color) { this.#pixelColor = color; }
 
   setPixelSize(size) {
     this.#scale = size;
@@ -114,14 +118,14 @@ export class PixelEditor extends EventEmitter {
 
   getPoint(x, y) {}
 
-  getPixelAtPoint(x, y) {
+  _getPixelAtPoint(x, y) {
     const pt = new DOMPoint(x, y)
     pt.matrixTransform(this.pixelLayer.getScreenCTM().inverse());
 
     return this.#pixels.get(document.elementFromPoint(pt.x, pt.y).closest('.pixel'));
   }
 
-  _getPixelAtPoint(x, y) {
+  getPixelAtPoint(x, y) {
     const pt = this.canvas.createSVGPoint();
     pt.x = x;
     pt.y = y;
@@ -132,16 +136,28 @@ export class PixelEditor extends EventEmitter {
 
   fillPixel(pixel) {
     if (!pixel) return;
-    pixel.fill(this.#fillColor)
+    pixel.fill(this.#pixelColor)
+  }
+
+  clear() {
+    this.each(px => px.clear())
+    // this.#pixels.forEach((px) => {
+    //   px.clear()
+    // })
+  }
+
+  each(fn) {
+    this.#pixels.forEach(fn)
   }
 
   get pixelLayer() { return this.#self.querySelector('#pixels'); }
 
-  get viewbox() { return this.#self.viewBox.baseVal }
+  get viewbox() { return this.#self.viewBo.baseVal }
 
   get canvas() { return this.#self }
 
   get drawMode() { return this.#drawMode }
+
   get isDrawing() { return this.#isDrawing }
 
   set isDrawing(v) { this.#isDrawing = v }

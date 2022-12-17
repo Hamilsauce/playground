@@ -46,9 +46,6 @@ export class Pixel {
 
   set scale(v) {
     this.#scale = v;
-    // this.#content.setAttribute('width', `${this.scale}`);
-    // this.#content.setAttribute('height', `${this.scale}`);
-    // this.#content.setAttribute('stroke-width', `${this.#strokeWidth}`);
     this.#self.setAttribute('transform', `translate(${this.x},${this.y}) scale(${v})`)
   }
 
@@ -70,6 +67,6 @@ export class Pixel {
   }
 
   clear() {
-    this.color = 'none';
+    this.color = '#FFFFFF';
   }
 }

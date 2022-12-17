@@ -1,0 +1,99 @@
+{
+  "id": "WB3413681114",
+  "status": "Pending Billing",
+  "orderDate": "7/26/2022",
+  "shipMethod": "Guest Shopper Default Shipping",
+  "trackingNumbers": [
+    {
+      "number": "123456789012",
+      "service": "UPS",
+      "url": "https://zoro.narvar.com/tracking/zoro/ups?tracking_numbers=123456789012"
+    },
+    {
+      "number": "223456789012",
+      "service": "UPS",
+      "url": "https://zoro.narvar.com/tracking/zoro/ups?tracking_numbers=223456789012"
+    }
+  ],
+  "shipDate": null,
+  "actualShipdate": "7/26/2022",
+  "total": "16.27",
+  "taxTotal": ".99",
+  "transactionDiscount": false,
+  "shippingCost": "5.00",
+  "subTotal": 10.28,
+  "ccNumber": "************1111",
+  "handlingCost": null,
+  "billingAddress": "Zoro Buffalo Grove\nZoro US\n909 Asbury Drive\n8474840474\nBuffalo Grove IL 600894525\nUnited States",
+  "shippingAddress": "Zoro Buffalo Grove\nZoro US\n909 Asbury Drive\n8474840474\nBuffalo Grove IL 600894525\nUnited States",
+  "orderRecCopyFields": "couldnt access fields",
+  "orderConstructorName": "NetSuiteObject",
+  "orderCopyConstructorName": "Object",
+  "ccExpirationDate": "05/2032",
+  "items": [
+    {
+      "zoroNo": "G0990534",
+      "quantity": "1",
+      "rate": "10.28",
+      "freightCost": "",
+      "quantityShipReceived": "1",
+      "status": "pendingBilling",
+      "closed": false,
+      "grossAmount": "10.28",
+      "trackingNumbers": "123456789012",
+      "actualShipDate": "7/26/2022",
+      "shipaddress": null,
+      "shipcarrier": null,
+      "shipmethod": null,
+      "taxcode": null
+    },
+    {
+      "zoroNo": "G0335505",
+      "quantity": "1",
+      "rate": "33.28",
+      "freightCost": "",
+      "quantityShipReceived": "1",
+      "status": "pendingBilling",
+      "closed": false,
+      "grossAmount": "10.28",
+      "trackingNumbers": "123456789012",
+      "actualShipDate": "7/26/2022",
+      "shipaddress": null,
+      "shipcarrier": null,
+      "shipmethod": null,
+      "taxcode": null
+    },
+    {
+      "zoroNo": "G0790666",
+      "quantity": "1",
+      "rate": "88.00",
+      "freightCost": "",
+      "quantityShipReceived": "1",
+      "status": "pendingBilling",
+      "closed": false,
+      "grossAmount": "88.00",
+      "trackingNumbers": "223456789012",
+      "actualShipDate": "8/03/2022",
+      "shipaddress": null,
+      "shipcarrier": null,
+      "shipmethod": null,
+      "taxcode": null
+    },
+    {
+      "zoroNo": "G01354567",
+      "quantity": "1",
+      "rate": "27.27",
+      "freightCost": "",
+      "quantityShipReceived": "1",
+      "status": "pendingBilling",
+      "closed": false,
+      "grossAmount": "27.27",
+      "trackingNumbers": "223456789012",
+      "actualShipDate": "8/03/2022",
+      "shipaddress": null,
+      "shipcarrier": null,
+      "shipmethod": null,
+      "taxcode": null
+    }
+  ]
+}

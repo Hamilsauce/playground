@@ -1,0 +1,70 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host 
+           valid_lft forever preferred_lft forever
+    2: bond0: <BROADCAST,MULTICAST,MASTER> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/ether da:d5:f8:10:79:9d brd ff:ff:ff:ff:ff:ff
+    3: dummy0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/ether 2a:3e:f6:fe:b6:4e brd ff:ff:ff:ff:ff:ff
+        inet6 fe80::283e:f6ff:fefe:b64e/64 scope link 
+           valid_lft forever preferred_lft forever
+    4: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+        link/ipip 0.0.0.0 brd 0.0.0.0
+    5: ip6_vti0@NONE: <NOARP> mtu 1364 qdisc noop state DOWN group default qlen 1000
+        link/tunnel6 :: brd ::
+    6: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+        link/sit 0.0.0.0 brd 0.0.0.0
+    7: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+        link/tunnel6 :: brd ::
+    8: p2p0: <BROADCAST,MULTICAST> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+        link/ether 4a:eb:62:2a:93:81 brd ff:ff:ff:ff:ff:ff
+    9: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+        link/ether 92:86:75:50:a1:b0 brd ff:ff:ff:ff:ff:ff
+    10: swlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/ether 02:90:4c:5e:82:c3 brd ff:ff:ff:ff:ff:ff
+    11: rmnet_ipa0: <> mtu 9216 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    13: rmnet_mhi0: <UP,LOWER_UP> mtu 65535 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+        link/[519] 
+    14: epdg0: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+        link/none 
+    15: epdg1: <NO-CARRIER,POINTOPOINT,MULTICAST,NOARP,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 500
+        link/none 
+        inet6 fe80::6053:bf69:920f:d96c/64 scope link stable-privacy 
+           valid_lft forever preferred_lft forever
+    16: epdg2: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 500
+        link/none 
+    17: epdg3: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 500
+        link/none 
+    18: epdg4: <POINTOPOINT,MULTICAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 500
+        link/none 
+    19: rmnet_data0@rmnet_mhi0: <UP,LOWER_UP,40000000> mtu 1436 qdisc mq state UNKNOWN group default qlen 1000
+        link/[519] 
+        inet 192.0.0.2/27 brd 192.0.0.31 scope global rmnet_data0
+           valid_lft forever preferred_lft forever
+        inet6 2607:fb90:9b21:766f:496e:90ec:a5e7:96b4/64 scope global 
+           valid_lft forever preferred_lft forever
+    20: rmnet_data1@rmnet_mhi0: <> mtu 1436 qdisc mq state DOWN group default qlen 1000
+        link/[519] 
+    21: rmnet_data2@rmnet_mhi0: <UP,LOWER_UP> mtu 1436 qdisc mq state UNKNOWN group default qlen 1000
+        link/[519] 
+        inet6 2607:fc20:9b68:69c1:ac39:8a32:4bc0:6051/64 scope global 
+           valid_lft forever preferred_lft forever
+    22: rmnet_data3@rmnet_mhi0: <> mtu 1436 qdisc mq state DOWN group default qlen 1000
+        link/[519] 
+    23: rmnet_data4@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    24: rmnet_data5@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    25: rmnet_data6@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    26: rmnet_data7@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    27: rmnet_data8@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    28: rmnet_data9@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 
+    29: rmnet_data10@rmnet_mhi0: <> mtu 1500 qdisc noop state DOWN group default qlen 1000
+        link/[519] 

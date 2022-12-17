@@ -1,0 +1,2449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jenkins:Branches (519) (all builds)</title>
+  <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/"></link>
+  <updated>2022-10-27T16:14:13Z</updated>
+  <author>
+    <name>Jenkins Server</name>
+  </author>
+  <id>urn:uuid:903deee0-7bfa-11db-9fe1-0800200c9a66</id>
+  <entry>
+    <title>Website » zoro » feature/TOOL-118-jest-upgrade #11 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-118-jest-upgrade/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-118-jest-upgrade:11</id>
+    <published>2022-10-27T16:14:13Z</published>
+    <updated>2022-10-27T16:14:13Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2108-quantity-spec-fix #4 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2108-quantity-spec-fix/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2108-quantity-spec-fix:4</id>
+    <published>2022-10-27T15:57:23Z</published>
+    <updated>2022-10-27T15:57:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1684 #7 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1684/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1684:7</id>
+    <published>2022-10-27T15:57:14Z</published>
+    <updated>2022-10-27T15:57:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104-dev #3 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104-dev/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104-dev:3</id>
+    <published>2022-10-27T15:40:57Z</published>
+    <updated>2022-10-27T15:40:57Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1684 #6 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1684/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1684:6</id>
+    <published>2022-10-27T15:40:08Z</published>
+    <updated>2022-10-27T15:40:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/TOOL-128-fix-web-server-test #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FTOOL-128-fix-web-server-test/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FTOOL-128-fix-web-server-test:2</id>
+    <published>2022-10-27T15:31:36Z</published>
+    <updated>2022-10-27T15:31:36Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2108-quantity-spec-fix #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2108-quantity-spec-fix/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2108-quantity-spec-fix:3</id>
+    <published>2022-10-27T15:22:49Z</published>
+    <updated>2022-10-27T15:22:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1855-cypress-enhancements-pdp #7 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1855-cypress-enhancements-pdp/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1855-cypress-enhancements-pdp:7</id>
+    <published>2022-10-27T15:16:14Z</published>
+    <updated>2022-10-27T15:16:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1505-browse-implement-cypress-test- #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1505-browse-implement-cypress-test-/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1505-browse-implement-cypress-test-:5</id>
+    <published>2022-10-27T15:13:14Z</published>
+    <updated>2022-10-27T15:13:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2087-improve-cart-guest/flyoutcart #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2087-improve-cart-guest%252Fflyoutcart/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2087-improve-cart-guest%2Fflyoutcart:1</id>
+    <published>2022-10-27T15:12:34Z</published>
+    <updated>2022-10-27T15:12:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2092-analyticsonplp-test-reset #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2092-analyticsonplp-test-reset/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2092-analyticsonplp-test-reset:1</id>
+    <published>2022-10-27T15:10:06Z</published>
+    <updated>2022-10-27T15:10:06Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4862 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4862/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4862</id>
+    <published>2022-10-27T14:55:31Z</published>
+    <updated>2022-10-27T14:55:31Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1684 #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1684/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1684:5</id>
+    <published>2022-10-27T14:49:59Z</published>
+    <updated>2022-10-27T14:49:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #12 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:12</id>
+    <published>2022-10-27T14:45:49Z</published>
+    <updated>2022-10-27T14:45:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/TOOL-128-fix-web-server-test #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FTOOL-128-fix-web-server-test/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FTOOL-128-fix-web-server-test:1</id>
+    <published>2022-10-27T14:41:34Z</published>
+    <updated>2022-10-27T14:41:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4861 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4861/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4861</id>
+    <published>2022-10-27T14:40:08Z</published>
+    <updated>2022-10-27T14:40:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #244 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/244/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:244</id>
+    <published>2022-10-27T14:38:59Z</published>
+    <updated>2022-10-27T14:38:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #58 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/58/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:58</id>
+    <published>2022-10-27T14:38:14Z</published>
+    <updated>2022-10-27T14:38:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4860 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4860/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4860</id>
+    <published>2022-10-27T14:22:27Z</published>
+    <updated>2022-10-27T14:22:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4229-header-personalized-account #13 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4229-header-personalized-account/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4229-header-personalized-account:13</id>
+    <published>2022-10-27T14:19:33Z</published>
+    <updated>2022-10-27T14:19:33Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-188-contact-form-analytics #4 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-188-contact-form-analytics/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-188-contact-form-analytics:4</id>
+    <published>2022-10-27T14:12:04Z</published>
+    <updated>2022-10-27T14:12:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2108-quantity-spec-fix #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2108-quantity-spec-fix/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2108-quantity-spec-fix:2</id>
+    <published>2022-10-27T14:04:19Z</published>
+    <updated>2022-10-27T14:04:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2108-quantity-spec-fix #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2108-quantity-spec-fix/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2108-quantity-spec-fix:1</id>
+    <published>2022-10-27T14:02:14Z</published>
+    <updated>2022-10-27T14:02:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4859 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4859/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4859</id>
+    <published>2022-10-27T13:19:54Z</published>
+    <updated>2022-10-27T13:19:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #25 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/25/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:25</id>
+    <published>2022-10-27T00:32:12Z</published>
+    <updated>2022-10-27T00:32:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #7 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:7</id>
+    <published>2022-10-27T00:31:21Z</published>
+    <updated>2022-10-27T00:31:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #6 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:6</id>
+    <published>2022-10-26T23:57:40Z</published>
+    <updated>2022-10-26T23:57:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4858 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4858/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4858</id>
+    <published>2022-10-26T23:51:24Z</published>
+    <updated>2022-10-26T23:51:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2107-add-future_annotations-to-sele #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2107-add-future_annotations-to-sele/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2107-add-future_annotations-to-sele:2</id>
+    <published>2022-10-26T23:30:19Z</published>
+    <updated>2022-10-26T23:30:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2107-add-future_annotations-to-sele #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2107-add-future_annotations-to-sele/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2107-add-future_annotations-to-sele:1</id>
+    <published>2022-10-26T23:29:04Z</published>
+    <updated>2022-10-26T23:29:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4857 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4857/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4857</id>
+    <published>2022-10-26T22:58:59Z</published>
+    <updated>2022-10-26T22:58:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #799 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/799/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:799</id>
+    <published>2022-10-26T22:22:46Z</published>
+    <updated>2022-10-26T22:22:46Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #33 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/33/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:33</id>
+    <published>2022-10-26T22:13:28Z</published>
+    <updated>2022-10-26T22:13:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-f #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-f/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-f:2</id>
+    <published>2022-10-26T22:08:19Z</published>
+    <updated>2022-10-26T22:08:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #6 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:6</id>
+    <published>2022-10-26T22:06:59Z</published>
+    <updated>2022-10-26T22:06:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1499-ADA-Update-Shopping-Cart-Total #5 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1499-ADA-Update-Shopping-Cart-Total/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1499-ADA-Update-Shopping-Cart-Total:5</id>
+    <published>2022-10-26T22:04:02Z</published>
+    <updated>2022-10-26T22:04:02Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/SLCT-1271_plp-variant-count #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FSLCT-1271_plp-variant-count/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FSLCT-1271_plp-variant-count:1</id>
+    <published>2022-10-26T22:03:42Z</published>
+    <updated>2022-10-26T22:03:42Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1505-browse-implement-cypress-test- #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1505-browse-implement-cypress-test-/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1505-browse-implement-cypress-test-:4</id>
+    <published>2022-10-26T22:01:57Z</published>
+    <updated>2022-10-26T22:01:57Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4856 (broken since build #4856)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4856/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4856</id>
+    <published>2022-10-26T22:01:12Z</published>
+    <updated>2022-10-26T22:01:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1601-po-box-inline-validation-not-displaying-in-auth-checkout #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1601-po-box-inline-validation-not-displaying-in-auth-checkout/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1601-po-box-inline-validation-not-displaying-in-auth-checkout:2</id>
+    <published>2022-10-26T22:00:09Z</published>
+    <updated>2022-10-26T22:00:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt:2</id>
+    <published>2022-10-26T21:59:08Z</published>
+    <updated>2022-10-26T21:59:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:5</id>
+    <published>2022-10-26T21:49:50Z</published>
+    <updated>2022-10-26T21:49:50Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #7 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:7</id>
+    <published>2022-10-26T21:26:44Z</published>
+    <updated>2022-10-26T21:26:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-a #127 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-a/127/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-a:127</id>
+    <published>2022-10-26T21:26:38Z</published>
+    <updated>2022-10-26T21:26:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #4 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:4</id>
+    <published>2022-10-26T21:20:50Z</published>
+    <updated>2022-10-26T21:20:50Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4302-fix-mobile-header-flicker #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4302-fix-mobile-header-flicker/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4302-fix-mobile-header-flicker:3</id>
+    <published>2022-10-26T21:18:32Z</published>
+    <updated>2022-10-26T21:18:32Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » master #454 (broken since build #452)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/master/454/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/master:454</id>
+    <published>2022-10-26T21:18:09Z</published>
+    <updated>2022-10-26T21:18:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #22 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/22/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:22</id>
+    <published>2022-10-26T21:17:09Z</published>
+    <updated>2022-10-26T21:17:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-107 #4 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-107/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-107:4</id>
+    <published>2022-10-26T21:16:51Z</published>
+    <updated>2022-10-26T21:16:51Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1680-safari-flyout-buttons #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1680-safari-flyout-buttons/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1680-safari-flyout-buttons:3</id>
+    <published>2022-10-26T21:07:52Z</published>
+    <updated>2022-10-26T21:07:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:3</id>
+    <published>2022-10-26T21:03:19Z</published>
+    <updated>2022-10-26T21:03:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » master #453 (broken since build #452)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/master/453/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/master:453</id>
+    <published>2022-10-26T21:01:21Z</published>
+    <updated>2022-10-26T21:01:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1505-browse-implement-cypress-test- #3 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1505-browse-implement-cypress-test-/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1505-browse-implement-cypress-test-:3</id>
+    <published>2022-10-26T20:56:21Z</published>
+    <updated>2022-10-26T20:56:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-118-jest-upgrade #10 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-118-jest-upgrade/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-118-jest-upgrade:10</id>
+    <published>2022-10-26T20:50:47Z</published>
+    <updated>2022-10-26T20:50:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #7 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:7</id>
+    <published>2022-10-26T20:44:00Z</published>
+    <updated>2022-10-26T20:44:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-107 #3 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-107/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-107:3</id>
+    <published>2022-10-26T20:43:47Z</published>
+    <updated>2022-10-26T20:43:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1505-browse-implement-cypress-test- #2 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1505-browse-implement-cypress-test-/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1505-browse-implement-cypress-test-:2</id>
+    <published>2022-10-26T20:40:54Z</published>
+    <updated>2022-10-26T20:40:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » master #452 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/master/452/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/master:452</id>
+    <published>2022-10-26T20:38:06Z</published>
+    <updated>2022-10-26T20:38:06Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4855 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4855/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4855</id>
+    <published>2022-10-26T20:37:21Z</published>
+    <updated>2022-10-26T20:37:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1659-v2 #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1659-v2/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1659-v2:1</id>
+    <published>2022-10-26T20:34:07Z</published>
+    <updated>2022-10-26T20:34:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #5 (broken since build #3)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:5</id>
+    <published>2022-10-26T20:23:23Z</published>
+    <updated>2022-10-26T20:23:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #57 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/57/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:57</id>
+    <published>2022-10-26T20:15:52Z</published>
+    <updated>2022-10-26T20:15:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #4 (broken since build #3)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:4</id>
+    <published>2022-10-26T20:13:37Z</published>
+    <updated>2022-10-26T20:13:37Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-245-ab-test-purchased-items #2 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-245-ab-test-purchased-items/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-245-ab-test-purchased-items:2</id>
+    <published>2022-10-26T20:12:33Z</published>
+    <updated>2022-10-26T20:12:33Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #798 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/798/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:798</id>
+    <published>2022-10-26T20:09:55Z</published>
+    <updated>2022-10-26T20:09:55Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4229-header-personalized-account #12 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4229-header-personalized-account/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4229-header-personalized-account:12</id>
+    <published>2022-10-26T20:00:34Z</published>
+    <updated>2022-10-26T20:00:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #32 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/32/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:32</id>
+    <published>2022-10-26T19:59:03Z</published>
+    <updated>2022-10-26T19:59:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #31 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/31/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:31</id>
+    <published>2022-10-26T19:48:45Z</published>
+    <updated>2022-10-26T19:48:45Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2026 #2 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2026/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2026:2</id>
+    <published>2022-10-26T19:45:38Z</published>
+    <updated>2022-10-26T19:45:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1266-show-price-per-unit-on-plp-pdp #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1266-show-price-per-unit-on-plp-pdp/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1266-show-price-per-unit-on-plp-pdp:1</id>
+    <published>2022-10-26T19:39:25Z</published>
+    <updated>2022-10-26T19:39:25Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #3 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:3</id>
+    <published>2022-10-26T19:37:15Z</published>
+    <updated>2022-10-26T19:37:15Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-245-ab-test-purchased-items #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-245-ab-test-purchased-items/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-245-ab-test-purchased-items:1</id>
+    <published>2022-10-26T19:36:40Z</published>
+    <updated>2022-10-26T19:36:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #797 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/797/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:797</id>
+    <published>2022-10-26T19:35:55Z</published>
+    <updated>2022-10-26T19:35:55Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #6 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:6</id>
+    <published>2022-10-26T19:35:10Z</published>
+    <updated>2022-10-26T19:35:10Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #260 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/260/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:260</id>
+    <published>2022-10-26T19:30:27Z</published>
+    <updated>2022-10-26T19:30:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » release/2022.10.26.84208b6 #5 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/release%252F2022.10.26.84208b6/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/release%2F2022.10.26.84208b6:5</id>
+    <published>2022-10-26T19:26:48Z</published>
+    <updated>2022-10-26T19:26:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4229-header-personalized-account #11 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4229-header-personalized-account/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4229-header-personalized-account:11</id>
+    <published>2022-10-26T19:23:57Z</published>
+    <updated>2022-10-26T19:23:57Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1680-safari-flyout-buttons #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1680-safari-flyout-buttons/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1680-safari-flyout-buttons:2</id>
+    <published>2022-10-26T19:22:27Z</published>
+    <updated>2022-10-26T19:22:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #17 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/17/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:17</id>
+    <published>2022-10-26T19:16:58Z</published>
+    <updated>2022-10-26T19:16:58Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-83 #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-83/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-83:2</id>
+    <published>2022-10-26T19:14:54Z</published>
+    <updated>2022-10-26T19:14:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #6 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:6</id>
+    <published>2022-10-26T19:13:34Z</published>
+    <updated>2022-10-26T19:13:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:2</id>
+    <published>2022-10-26T19:00:10Z</published>
+    <updated>2022-10-26T19:00:10Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4854 (broken since build #4853)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4854/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4854</id>
+    <published>2022-10-26T18:58:17Z</published>
+    <updated>2022-10-26T18:58:17Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #49 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/49/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:49</id>
+    <published>2022-10-26T18:53:19Z</published>
+    <updated>2022-10-26T18:53:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #5 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:5</id>
+    <published>2022-10-26T18:50:22Z</published>
+    <updated>2022-10-26T18:50:22Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-94 #13 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-94/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-94:13</id>
+    <published>2022-10-26T18:40:37Z</published>
+    <updated>2022-10-26T18:40:37Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #48 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/48/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:48</id>
+    <published>2022-10-26T18:33:31Z</published>
+    <updated>2022-10-26T18:33:31Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-118-jest-upgrade #9 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-118-jest-upgrade/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-118-jest-upgrade:9</id>
+    <published>2022-10-26T18:27:10Z</published>
+    <updated>2022-10-26T18:27:10Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-83 #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-83/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-83:1</id>
+    <published>2022-10-26T18:15:40Z</published>
+    <updated>2022-10-26T18:15:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97-fix #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97-fix/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97-fix:1</id>
+    <published>2022-10-26T18:07:39Z</published>
+    <updated>2022-10-26T18:07:39Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #30 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/30/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:30</id>
+    <published>2022-10-26T18:04:49Z</published>
+    <updated>2022-10-26T18:04:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/search-a #189 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fsearch-a/189/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fsearch-a:189</id>
+    <published>2022-10-26T18:00:40Z</published>
+    <updated>2022-10-26T18:00:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97_fixer #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97_fixer/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97_fixer:1</id>
+    <published>2022-10-26T17:50:12Z</published>
+    <updated>2022-10-26T17:50:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4853 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4853/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4853</id>
+    <published>2022-10-26T17:39:23Z</published>
+    <updated>2022-10-26T17:39:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » release/2022.10.26.84208b6 #4 (broken since build #4)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/release%252F2022.10.26.84208b6/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/release%2F2022.10.26.84208b6:4</id>
+    <published>2022-10-26T16:52:22Z</published>
+    <updated>2022-10-26T16:52:22Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-a #126 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-a/126/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-a:126</id>
+    <published>2022-10-26T16:52:19Z</published>
+    <updated>2022-10-26T16:52:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZS-613 #8 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZS-613/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZS-613:8</id>
+    <published>2022-10-26T16:50:09Z</published>
+    <updated>2022-10-26T16:50:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #4 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:4</id>
+    <published>2022-10-26T16:40:48Z</published>
+    <updated>2022-10-26T16:40:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » release/2022.10.26.84208b6 #3 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/release%252F2022.10.26.84208b6/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/release%2F2022.10.26.84208b6:3</id>
+    <published>2022-10-26T16:40:32Z</published>
+    <updated>2022-10-26T16:40:32Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:3</id>
+    <published>2022-10-26T16:37:13Z</published>
+    <updated>2022-10-26T16:37:13Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZS-613 #7 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZS-613/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZS-613:7</id>
+    <published>2022-10-26T16:24:34Z</published>
+    <updated>2022-10-26T16:24:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104 #3 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104:3</id>
+    <published>2022-10-26T16:16:56Z</published>
+    <updated>2022-10-26T16:16:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-94 #12 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-94/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-94:12</id>
+    <published>2022-10-26T16:11:54Z</published>
+    <updated>2022-10-26T16:11:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #47 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/47/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:47</id>
+    <published>2022-10-26T16:11:34Z</published>
+    <updated>2022-10-26T16:11:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104-dev #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104-dev/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104-dev:2</id>
+    <published>2022-10-26T16:07:14Z</published>
+    <updated>2022-10-26T16:07:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104-dev #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104-dev/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104-dev:1</id>
+    <published>2022-10-26T16:05:07Z</published>
+    <updated>2022-10-26T16:05:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #29 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/29/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:29</id>
+    <published>2022-10-26T16:01:46Z</published>
+    <updated>2022-10-26T16:01:46Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #16 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/16/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:16</id>
+    <published>2022-10-26T16:01:22Z</published>
+    <updated>2022-10-26T16:01:22Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:2</id>
+    <published>2022-10-26T15:59:57Z</published>
+    <updated>2022-10-26T15:59:57Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #259 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/259/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:259</id>
+    <published>2022-10-26T15:55:03Z</published>
+    <updated>2022-10-26T15:55:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4229-header-personalized-account #10 (broken since build #9)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4229-header-personalized-account/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4229-header-personalized-account:10</id>
+    <published>2022-10-26T15:54:18Z</published>
+    <updated>2022-10-26T15:54:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZS-613 #6 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZS-613/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZS-613:6</id>
+    <published>2022-10-26T15:47:56Z</published>
+    <updated>2022-10-26T15:47:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #379 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/379/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:379</id>
+    <published>2022-10-26T15:46:44Z</published>
+    <updated>2022-10-26T15:46:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104 #2 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104:2</id>
+    <published>2022-10-26T15:45:03Z</published>
+    <updated>2022-10-26T15:45:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #28 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/28/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:28</id>
+    <published>2022-10-26T15:36:59Z</published>
+    <updated>2022-10-26T15:36:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #27 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/27/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:27</id>
+    <published>2022-10-26T15:27:08Z</published>
+    <updated>2022-10-26T15:27:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #24 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/24/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:24</id>
+    <published>2022-10-26T15:05:33Z</published>
+    <updated>2022-10-26T15:05:33Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2041-search-events-enhancements #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2041-search-events-enhancements/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2041-search-events-enhancements:2</id>
+    <published>2022-10-26T15:01:20Z</published>
+    <updated>2022-10-26T15:01:20Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #796 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/796/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:796</id>
+    <published>2022-10-26T15:00:20Z</published>
+    <updated>2022-10-26T15:00:20Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #5 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:5</id>
+    <published>2022-10-26T14:59:35Z</published>
+    <updated>2022-10-26T14:59:35Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/ZQAA-2104 #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FZQAA-2104/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FZQAA-2104:1</id>
+    <published>2022-10-26T14:54:25Z</published>
+    <updated>2022-10-26T14:54:25Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-a #125 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-a/125/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-a:125</id>
+    <published>2022-10-26T14:49:30Z</published>
+    <updated>2022-10-26T14:49:30Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #293 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/293/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:293</id>
+    <published>2022-10-26T14:47:40Z</published>
+    <updated>2022-10-26T14:47:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » release/2022.10.26.84208b6 #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/release%252F2022.10.26.84208b6/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/release%2F2022.10.26.84208b6:2</id>
+    <published>2022-10-26T14:47:10Z</published>
+    <updated>2022-10-26T14:47:10Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #23 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/23/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:23</id>
+    <published>2022-10-26T14:41:05Z</published>
+    <updated>2022-10-26T14:41:05Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #26 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/26/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:26</id>
+    <published>2022-10-26T14:34:30Z</published>
+    <updated>2022-10-26T14:34:30Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » release/2022.10.26.84208b6 #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/release%252F2022.10.26.84208b6/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/release%2F2022.10.26.84208b6:1</id>
+    <published>2022-10-26T10:01:00Z</published>
+    <updated>2022-10-26T10:01:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #243 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/243/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:243</id>
+    <published>2022-10-26T00:45:04Z</published>
+    <updated>2022-10-26T00:45:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-107 #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-107/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-107:2</id>
+    <published>2022-10-25T23:30:44Z</published>
+    <updated>2022-10-25T23:30:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #292 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/292/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:292</id>
+    <published>2022-10-25T22:47:12Z</published>
+    <updated>2022-10-25T22:47:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #795 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/795/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:795</id>
+    <published>2022-10-25T22:29:08Z</published>
+    <updated>2022-10-25T22:29:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1505-browse-implement-cypress-test- #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1505-browse-implement-cypress-test-/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1505-browse-implement-cypress-test-:1</id>
+    <published>2022-10-25T22:22:07Z</published>
+    <updated>2022-10-25T22:22:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #15 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/15/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:15</id>
+    <published>2022-10-25T22:10:56Z</published>
+    <updated>2022-10-25T22:10:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #15 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/15/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:15</id>
+    <published>2022-10-25T22:03:03Z</published>
+    <updated>2022-10-25T22:03:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #242 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/242/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:242</id>
+    <published>2022-10-25T22:02:25Z</published>
+    <updated>2022-10-25T22:02:25Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1667-user-gets-incorrect-error-message #3 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1667-user-gets-incorrect-error-message/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1667-user-gets-incorrect-error-message:3</id>
+    <published>2022-10-25T21:58:08Z</published>
+    <updated>2022-10-25T21:58:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #14 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/14/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:14</id>
+    <published>2022-10-25T21:57:58Z</published>
+    <updated>2022-10-25T21:57:58Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #25 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/25/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:25</id>
+    <published>2022-10-25T21:47:43Z</published>
+    <updated>2022-10-25T21:47:43Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1680-safari-flyout-buttons #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1680-safari-flyout-buttons/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1680-safari-flyout-buttons:1</id>
+    <published>2022-10-25T21:39:53Z</published>
+    <updated>2022-10-25T21:39:53Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-e #24 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-e/24/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-e:24</id>
+    <published>2022-10-25T21:23:51Z</published>
+    <updated>2022-10-25T21:23:51Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #11 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:11</id>
+    <published>2022-10-25T21:11:28Z</published>
+    <updated>2022-10-25T21:11:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #13 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:13</id>
+    <published>2022-10-25T21:11:09Z</published>
+    <updated>2022-10-25T21:11:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1855-cypress-enhancements-pdp #6 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1855-cypress-enhancements-pdp/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1855-cypress-enhancements-pdp:6</id>
+    <published>2022-10-25T21:03:44Z</published>
+    <updated>2022-10-25T21:03:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1667-user-gets-incorrect-error-message #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1667-user-gets-incorrect-error-message/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1667-user-gets-incorrect-error-message:2</id>
+    <published>2022-10-25T21:00:54Z</published>
+    <updated>2022-10-25T21:00:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #10 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:10</id>
+    <published>2022-10-25T20:54:49Z</published>
+    <updated>2022-10-25T20:54:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #291 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/291/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:291</id>
+    <published>2022-10-25T20:48:18Z</published>
+    <updated>2022-10-25T20:48:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZS-613 #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZS-613/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZS-613:5</id>
+    <published>2022-10-25T20:40:44Z</published>
+    <updated>2022-10-25T20:40:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #14 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/14/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:14</id>
+    <published>2022-10-25T20:36:00Z</published>
+    <updated>2022-10-25T20:36:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #794 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/794/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:794</id>
+    <published>2022-10-25T20:27:42Z</published>
+    <updated>2022-10-25T20:27:42Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #241 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/241/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:241</id>
+    <published>2022-10-25T20:26:38Z</published>
+    <updated>2022-10-25T20:26:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #13 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:13</id>
+    <published>2022-10-25T20:12:00Z</published>
+    <updated>2022-10-25T20:12:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #14 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/14/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:14</id>
+    <published>2022-10-25T19:51:54Z</published>
+    <updated>2022-10-25T19:51:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-127-unused-dep-cleanup #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-127-unused-dep-cleanup/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-127-unused-dep-cleanup:3</id>
+    <published>2022-10-25T19:23:00Z</published>
+    <updated>2022-10-25T19:23:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #240 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/240/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:240</id>
+    <published>2022-10-25T19:16:14Z</published>
+    <updated>2022-10-25T19:16:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #378 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/378/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:378</id>
+    <published>2022-10-25T19:03:24Z</published>
+    <updated>2022-10-25T19:03:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #46 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/46/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:46</id>
+    <published>2022-10-25T19:00:19Z</published>
+    <updated>2022-10-25T19:00:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-127-unused-dep-cleanup #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-127-unused-dep-cleanup/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-127-unused-dep-cleanup:2</id>
+    <published>2022-10-25T19:00:14Z</published>
+    <updated>2022-10-25T19:00:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-104-migrate-class-component #6 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-104-migrate-class-component/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-104-migrate-class-component:6</id>
+    <published>2022-10-25T18:59:14Z</published>
+    <updated>2022-10-25T18:59:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-242-due-date #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-242-due-date/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-242-due-date:2</id>
+    <published>2022-10-25T18:45:59Z</published>
+    <updated>2022-10-25T18:45:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #239 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/239/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:239</id>
+    <published>2022-10-25T16:59:40Z</published>
+    <updated>2022-10-25T16:59:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #21 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/21/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:21</id>
+    <published>2022-10-25T16:27:44Z</published>
+    <updated>2022-10-25T16:27:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #20 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/20/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:20</id>
+    <published>2022-10-25T15:45:08Z</published>
+    <updated>2022-10-25T15:45:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-896-show-critical-messaging-below-status #21 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-896-show-critical-messaging-below-status/21/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-896-show-critical-messaging-below-status:21</id>
+    <published>2022-10-25T15:41:09Z</published>
+    <updated>2022-10-25T15:41:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #12 (broken since build #11)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:12</id>
+    <published>2022-10-25T15:32:12Z</published>
+    <updated>2022-10-25T15:32:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #97 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/97/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:97</id>
+    <published>2022-10-25T15:09:34Z</published>
+    <updated>2022-10-25T15:09:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #11 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:11</id>
+    <published>2022-10-25T15:09:19Z</published>
+    <updated>2022-10-25T15:09:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #258 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/258/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:258</id>
+    <published>2022-10-25T15:08:35Z</published>
+    <updated>2022-10-25T15:08:35Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #45 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/45/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:45</id>
+    <published>2022-10-25T14:59:44Z</published>
+    <updated>2022-10-25T14:59:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #793 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/793/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:793</id>
+    <published>2022-10-25T14:58:52Z</published>
+    <updated>2022-10-25T14:58:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:4</id>
+    <published>2022-10-25T14:57:18Z</published>
+    <updated>2022-10-25T14:57:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #56 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/56/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:56</id>
+    <published>2022-10-25T14:55:47Z</published>
+    <updated>2022-10-25T14:55:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #257 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/257/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:257</id>
+    <published>2022-10-25T14:54:44Z</published>
+    <updated>2022-10-25T14:54:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4229-header-personalized-account #9 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4229-header-personalized-account/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4229-header-personalized-account:9</id>
+    <published>2022-10-25T14:54:29Z</published>
+    <updated>2022-10-25T14:54:29Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-64-use-categories-returned-by-rec-service #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-64-use-categories-returned-by-rec-service/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-64-use-categories-returned-by-rec-service:3</id>
+    <published>2022-10-25T14:47:39Z</published>
+    <updated>2022-10-25T14:47:39Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #12 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:12</id>
+    <published>2022-10-25T14:46:46Z</published>
+    <updated>2022-10-25T14:46:46Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-49 #52 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-49/52/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-49:52</id>
+    <published>2022-10-25T14:43:59Z</published>
+    <updated>2022-10-25T14:43:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #11 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:11</id>
+    <published>2022-10-25T14:40:24Z</published>
+    <updated>2022-10-25T14:40:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #238 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/238/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:238</id>
+    <published>2022-10-25T14:30:24Z</published>
+    <updated>2022-10-25T14:30:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-64-use-categories-returned-by-rec-service #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-64-use-categories-returned-by-rec-service/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-64-use-categories-returned-by-rec-service:2</id>
+    <published>2022-10-25T13:53:49Z</published>
+    <updated>2022-10-25T13:53:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #792 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/792/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:792</id>
+    <published>2022-10-25T13:53:44Z</published>
+    <updated>2022-10-25T13:53:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:3</id>
+    <published>2022-10-25T13:53:34Z</published>
+    <updated>2022-10-25T13:53:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2041-search-events-enhancements #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2041-search-events-enhancements/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2041-search-events-enhancements:1</id>
+    <published>2022-10-25T13:51:34Z</published>
+    <updated>2022-10-25T13:51:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » development #4846 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/development/4846/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/development:4846</id>
+    <published>2022-10-25T13:48:09Z</published>
+    <updated>2022-10-25T13:48:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #237 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/237/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:237</id>
+    <published>2022-10-25T07:09:12Z</published>
+    <updated>2022-10-25T07:09:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #55 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/55/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:55</id>
+    <published>2022-10-25T05:35:20Z</published>
+    <updated>2022-10-25T05:35:20Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #10 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:10</id>
+    <published>2022-10-25T04:33:16Z</published>
+    <updated>2022-10-25T04:33:16Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #54 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/54/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:54</id>
+    <published>2022-10-25T04:00:38Z</published>
+    <updated>2022-10-25T04:00:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #9 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:9</id>
+    <published>2022-10-25T04:00:21Z</published>
+    <updated>2022-10-25T04:00:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #53 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/53/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:53</id>
+    <published>2022-10-25T03:39:49Z</published>
+    <updated>2022-10-25T03:39:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #8 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:8</id>
+    <published>2022-10-25T03:39:14Z</published>
+    <updated>2022-10-25T03:39:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1673-move-item-list-at-checkout #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1673-move-item-list-at-checkout/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1673-move-item-list-at-checkout:2</id>
+    <published>2022-10-25T02:09:03Z</published>
+    <updated>2022-10-25T02:09:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1673-move-item-list-at-checkout #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1673-move-item-list-at-checkout/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1673-move-item-list-at-checkout:1</id>
+    <published>2022-10-25T02:06:38Z</published>
+    <updated>2022-10-25T02:06:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #52 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/52/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:52</id>
+    <published>2022-10-25T00:51:05Z</published>
+    <updated>2022-10-25T00:51:05Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:2</id>
+    <published>2022-10-25T00:12:38Z</published>
+    <updated>2022-10-25T00:12:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-new-not-validating-card-name-length #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-new-not-validating-card-name-length/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-new-not-validating-card-name-length:1</id>
+    <published>2022-10-24T23:56:08Z</published>
+    <updated>2022-10-24T23:56:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #13 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:13</id>
+    <published>2022-10-24T23:52:32Z</published>
+    <updated>2022-10-24T23:52:32Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #12 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:12</id>
+    <published>2022-10-24T23:48:28Z</published>
+    <updated>2022-10-24T23:48:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #10 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:10</id>
+    <published>2022-10-24T23:44:34Z</published>
+    <updated>2022-10-24T23:44:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #51 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/51/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:51</id>
+    <published>2022-10-24T23:42:08Z</published>
+    <updated>2022-10-24T23:42:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #9 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:9</id>
+    <published>2022-10-24T22:54:28Z</published>
+    <updated>2022-10-24T22:54:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #96 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/96/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:96</id>
+    <published>2022-10-24T22:53:57Z</published>
+    <updated>2022-10-24T22:53:57Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #95 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/95/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:95</id>
+    <published>2022-10-24T22:51:09Z</published>
+    <updated>2022-10-24T22:51:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1249-spike-show-disclaimer-copy-by-supplier #8 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1249-spike-show-disclaimer-copy-by-supplier/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1249-spike-show-disclaimer-copy-by-supplier:8</id>
+    <published>2022-10-24T22:50:17Z</published>
+    <updated>2022-10-24T22:50:17Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #94 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/94/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:94</id>
+    <published>2022-10-24T22:49:17Z</published>
+    <updated>2022-10-24T22:49:17Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-127-unused-dep-cleanup #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-127-unused-dep-cleanup/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-127-unused-dep-cleanup:1</id>
+    <published>2022-10-24T22:14:43Z</published>
+    <updated>2022-10-24T22:14:43Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4302-fix-mobile-header-flicker #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4302-fix-mobile-header-flicker/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4302-fix-mobile-header-flicker:2</id>
+    <published>2022-10-24T22:04:27Z</published>
+    <updated>2022-10-24T22:04:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1959-order-details-page-improvement #6 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1959-order-details-page-improvement/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1959-order-details-page-improvement:6</id>
+    <published>2022-10-24T21:54:07Z</published>
+    <updated>2022-10-24T21:54:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #11 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:11</id>
+    <published>2022-10-24T21:34:27Z</published>
+    <updated>2022-10-24T21:34:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1959-order-details-page-improvement #5 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1959-order-details-page-improvement/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1959-order-details-page-improvement:5</id>
+    <published>2022-10-24T21:13:01Z</published>
+    <updated>2022-10-24T21:13:01Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #50 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/50/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:50</id>
+    <published>2022-10-24T21:09:44Z</published>
+    <updated>2022-10-24T21:09:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #493 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/493/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:493</id>
+    <published>2022-10-24T20:34:50Z</published>
+    <updated>2022-10-24T20:34:50Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-a #49 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-a/49/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-a:49</id>
+    <published>2022-10-24T20:30:52Z</published>
+    <updated>2022-10-24T20:30:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #791 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/791/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:791</id>
+    <published>2022-10-24T20:30:27Z</published>
+    <updated>2022-10-24T20:30:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #7 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:7</id>
+    <published>2022-10-24T20:30:27Z</published>
+    <updated>2022-10-24T20:30:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #12 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:12</id>
+    <published>2022-10-24T20:17:24Z</published>
+    <updated>2022-10-24T20:17:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-b #790 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-b/790/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-b:790</id>
+    <published>2022-10-24T19:49:35Z</published>
+    <updated>2022-10-24T19:49:35Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #93 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/93/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:93</id>
+    <published>2022-10-24T19:34:59Z</published>
+    <updated>2022-10-24T19:34:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-b #230 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-b/230/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-b:230</id>
+    <published>2022-10-24T19:32:04Z</published>
+    <updated>2022-10-24T19:32:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1248-alternate-item #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1248-alternate-item/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1248-alternate-item:1</id>
+    <published>2022-10-24T19:31:44Z</published>
+    <updated>2022-10-24T19:31:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #256 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/256/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:256</id>
+    <published>2022-10-24T19:18:59Z</published>
+    <updated>2022-10-24T19:18:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4299 #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4299/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4299:1</id>
+    <published>2022-10-24T19:10:56Z</published>
+    <updated>2022-10-24T19:10:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #13 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:13</id>
+    <published>2022-10-24T19:10:21Z</published>
+    <updated>2022-10-24T19:10:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-107 #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-107/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-107:1</id>
+    <published>2022-10-24T19:08:28Z</published>
+    <updated>2022-10-24T19:08:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #10 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:10</id>
+    <published>2022-10-24T19:08:08Z</published>
+    <updated>2022-10-24T19:08:08Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #11 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:11</id>
+    <published>2022-10-24T18:57:52Z</published>
+    <updated>2022-10-24T18:57:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4302-fix-mobile-header-flicker #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4302-fix-mobile-header-flicker/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4302-fix-mobile-header-flicker:1</id>
+    <published>2022-10-24T18:46:56Z</published>
+    <updated>2022-10-24T18:46:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1680-flyout-buttons-safari #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1680-flyout-buttons-safari/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1680-flyout-buttons-safari:2</id>
+    <published>2022-10-24T18:25:47Z</published>
+    <updated>2022-10-24T18:25:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-a #124 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-a/124/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-a:124</id>
+    <published>2022-10-24T18:09:12Z</published>
+    <updated>2022-10-24T18:09:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #290 (broken since build #289)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/290/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:290</id>
+    <published>2022-10-24T17:53:44Z</published>
+    <updated>2022-10-24T17:53:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #19 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/19/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:19</id>
+    <published>2022-10-24T17:53:05Z</published>
+    <updated>2022-10-24T17:53:05Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #492 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/492/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:492</id>
+    <published>2022-10-24T17:52:42Z</published>
+    <updated>2022-10-24T17:52:42Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #12 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/12/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:12</id>
+    <published>2022-10-24T17:51:24Z</published>
+    <updated>2022-10-24T17:51:24Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #9 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:9</id>
+    <published>2022-10-24T17:17:02Z</published>
+    <updated>2022-10-24T17:17:02Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #22 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/22/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:22</id>
+    <published>2022-10-24T17:16:48Z</published>
+    <updated>2022-10-24T17:16:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #236 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/236/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:236</id>
+    <published>2022-10-24T17:15:15Z</published>
+    <updated>2022-10-24T17:15:15Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #18 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/18/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:18</id>
+    <published>2022-10-24T17:11:48Z</published>
+    <updated>2022-10-24T17:11:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1617-unit-price-display #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1617-unit-price-display/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1617-unit-price-display:2</id>
+    <published>2022-10-24T16:55:28Z</published>
+    <updated>2022-10-24T16:55:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1685-ensure-information-icon-near-order-summary-surcharge-label-is-in-correct-location #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1685-ensure-information-icon-near-order-summary-surcharge-label-is-in-correct-location/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1685-ensure-information-icon-near-order-summary-surcharge-label-is-in-correct-location:1</id>
+    <published>2022-10-24T16:50:09Z</published>
+    <updated>2022-10-24T16:50:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #21 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/21/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:21</id>
+    <published>2022-10-24T16:48:18Z</published>
+    <updated>2022-10-24T16:48:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #8 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:8</id>
+    <published>2022-10-24T16:38:53Z</published>
+    <updated>2022-10-24T16:38:53Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #289 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/289/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:289</id>
+    <published>2022-10-24T16:29:13Z</published>
+    <updated>2022-10-24T16:29:13Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #92 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/92/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:92</id>
+    <published>2022-10-24T16:23:43Z</published>
+    <updated>2022-10-24T16:23:43Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #51 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/51/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:51</id>
+    <published>2022-10-24T16:19:50Z</published>
+    <updated>2022-10-24T16:19:50Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4173 #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4173/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4173:4</id>
+    <published>2022-10-24T16:19:17Z</published>
+    <updated>2022-10-24T16:19:17Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #6 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:6</id>
+    <published>2022-10-24T16:14:07Z</published>
+    <updated>2022-10-24T16:14:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #11 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:11</id>
+    <published>2022-10-24T16:04:40Z</published>
+    <updated>2022-10-24T16:04:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-a #123 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-a/123/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-a:123</id>
+    <published>2022-10-24T15:54:53Z</published>
+    <updated>2022-10-24T15:54:53Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #491 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/491/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:491</id>
+    <published>2022-10-24T15:47:54Z</published>
+    <updated>2022-10-24T15:47:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #20 (broken since build #19)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/20/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:20</id>
+    <published>2022-10-24T15:47:39Z</published>
+    <updated>2022-10-24T15:47:39Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #17 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/17/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:17</id>
+    <published>2022-10-24T15:43:11Z</published>
+    <updated>2022-10-24T15:43:11Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #9 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:9</id>
+    <published>2022-10-24T15:41:02Z</published>
+    <updated>2022-10-24T15:41:02Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/buy-d #235 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbuy-d/235/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbuy-d:235</id>
+    <published>2022-10-24T15:40:46Z</published>
+    <updated>2022-10-24T15:40:46Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4173 #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4173/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4173:3</id>
+    <published>2022-10-24T15:33:09Z</published>
+    <updated>2022-10-24T15:33:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #10 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:10</id>
+    <published>2022-10-24T15:32:59Z</published>
+    <updated>2022-10-24T15:32:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-188-contact-form-analytics #3 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-188-contact-form-analytics/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-188-contact-form-analytics:3</id>
+    <published>2022-10-24T15:15:21Z</published>
+    <updated>2022-10-24T15:15:21Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #16 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/16/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:16</id>
+    <published>2022-10-24T15:09:27Z</published>
+    <updated>2022-10-24T15:09:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1959-order-details-page-improvement #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1959-order-details-page-improvement/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1959-order-details-page-improvement:4</id>
+    <published>2022-10-24T14:51:00Z</published>
+    <updated>2022-10-24T14:51:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #44 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/44/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:44</id>
+    <published>2022-10-24T14:34:18Z</published>
+    <updated>2022-10-24T14:34:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #7 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:7</id>
+    <published>2022-10-24T14:15:09Z</published>
+    <updated>2022-10-24T14:15:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #50 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/50/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:50</id>
+    <published>2022-10-24T14:12:52Z</published>
+    <updated>2022-10-24T14:12:52Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-49 #51 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-49/51/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-49:51</id>
+    <published>2022-10-24T14:11:37Z</published>
+    <updated>2022-10-24T14:11:37Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #6 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:6</id>
+    <published>2022-10-24T14:01:47Z</published>
+    <updated>2022-10-24T14:01:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #43 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/43/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:43</id>
+    <published>2022-10-24T13:40:02Z</published>
+    <updated>2022-10-24T13:40:02Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #5 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:5</id>
+    <published>2022-10-24T03:32:22Z</published>
+    <updated>2022-10-24T03:32:22Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #4 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:4</id>
+    <published>2022-10-24T03:26:34Z</published>
+    <updated>2022-10-24T03:26:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #42 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/42/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:42</id>
+    <published>2022-10-22T02:46:19Z</published>
+    <updated>2022-10-22T02:46:19Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #41 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/41/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:41</id>
+    <published>2022-10-22T01:13:41Z</published>
+    <updated>2022-10-22T01:13:41Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/tools #40 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Ftools/40/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Ftools:40</id>
+    <published>2022-10-22T00:29:14Z</published>
+    <updated>2022-10-22T00:29:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #91 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/91/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:91</id>
+    <published>2022-10-21T22:54:53Z</published>
+    <updated>2022-10-21T22:54:53Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #49 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/49/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:49</id>
+    <published>2022-10-21T22:43:28Z</published>
+    <updated>2022-10-21T22:43:28Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #48 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/48/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:48</id>
+    <published>2022-10-21T21:47:48Z</published>
+    <updated>2022-10-21T21:47:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1183-fitment-widget-alert #9 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1183-fitment-widget-alert/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1183-fitment-widget-alert:9</id>
+    <published>2022-10-21T21:30:51Z</published>
+    <updated>2022-10-21T21:30:51Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-97 #19 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-97/19/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-97:19</id>
+    <published>2022-10-21T21:29:32Z</published>
+    <updated>2022-10-21T21:29:32Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #8 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:8</id>
+    <published>2022-10-21T21:17:27Z</published>
+    <updated>2022-10-21T21:17:27Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1183-fitment-widget-alert #8 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1183-fitment-widget-alert/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1183-fitment-widget-alert:8</id>
+    <published>2022-10-21T20:35:11Z</published>
+    <updated>2022-10-21T20:35:11Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-242-due-date #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-242-due-date/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-242-due-date:1</id>
+    <published>2022-10-21T20:32:46Z</published>
+    <updated>2022-10-21T20:32:46Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #90 (broken since build #89)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/90/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:90</id>
+    <published>2022-10-21T20:31:40Z</published>
+    <updated>2022-10-21T20:31:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4173 #2 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4173/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4173:2</id>
+    <published>2022-10-21T20:18:09Z</published>
+    <updated>2022-10-21T20:18:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1616-free-shipping-tooltip #7 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1616-free-shipping-tooltip/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1616-free-shipping-tooltip:7</id>
+    <published>2022-10-21T20:14:47Z</published>
+    <updated>2022-10-21T20:14:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #89 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/89/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:89</id>
+    <published>2022-10-21T20:14:07Z</published>
+    <updated>2022-10-21T20:14:07Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-c #42 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-c/42/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-c:42</id>
+    <published>2022-10-21T20:11:12Z</published>
+    <updated>2022-10-21T20:11:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-49 #50 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-49/50/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-49:50</id>
+    <published>2022-10-21T19:50:59Z</published>
+    <updated>2022-10-21T19:50:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-b #88 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-b/88/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-b:88</id>
+    <published>2022-10-21T19:43:23Z</published>
+    <updated>2022-10-21T19:43:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1965 #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1965/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1965:2</id>
+    <published>2022-10-21T19:36:47Z</published>
+    <updated>2022-10-21T19:36:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/select-d #206 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fselect-d/206/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fselect-d:206</id>
+    <published>2022-10-21T19:19:58Z</published>
+    <updated>2022-10-21T19:19:58Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1183-fitment-widget-alert #7 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1183-fitment-widget-alert/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1183-fitment-widget-alert:7</id>
+    <published>2022-10-21T19:17:38Z</published>
+    <updated>2022-10-21T19:17:38Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #47 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/47/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:47</id>
+    <published>2022-10-21T19:09:13Z</published>
+    <updated>2022-10-21T19:09:13Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1681-zip-code-invalid-for-select-state-message-displayed-in-checkout-when-it-shouldnt:1</id>
+    <published>2022-10-21T19:08:33Z</published>
+    <updated>2022-10-21T19:08:33Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1965 #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1965/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1965:1</id>
+    <published>2022-10-21T18:54:49Z</published>
+    <updated>2022-10-21T18:54:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-125-enalble-fastify-server #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-125-enalble-fastify-server/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-125-enalble-fastify-server:3</id>
+    <published>2022-10-21T18:40:49Z</published>
+    <updated>2022-10-21T18:40:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-94 #11 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-94/11/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-94:11</id>
+    <published>2022-10-21T18:34:58Z</published>
+    <updated>2022-10-21T18:34:58Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1684 #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1684/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1684:4</id>
+    <published>2022-10-21T18:32:00Z</published>
+    <updated>2022-10-21T18:32:00Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #490 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/490/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:490</id>
+    <published>2022-10-21T18:08:54Z</published>
+    <updated>2022-10-21T18:08:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-125-enalble-fastify-server #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-125-enalble-fastify-server/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-125-enalble-fastify-server:2</id>
+    <published>2022-10-21T17:59:09Z</published>
+    <updated>2022-10-21T17:59:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1684 #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1684/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1684:3</id>
+    <published>2022-10-21T17:56:49Z</published>
+    <updated>2022-10-21T17:56:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-49 #49 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-49/49/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-49:49</id>
+    <published>2022-10-21T17:23:56Z</published>
+    <updated>2022-10-21T17:23:56Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-236-update-copy-for-net-30-billin #3 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-236-update-copy-for-net-30-billin/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-236-update-copy-for-net-30-billin:3</id>
+    <published>2022-10-21T17:14:23Z</published>
+    <updated>2022-10-21T17:14:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-d #255 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-d/255/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-d:255</id>
+    <published>2022-10-21T16:21:59Z</published>
+    <updated>2022-10-21T16:21:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #288 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/288/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:288</id>
+    <published>2022-10-21T16:20:11Z</published>
+    <updated>2022-10-21T16:20:11Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/TOOL-125-enalble-fastify-server #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FTOOL-125-enalble-fastify-server/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FTOOL-125-enalble-fastify-server:1</id>
+    <published>2022-10-21T16:18:58Z</published>
+    <updated>2022-10-21T16:18:58Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1667-user-gets-incorrect-error-message #1 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1667-user-gets-incorrect-error-message/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1667-user-gets-incorrect-error-message:1</id>
+    <published>2022-10-21T15:38:40Z</published>
+    <updated>2022-10-21T15:38:40Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #9 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:9</id>
+    <published>2022-10-21T15:33:03Z</published>
+    <updated>2022-10-21T15:33:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #10 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:10</id>
+    <published>2022-10-21T15:23:09Z</published>
+    <updated>2022-10-21T15:23:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-c #41 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-c/41/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-c:41</id>
+    <published>2022-10-21T15:19:03Z</published>
+    <updated>2022-10-21T15:19:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #377 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/377/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:377</id>
+    <published>2022-10-21T15:15:15Z</published>
+    <updated>2022-10-21T15:15:15Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1183-fitment-widget-alert #6 (broken since build #5)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1183-fitment-widget-alert/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1183-fitment-widget-alert:6</id>
+    <published>2022-10-21T15:07:55Z</published>
+    <updated>2022-10-21T15:07:55Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #9 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:9</id>
+    <published>2022-10-21T14:47:44Z</published>
+    <updated>2022-10-21T14:47:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-49 #48 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-49/48/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-49:48</id>
+    <published>2022-10-21T14:44:04Z</published>
+    <updated>2022-10-21T14:44:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1959-order-details-page-improvement #3 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1959-order-details-page-improvement/3/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1959-order-details-page-improvement:3</id>
+    <published>2022-10-21T14:38:29Z</published>
+    <updated>2022-10-21T14:38:29Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SLCT-1183-fitment-widget-alert #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSLCT-1183-fitment-widget-alert/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSLCT-1183-fitment-widget-alert:5</id>
+    <published>2022-10-21T14:26:34Z</published>
+    <updated>2022-10-21T14:26:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2025-ct-cypress-demo #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2025-ct-cypress-demo/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2025-ct-cypress-demo:4</id>
+    <published>2022-10-21T14:19:44Z</published>
+    <updated>2022-10-21T14:19:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #376 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/376/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:376</id>
+    <published>2022-10-21T13:39:14Z</published>
+    <updated>2022-10-21T13:39:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/get-94 #10 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252Fget-94/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2Fget-94:10</id>
+    <published>2022-10-21T13:09:54Z</published>
+    <updated>2022-10-21T13:09:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #8 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:8</id>
+    <published>2022-10-21T07:17:23Z</published>
+    <updated>2022-10-21T07:17:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #7 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:7</id>
+    <published>2022-10-21T05:45:49Z</published>
+    <updated>2022-10-21T05:45:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #6 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:6</id>
+    <published>2022-10-21T03:37:34Z</published>
+    <updated>2022-10-21T03:37:34Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/MANAGE-231-not-validating-length-of-name #5 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FMANAGE-231-not-validating-length-of-name/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FMANAGE-231-not-validating-length-of-name:5</id>
+    <published>2022-10-21T02:28:13Z</published>
+    <updated>2022-10-21T02:28:13Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-b #60 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-b/60/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-b:60</id>
+    <published>2022-10-21T02:07:48Z</published>
+    <updated>2022-10-21T02:07:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-221-non-business-names #10 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-221-non-business-names/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-221-non-business-names:10</id>
+    <published>2022-10-21T00:42:03Z</published>
+    <updated>2022-10-21T00:42:03Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #8 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:8</id>
+    <published>2022-10-20T23:18:09Z</published>
+    <updated>2022-10-20T23:18:09Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #489 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/489/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:489</id>
+    <published>2022-10-20T23:00:17Z</published>
+    <updated>2022-10-20T23:00:17Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #287 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/287/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:287</id>
+    <published>2022-10-20T23:00:04Z</published>
+    <updated>2022-10-20T23:00:04Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BUY-1578-keep-the-item-order-for-the-save-for-later #5 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBUY-1578-keep-the-item-order-for-the-save-for-later/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBUY-1578-keep-the-item-order-for-the-save-for-later:5</id>
+    <published>2022-10-20T22:58:39Z</published>
+    <updated>2022-10-20T22:58:39Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #15 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/15/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:15</id>
+    <published>2022-10-20T22:56:41Z</published>
+    <updated>2022-10-20T22:56:41Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #7 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/7/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:7</id>
+    <published>2022-10-20T22:33:39Z</published>
+    <updated>2022-10-20T22:33:39Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #14 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/14/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:14</id>
+    <published>2022-10-20T22:16:53Z</published>
+    <updated>2022-10-20T22:16:53Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/get-a #46 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fget-a/46/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fget-a:46</id>
+    <published>2022-10-20T21:36:35Z</published>
+    <updated>2022-10-20T21:36:35Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2034 #10 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2034/10/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2034:10</id>
+    <published>2022-10-20T21:28:45Z</published>
+    <updated>2022-10-20T21:28:45Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #375 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/375/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:375</id>
+    <published>2022-10-20T21:21:44Z</published>
+    <updated>2022-10-20T21:21:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/SEOP-70 #6 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FSEOP-70/6/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FSEOP-70:6</id>
+    <published>2022-10-20T21:11:32Z</published>
+    <updated>2022-10-20T21:11:32Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4287 #2 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4287/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4287:2</id>
+    <published>2022-10-20T21:09:12Z</published>
+    <updated>2022-10-20T21:09:12Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2034 #9 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2034/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2034:9</id>
+    <published>2022-10-20T20:43:36Z</published>
+    <updated>2022-10-20T20:43:36Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1855-cypress-enhancements-pdp #5 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1855-cypress-enhancements-pdp/5/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1855-cypress-enhancements-pdp:5</id>
+    <published>2022-10-20T20:38:44Z</published>
+    <updated>2022-10-20T20:38:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/BROWSE-4173 #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FBROWSE-4173/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FBROWSE-4173:1</id>
+    <published>2022-10-20T20:34:54Z</published>
+    <updated>2022-10-20T20:34:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #374 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/374/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:374</id>
+    <published>2022-10-20T20:34:54Z</published>
+    <updated>2022-10-20T20:34:54Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » bugfix/BUY-1680-flyout-buttons-safari #1 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/bugfix%252FBUY-1680-flyout-buttons-safari/1/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/bugfix%2FBUY-1680-flyout-buttons-safari:1</id>
+    <published>2022-10-20T20:30:29Z</published>
+    <updated>2022-10-20T20:30:29Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #488 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/488/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:488</id>
+    <published>2022-10-20T20:24:49Z</published>
+    <updated>2022-10-20T20:24:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1313-product-carousels-regression-test #4 (back to normal)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1313-product-carousels-regression-test/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1313-product-carousels-regression-test:4</id>
+    <published>2022-10-20T20:07:49Z</published>
+    <updated>2022-10-20T20:07:49Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-2034 #8 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-2034/8/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-2034:8</id>
+    <published>2022-10-20T20:07:14Z</published>
+    <updated>2022-10-20T20:07:14Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zmo #286 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzmo/286/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzmo:286</id>
+    <published>2022-10-20T19:54:23Z</published>
+    <updated>2022-10-20T19:54:23Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-188-contact-form-analytics #2 (broken for a long time)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-188-contact-form-analytics/2/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-188-contact-form-analytics:2</id>
+    <published>2022-10-20T19:38:37Z</published>
+    <updated>2022-10-20T19:38:37Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #373 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/373/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:373</id>
+    <published>2022-10-20T19:26:18Z</published>
+    <updated>2022-10-20T19:26:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/MANAGE-221-non-business-names #9 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FMANAGE-221-non-business-names/9/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FMANAGE-221-non-business-names:9</id>
+    <published>2022-10-20T18:49:18Z</published>
+    <updated>2022-10-20T18:49:18Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/zqaa #372 (aborted)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fzqaa/372/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fzqaa:372</id>
+    <published>2022-10-20T18:23:48Z</published>
+    <updated>2022-10-20T18:23:48Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/GET-96_add-return-form #13 (broken since this build)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FGET-96_add-return-form/13/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FGET-96_add-return-form:13</id>
+    <published>2022-10-20T18:08:44Z</published>
+    <updated>2022-10-20T18:08:44Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/manage-b #59 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fmanage-b/59/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fmanage-b:59</id>
+    <published>2022-10-20T17:16:47Z</published>
+    <updated>2022-10-20T17:16:47Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » env/browse-c #487 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/env%252Fbrowse-c/487/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/env%2Fbrowse-c:487</id>
+    <published>2022-10-20T17:13:59Z</published>
+    <updated>2022-10-20T17:13:59Z</updated>
+  </entry>
+  <entry>
+    <title>Website » zoro » feature/ZQAA-1855-cypress-enhancements-pdp #4 (stable)</title>
+    <link rel="alternate" type="text/html" href="https://ci.zoro.com/view/Website/job/Website/job/zoro.com/job/feature%252FZQAA-1855-cypress-enhancements-pdp/4/"></link>
+    <id>tag:hudson.dev.java.net,2022:Website/zoro.com/feature%2FZQAA-1855-cypress-enhancements-pdp:4</id>
+    <published>2022-10-20T16:58:18Z</published>
+    <updated>2022-10-20T16:58:18Z</updated>
+  </entry>
+</feed>
+
+<!-- (?i)(?<=Grant\s)(?-i)[A-Z0-9-]+\b -->

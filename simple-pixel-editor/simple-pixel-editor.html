@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Simplr Editor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./simple-pixel-editor.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header id="app-header">
+      <div id="app-header-left">L</div>
+      <div id="app-header-center">
+        <h1>Simple Pixel Editor</h1>
+      </div>
+      <div id="app-header-right">R</div>
+    </header>
+    <section id="app-body">
+      <div id="canvas-container" class="container">
+        <svg id="svg-canvas" class="canvas" width="412" height="720" viewbox="0 0 46 80" _preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="smallGrid" width="5" height="5" patternUnits="userSpaceOnUse">
+              <path id="smallGridPath" d="M 5 0 H 0 V 5" fill="none" stroke="lightgrey" stroke-width="0.5" />
+            </pattern>
+            <pattern id="largeGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+              <rect class="draggabl" id="largeGridRect" width="25" height="25" fill="url(#smallGrid)" />
+              <path class="draggabl" id="largeGridPath" d="M 25 0 H 0 V 25" fill="none" stroke="lightgrey" stroke-width="1" />
+            </pattern>
+            <pattern id="rulerMarkers" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect class="draggabl" id="largeGridRect" width="32" height="32" fill="white" />
+              <path class="draggabl" id="largeGridPath" d="M 20 0 H 0 V 20" fill="none" stroke="lightgrey" stroke-width="2" />
+            </pattern>
+            <linearGradient id="handleGradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="50%" stop-color="#FFFDF390" />
+              <stop offset="51%" stop-color="#18181890" />
+            </linearGradient>
+          </defs>
+
+
+          <g id="scene" x="0" y="0" transform="translate(-0.5,-0.5) scale(1)">
+            <!-- <g id="grid" transform="translate(-0,-0)">
+              <rect fill="url(#largeGrid)" id="grid-face" x="0" y="0" stroke="#F1F1F170" stroke-width="2" fill="#FFF00FF" width="412" height="690"></rect>
+            </g> -->
+            <!-- <g id="axes" transform="translate(0,0)">
+              <line fill="red" id="xaxis" class="axis" x1="-50" x2="50" y1="0" y2="0" stroke-width="5"></line>
+              <line fill="blue" id="yaxis" class="axis" x1="0" x2="0" y1="-50" y2="50" stroke-width="5"></line>
+            </g> -->
+
+            <g transform="translate(-0,-0)" id="pixels" class="layer">
+              <!-- <g id="actors" transform="translate(2.5,2.5)">
+                <g class="pixel" id="" data-filled="" data-color="">
+                  <rect fill="teal" x="5" y="5" width="1" height="1" class="pixel-content"></rect>
+                </g>
+              </g> -->
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+    <footer id="app-footer">
+      <div id="tools" class="container">
+        <div class="control-group">
+          <label for="color-picker">Fill</label>
+          <input type="color" name="color-picker" id="color-picker">
+        </div>
+        <div class="control-group">
+          <label for="pixel-size">Pixel Size</label>
+          <input type="number" name="pixel-size" id="pixel-size" value="1">
+        </div>
+        <div class="control-group">
+          <label for="zoom">Zoom</label>
+          <input type="number" name="zoom" id="zoom" value="100">
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+  </script>
+
+  <script src="./app.js" type="module"></script>
+  
+  <template id="pixel-template">
+    <g class="pixel" id="" data-filled="" data-color="">
+      <rect fill="teal" x="5" y="5" width="1" height="1" class="pixel-content"></rect>
+    </g>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1673946374",
+    "method": "messages.getMessages",
+    "params": [{
+      "name": "id",
+      "type": "Vector<InputMessage>"
+    }],
+    "type": "messages.Messages"
+  },
+  {
+    "id": "228423076",
+    "method": "messages.sendMessage",
+    "params": [
+      { "name": "flags", "type": "#" },
+      { "name": "no_webpage", "type": "flags.1?true" },
+      { "name": "silent", "type": "flags.5?true" },
+      { "name": "background", "type": "flags.6?true" },
+      { "name": "clear_draft", "type": "flags.7?true" },
+      { "name": "noforwards", "type": "flags.14?true" },
+      { "name": "peer", "type": "InputPeer" },
+      { "name": "reply_to_msg_id", "type": "flags.0?int" },
+      { "name": "message", "type": "string" },
+      { "name": "random_id", "type": "long" },
+      { "name": "reply_markup", "type": "flags.2?ReplyMarkup" },
+      { "name": "entities", "type": "flags.3?Vector<MessageEntity>" },
+      { "name": "schedule_date", "type": "flags.10?int" },
+      { "name": "send_as", "type": "flags.13?InputPeer" }
+    ],
+    "type": "Updates"
+  }
+]

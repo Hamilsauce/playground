@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>PIXEL FART</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main id="app">
+    <header id="app-header">
+      <div id="app-header-left">
+        <h3>PIXEL FART</h3>
+      </div>
+      <div id="app-header-center"></div>
+      <div id="app-header-right"></div>
+    </header>
+
+    <section class="app-body">
+      <div id="canvas-container"></div>
+    </section>
+
+    <footer id="app-footer">Slut</footer>
+  </main>
+
+  <script type="text/javascript" charset="utf-8">
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+  </script>
+
+  <script src="./main.js" type="module"></script>
+  <!-- <script src="./recorder.js" type="module"></script> -->
+  <!-- <script src="./app.js" type="module"></script> -->
+  <template id="status-bar-template">
+    <div id="status-bar">
+      <div id="status-bar-pointer-coords"></div>
+    </div>
+  </template>
+  
+  <template id="svg-canvas-template">
+    <svg id="svg-canvas" class="canvas" width="50" height="50" viewbox="0 0 0 0" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="smallGrid" width="5" height="5" patternUnits="userSpaceOnUse">
+          <path id="smallGridPath" d="M 5 0 H 0 V 5" fill="none" stroke="lightgrey" stroke-width="0.5" />
+        </pattern>
+        <pattern id="largeGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+          <rect class="draggabl" id="largeGridRect" width="25" height="25" fill="url(#smallGrid)" />
+          <path class="draggabl" id="largeGridPath" d="M 25 0 H 0 V 25" fill="none" stroke="lightgrey" stroke-width="1" />
+        </pattern>
+        <pattern id="rulerMarkers" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect class="draggabl" id="largeGridRect" width="32" height="32" fill="white" />
+          <path class="draggabl" id="largeGridPath" d="M 20 0 H 0 V 20" fill="none" stroke="lightgrey" stroke-width="2" />
+        </pattern>
+        <linearGradient id="handleGradient" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="50%" stop-color="#FFFDF390" />
+          <stop offset="51%" stop-color="#18181890" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </template>
+
+  <svg id="canvas-elements-template" style="position:absolute;top:0;left:0;display:none">
+
+    <svg x="0" y="0" data-template-name="canvas" id="canvas" width="0" height="0" viewBox="0 0 0 0" _preserveAspectRatio="xMinYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+      <defs></defs>
+    </svg>
+
+    <g id="" data-canvas-element="block" data-template-name="block" class="block" transform="translate(0,0)">
+      <rect class="block--shape" x="0" y="0" width="10" height="10" />
+      <g class="block--content"></g>
+    </g>
+
+    <g data-canvas-element="axes" data-template-name="axes" class="axes" transform="translate(0,0)">
+      <line id="xaxis" class="axis" x1="-5000" x2="5000" y1="0" y2="0" stroke-width="0.5"></line>
+      <line id="yaxis" class="axis" x1="0" x2="0" y1="-5000" y2="5000" stroke-width="0.5"></line>
+    </g>
+
+
+    <g data-canvas-element="tile" data-template-name="tile" class="tile" id="tile-r0c4" transform="translate(-0.5,-0.5)" data-column="0" data-row="0">
+      <rect fill="darkgray" class="tile-face" x="0" y="0" width="1" height="1"></rect>
+      <g class="tile-edges">
+        <line stroke="blue" stroke-width="0.04" class="edge" x1="0" x2="1" y1="0" y2="0"></line>
+        <line stroke="blue" stroke-width="0.04" class="edge" x1="1" x2="1" y1="0" y2="1"></line>
+        <line stroke="blue" stroke-width="0.04" class="edge" x1="1" x2="0" y1="1" y2="1"></line>
+        <line stroke="blue" stroke-width="0.04" class="edge" x1="0" x2="0" y1="1" y2="0"></line>
+      </g>
+      <g class="tile-points">
+        <circle cx="0" cy="0" class="vertex" r="0.06"></circle>
+        <circle cx="1" cy="0" class="vertex" r="0.06"></circle>
+        <circle cx="1" cy="1" class="vertex" r="0.06"></circle>
+        <circle cx="0" cy="1" class="vertex" r="0.06"></circle>
+        <circle cx="0.5" cy="0.5" class="point" r="0.08"></circle>
+      </g>
+    </g>
+
+    <!-- <g data-canvas-element="surface" data-template-name="surface" class="surface" data-layer-name="surface" transform="translate(0,0)" data-columns="5" data-row="5">
+      <path class="surface--face" d=" m 0,0 5,0 0,5 -5,0 0,-5 0,0 Z"></path>
+    </g> -->
+
+    <g data-canvas-element="grid" data-template-name="grid" class="grid" data-layer="surface" transform="translate(0,0)"></g>
+
+    <g data-canvas-element="canvas-layer" data-active="false" id="" class="layer" data-layer-id="" class="layer" transform="translate(-5,-9) scale(0.1)">
+      <rect class="canvas-layer--background" id="" x="0" y="0" width="0" height="0" fill="url(#largeGrid)" />
+      <g class="canvas-layer--objects" transform="translate(-10,-20) scale(0.1)"></g>
+    </g>
+
+
+    <g data-canvas-element="plot-segment" data-template-name="plot-segment" class="plot-segment" transform="translate(0,0)">
+      <path class="path-segment" transform="translate(0,0)" d=" M 0,0 0,1 1 1,1 " />
+      <circle class="point way-point" transform="translate(0,0)" r="0.1"></circle>
+      <circle class="point way-point" transform="translate(1,1)" r="0.1"></circle>
+    </g>
+
+    <g data-canvas-element="actor" data-template-name="actor" class="actor" id="john" data-row="0" data-column="0" transform="translate(0.5,0.5) scale(1)">
+      <circle data-row="0" data-column="0" transform="translate(0.5,0.5) scale(1)" class="actor-shape" r="0.4"></circle>
+    </g>
+
+  </svg>
+</body>
+
+</html>

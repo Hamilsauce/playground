@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #202328;
+  color: #516696;
+}
+
+#app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  grid-template-rows: 1fr;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#app-header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+#app-header-center {}
+
+#app-header-right {}
+
+#app-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  overflow-y: scroll;
+}
+
+
+#active-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+#scrum-board {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-columns: 320px;
+  grid-auto-flow: column;
+  gap: 8px;
+  padding: 16px;
+  scroll-snap-type: mandatory;
+
+}
+
+.scrum-board-lane {
+  display: grid;
+  grid-template-rows: 48px repeat(auto-fit, minmax(48px, max-content));
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  gap: 16px;
+  /* padding: 16px; */
+  color: #E5E5E5;
+}
+
+.lane-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: #374049;
+  border-radius: 4px 4px 0 0;
+
+}
+
+.lane-header-count {
+  font-size: 14px;
+  color: #787D8C;
+}
+
+.lane-assignee {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  background: #374049;
+  border-radius: 4px;
+  overflow: hidden;
+
+}
+
+.assignee-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 16px 8px;
+  background: #374049;
+  transition: 0.25s ease;
+}
+
+.assignee-header:active {
+  filter: brightness(150%);
+}
+
+.assignee-header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.assignee-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  background: #1E8062;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 32px;
+  height: 32px;
+}
+
+.assignee-name {}
+
+.assignee-header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+
+}
+
+
+.assignee-story-count {
+  font-size: 14px;
+  color: #787D8C;
+
+}
+
+.assignee-story-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.assignee-stories {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+  background: #202328;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.assignee-footer-create-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 16px 8px;
+  background: #374049;
+  font-size: 18px;
+}
+
+#app-controls {}
+
+.controls {}
+
+#project-list-template {}
+
+#scrum-board-template {}

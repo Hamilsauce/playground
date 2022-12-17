@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>new pipe</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="app-body">
+      <svg id="canvas" class="canvas" width="384" height="722" viewbox="0 0 384 722" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+            <path id="smallGridPath" d="M 8 0 H 0 V 8" fill="none" stroke="lightgrey" stroke-width="0.5" />
+          </pattern>
+          <pattern id="largeGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+            <rect class="draggabl" id="largeGridRect" width="80" height="80" fill="url(#smallGrid)" />
+            <path class="draggabl" id="largeGridPath" d="M 80 0 H 0 V 80" fill="none" stroke="lightgrey" stroke-width="2" />
+          </pattern>
+          <pattern id="rulerMarkers" width="40" height="40" patternUnits="userSpaceOnUse">
+            <rect class="draggabl" id="largeGridRect" width="32" height="32" fill="white" />
+            <path class="draggabl" id="largeGridPath" d="M 40 0 H 0 V 40" fill="none" stroke="lightgrey" stroke-width="2" />
+          </pattern>
+          <linearGradient id="handleGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="50%" stop-color="#FFFDF390" />
+            <stop offset="51%" stop-color="#18181890" />
+          </linearGradient>
+        </defs>
+        <svg id="draw-surface" class="draw-surface" width="384" height="722" viewbox="0 0 384 722" xmlns="http://www.w3.org/2000/svg">
+          <g id="surface" class="draggable" transform="translate(32, 32) scale(1)" x="0" y="0" width="2961" height="21001">
+            <rect class="draggabl" id="grid" x="0" y="0" width="352" height="690" fill="url(#largeGrid)" />
+            <path d="M 50 50 M 200 200 z" fill="black" stroke-width="2" stroke="black" />
+          </g>
+        </svg>
+        <g id="rulers" class="draggable" x="0" y="0">
+          <rect class="draggabl" id="ruler-top" transform="translate(32, 0)" x="0" y="0" width="384" height="32" fill="url(#rulerMarkers)" stroke="black" />
+          <rect class="draggabl" id="ruler-left" transform="translate(0, 32)" x="0" y="0" width="32" height="690" fill="url(#rulerMarkers)" stroke="black" />
+        </g>
+
+        <path d="M 50 50 200 200" fill="black" stroke-width="2" stroke="black" />
+
+        <path d="M 10 10
+            90 90 V 90 H 10 L 10 10 " stroke-width="2" stroke="black" fill="none" />
+        <!-- <g id="boardGroup" class="draggable" transform="translate(0, 0)" x="0" y="0">
+          <rect id="boardBackground" class="draggabl" id="" x="0" y="0" width="384" height="400" fill="#fff" />
+          <g id="leftPaddleGroup" class="draggable" transform="translate(0, 0)" x="0" y="0" width="25" height="50">
+            <rect class="draggabl" id="leftPaddle" class="paddle" x="25" y="0" width="25" height="50" fill="#434343" />
+          </g>
+          <g id="rightPaddleGroup" class="draggable" transform="translate(0, 0)" x="0" y="0" width="25" height="50">
+            <rect class="draggabl" id="rightPaddle" class="paddle" y="0" x="335" width="25" height="50" fill="#434343" />
+          </g>
+        </g> -->
+      </svg>
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+  </script>
+  <script src="./script.js" type="module"></script>
+  <script src="./recorder.js" type="module"></script>
+  <script src="./viewBoxPan.js" type="module"></script>
+  <!-- <script src="./app.js" type="module"></script> -->
+</body>
+
+</html>

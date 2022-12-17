@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>app</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
+  <link rel="stylesheet" href="./flex-scale-viewBox.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <header id="app-header">
+      <div id="app-header-left">L</div>
+      <div id="app-header-center">
+        <h1>Title</h1>
+      </div>
+      <div id="app-header-right">R</div>
+    </header>
+
+    <section id="app-body">
+      <div class="container">
+        <form id="preserve-options">
+          <!--3-->
+          <label><code>preserveAspectRatio</code>
+            mode
+            <select id="preserve">
+              <option value="none">none</option>
+              <option value="meet" selected>meet</option>
+              <!--4-->
+              <option value="slice">slice</option>
+            </select>
+          </label>
+          <label><i>x</i>-alignment
+            <select id="x-align">
+              <!--5-->
+              <option value="xMin">min</option>
+              <option value="xMid" selected>mid</option>
+              <option value="xMax">max</option>
+            </select>
+          </label>
+          <label><i>y</i>-alignment
+            <select id="y-align">
+              <option value="YMin">min</option>
+              <option value="YMid" selected>mid</option>
+              <option value="YMax">max</option>
+            </select>
+          </label>
+        </form>
+      </div>
+      <div class="wrapper">
+        <svg id="preserve-svg" viewBox="0,0 20,20">
+          <title>Spade</title>
+          <path d="M9,15C9,20 0,21 0,16S6,9 10,0C14,9 20,11 20,16
+                             S11,20 11,15Q11,20 13,20H7Q9,20 9,15Z" />
+        </svg>
+      </div>
+    </section>
+
+    <footer id="app-footer">
+      <div class="container">
+      </div>
+    </footer>
+  </div>
+  <script src="./flex-scale-preserve-options.js"></script>
+  
+  <!-- <script src="./script.js" type="module"></script> -->
+</body>
+
+</html>
+
+
+<!-- <html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>preserveAspectRatio options</title>
+  <link rel="stylesheet" href="flex-scale-viewBox.css" />
+  1
+  <style></style>
+  <script src="flex-scale-preserve-options.js"></script>
+  2
+</head>
+
+<body>
+  <form id="preserve-options">
+    3
+    <label><code>preserveAspectRatio</code>
+      mode
+      <select id="preserve">
+        <option value="none">none</option>
+        <option value="meet" selected>meet</option>
+        4
+        <option value="slice">slice</option>
+      </select>
+    </label>
+    <label><i>x</i>-alignment
+      <select id="x-align">
+        5
+        <option value="xMin">min</option>
+        <option value="xMid" selected>mid</option>
+        <option value="xMax">max</option>
+      </select>
+    </label>
+    <label><i>y</i>-alignment
+      <select id="y-align">
+        <option value="YMin">min</option>
+        <option value="YMid" selected>mid</option>
+        <option value="YMax">max</option>
+      </select>
+    </label>
+  </form>
+  <div class="wrapper">
+    <svg id="preserve-svg" viewBox="0,0 20,20">
+      <title>Spade</title>
+      <path d="M9,15C9,20 0,21 0,16S6,9 10,0C14,9 20,11 20,16
+                     S11,20 11,15Q11,20 13,20H7Q9,20 9,15Z" />
+    </svg>
+  </div>
+</body>
+
+</html> -->

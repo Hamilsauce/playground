@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "creator": "svg2geojson v0.7.0",
+  "name": "2",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "properties": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [141.84895, 30.457526],
+          [54.549851, 29.49192],
+          [141.84895, 30.457526]
+        ]
+      }
+    }
+]
+}

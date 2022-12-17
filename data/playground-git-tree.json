@@ -76,7 +76,7 @@
     {
       "path": "IntersectionObserver",
       "mode": "040000",
-      "type": "tree",
+      "type": "_tree",
       "sha": "d933bd1189aa6134ed979f8d71eaa25b42279445",
       "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/d933bd1189aa6134ed979f8d71eaa25b42279445"
     },
@@ -91,7 +91,7 @@
     {
       "path": "SVG_API",
       "mode": "040000",
-      "type": "tree",
+      "type": "_tree",
       "sha": "97807d33fe496ce372eee1b66f8a37acb42a8770",
       "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/97807d33fe496ce372eee1b66f8a37acb42a8770"
     },

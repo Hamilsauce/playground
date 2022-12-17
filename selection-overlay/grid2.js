@@ -71,12 +71,12 @@ export class GridView {
       start: { row: -1, column: -1 },
       end: { row: -1, column: -1 },
     }
-    console.warn('LINE 74 After Filter this.tileRange', this.tileRange)
+    // console.warn('LINE 74 After Filter this.tileRange', this.tileRange)
 
     if (this.tileRange) {
       this.tileRange.forEach((t, i) => {
         // console.log({ t });
-        console.log(' t', t)
+        // console.log(' t', t)
         t.dataset.selected = false
         t.classList.remove('selected')
         // this.removeSelectionBorders(t)
@@ -86,7 +86,7 @@ export class GridView {
         t.classList.remove('right')
       });
     }
-console.log('rangeAddress', rangeAddress)
+    // console.log('rangeAddress', rangeAddress)
     const rangeIndexes = rangeAddress.includes(':') ?
       rangeAddress.split(':').reduce((acc, curr, i) => {
         let key = i === 0 ? 'start' : 'end'
@@ -99,7 +99,7 @@ console.log('rangeAddress', rangeAddress)
         start: { row: +rangeAddress.split(',')[1], column: +rangeAddress.split(',')[0] },
         end: { row: +rangeAddress.split(',')[1], column: +rangeAddress.split(',')[0] },
       }
-console.log('rangeIndexes', rangeIndexes)
+    // console.log('rangeIndexes', rangeIndexes)
     const { start, end } = rangeIndexes
 
     this.tileRange = [...this.tiles.entries()]
@@ -461,4 +461,4 @@ drawActions$.arm
 //   console.warn('[drawSubscription]', { start: startTile.dataset.address, end: endTile.dataset.address })
 // });
 
-console.log('FUK');
+// console.log('FUK');

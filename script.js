@@ -5,10 +5,18 @@ const API_URL = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/58
 const JSON_URL = './data/playground-git-tree.json';
 const BASEPATH = `https://hamilsauce.github.io/playground`
 
+const blacklist = new Set([
+  'rx-datastore',  
+  'components',  
+  'lib',  
+  'SVG_API',  
+])
+
+
 const getGitTree = async (url) => {
   const response = await (await fetch(url)).json();
   console.log('response', response)
-  return response.tree.filter((_) => _.type === 'tree' && !_.path.includes('/'))
+  return response.tree.filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
 };
 
 const createFolderLink = (folder) => {

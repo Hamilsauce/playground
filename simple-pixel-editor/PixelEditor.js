@@ -18,6 +18,7 @@ export class PixelEditor extends EventEmitter {
   #self;
   #fillColor;
   #drawMode = DRAW_MODE.point;
+  #isDrawing = false;
 
 
   constructor(svg, { width, height, scale, fillColor }) {
@@ -141,4 +142,7 @@ export class PixelEditor extends EventEmitter {
   get canvas() { return this.#self }
 
   get drawMode() { return this.#drawMode }
+  get isDrawing() { return this.#isDrawing }
+
+  set isDrawing(v) { this.#isDrawing = v }
 }

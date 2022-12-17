@@ -1,12 +1,13 @@
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 const { template, utils } = ham;
 
-const url = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/5861ace89a194d1e48da2b342220a6388a0559dc?recursive=true'
+const API_URL = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/5861ace89a194d1e48da2b342220a6388a0559dc?recursive=true'
+const JSON_URL = './data/playground-git-tree.json';
 const BASEPATH = `https://hamilsauce.github.io/playground`
 
 const getGitTree = async (url) => {
   const response = await (await fetch(url)).json();
-
+  console.log('response', response)
   return response.tree.filter((_) => _.type === 'tree' && !_.path.includes('/'))
 };
 
@@ -35,7 +36,7 @@ const createFolderList = (folders) => {
 
 
 const appBody = document.querySelector('#app-body')
-const folderList = createFolderList(await getGitTree(url))
+const folderList = createFolderList(await getGitTree(JSON_URL))
 
 appBody.append(folderList);
 

@@ -17,22 +17,22 @@ export class PixelEditor extends EventEmitter {
   #scale;
   #self;
   #pixelColor;
-  #fillColor = '#FFFFFF'
+  #fillColor = '#FFFFFF';
   #drawMode = DRAW_MODE.point;
   #isDrawing = false;
 
 
-  constructor(svg, { width, height, scale, pixelColor }) {
+  constructor(svg, { width, height, scale, pixelColor, fillColor }) {
     super();
 
     this.#self = svg;
-    this.#self.classList.add('pixel-editor')
+    this.#self.classList.add('pixel-editor');
     this.#width = width;
     this.#height = height;
     this.#scale = scale;
-    this.#pixelColor = pixelColor || '#000000'
-    this.#fillColor = '#FFFFFF';
-    this.render()
+    this.#pixelColor = pixelColor || '#000000';
+    this.#fillColor = fillColor || '#FFFFFF';
+    this.render();
     // for (let x = 0; x < width; x++) {
     //   for (let y = 0; y < height; y++) {
     //     const color = ((x % 10 === 0 && x != 0) && (y % 10 === 0 && y != 0)) ? '#DADADA' : '#FFFFFF';
@@ -52,12 +52,14 @@ export class PixelEditor extends EventEmitter {
   render() {
     for (let x = 0; x < this.#width; x++) {
       for (let y = 0; y < this.#height; y++) {
-        const color = ((x % 10 === 0 && x != 0) && (y % 10 === 0 && y != 0)) ? '#DADADA' : '#FFFFFF';
+        // const color = ((x % 10 === 0 && x != 0) && (y % 10 === 0 && y != 0)) ? '#DADADA' : '#FFFFFF';
 
-        this.createPixel({ x, y, color });
+        this.createPixel({ x, y, color: this.#pixelColor });
       }
     }
-    this.pixelLayer.setAttribute('fill', '#FFFFFF')
+
+    this.pixelLayer.setAttribute('fill', '#FFFFFF');
+
     this.pixelLayer.append(...this.#pixels.keys());
 
     return this.#self;
@@ -108,10 +110,7 @@ export class PixelEditor extends EventEmitter {
   setPixelSize(size) {
     this.#scale = size;
 
-    this.pixelLayer.setAttribute('transform', `translate(-${this.#scale},-${this.#scale}) scale(${this.#scale})`)
-    // this.#pixels.forEach((px, i) => {
-    //   px.setScale(size)
-    // });
+    this.pixelLayer.setAttribute('transform', `translate(-${this.#scale},-${this.#scale}) scale(${this.#scale})`);
   }
 
   getPixelTarget(el) { return this.#pixels.get(el.closest('.pixel')) }
@@ -136,14 +135,12 @@ export class PixelEditor extends EventEmitter {
 
   fillPixel(pixel) {
     if (!pixel) return;
-    pixel.fill(this.#pixelColor)
+    
+    pixel.fill(this.#pixelColor);
   }
 
   clear() {
     this.each(px => px.clear())
-    // this.#pixels.forEach((px) => {
-    //   px.clear()
-    // })
   }
 
   each(fn) {

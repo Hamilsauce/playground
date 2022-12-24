@@ -51,7 +51,7 @@ const insertMarker = (el, point) => {
   el.style.left = `${point.x - (GlobalState.markerSize/2)}px`
   el.style.top = `${point.y - (GlobalState.markerSize/2)}px`
   ui.surfaceMarkers.append(el);
-  
+
 };
 
 const moveMarker = (el, point) => {
@@ -95,8 +95,8 @@ const getEventPoint = ({ offsetX, offsetY }, element) => {
 
 const getDelta = (pointA, pointB) => {};
 
-    // Find this eent in the cache and update its record with this eent
-const  pointerMarkers= new Map()
+// Find this eent in the cache and update its record with this eent
+const pointerMarkers = new Map()
 
 const handlePointerDown = (e) => {
   if (e.target === ui.surface) {
@@ -174,7 +174,7 @@ const handlePointerMove = (e) => {
           ui.surfaceBG.textContent = 'IN';
         }
 
-         if (isZoomingOut) {
+        if (isZoomingOut) {
           if (pointerMarkers.size > 0) {
             pointerMarkers.forEach((m, i) => {
               let width = +getComputedStyle(m).width.replace('px', '');
@@ -189,6 +189,25 @@ const handlePointerMove = (e) => {
           ui.surfaceBG.textContent = 'OUT';
         }
       }
+
+
+      pointerMarkers.forEach((m, i) => {
+        const id = [...pointerMarkers.keys()][i] 
+        console.log('pointerMarkers', [...pointerMarkers.keys()]) 
+        const { clientX, clientY } = eventCache.at(id)
+
+        let el = m.querySelector('.marker-text')
+        if (!el) {
+          el = document.createElement('div');
+          el.classList.add('marker-text');
+          m.append(el)
+        }
+        
+        el.textContent = `${Math.round(clientX)}px, ${Math.round(clientY)}px`;
+
+      });
+
+
 
       GlobalState.previousPointDifference = curDiffXY;
     }

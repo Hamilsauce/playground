@@ -4,7 +4,7 @@ import { SUITS } from './data/constants.js';
 import { TableView } from './view/table.view.js';
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 // import { EventEmitter } from 'https://hamilsauce.github.io/event-emitter.js';
-
+import {CardView} from './view/card.view.js';
 
 const { template, download, utils, timer } = ham;
 

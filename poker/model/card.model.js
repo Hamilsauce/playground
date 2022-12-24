@@ -21,6 +21,7 @@ export class CardModel extends Model {
 
     this.#suit = suit;
     this.#card = card;
+    this.state = this._state.bind(this);
   }
 
   static create(cardValue, suit) {
@@ -52,12 +53,25 @@ export class CardModel extends Model {
     return this.#card.value;
   }
 
+  get type() {
+    return this.#card.type;
+  }
+
   get rank() {
     return this.#card.rank;
   }
 
   get valueType() {
     return this.#card.type;
+  }
+
+  _state() {
+    return {
+      suit: this.#suit,
+      rank: this.rank,
+      value: this.value,
+      type: this.type,
+    }
   }
 
   toJSON() {

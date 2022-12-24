@@ -35,10 +35,10 @@ export class View extends EventEmitter {
   }
 
   get actorScreenCoordinates() {
-    return {
-      x: this.actor.getBoundingClientRect().x + 0,
-      y: this.actor.getBoundingClientRect().y + 0
-    }
+    return new DOMPoint(
+      this.actor.getBoundingClientRect().x,
+      this.actor.getBoundingClientRect().y 
+    )
   }
 
   get actorGridCoordinates() {
@@ -82,11 +82,10 @@ export class View extends EventEmitter {
   }
 
   tileAtPoint(x, y) {
-    return this.grid.tileAtPoint(x,y)
+    return this.grid.tileAtPoint(x, y)
     const targ = document.elementFromPoint(x, y)
     const curr = targ ? targ.closest('.tile') : null
     const subtile = targ ? targ.closest('.subtile') : null
-
     return [curr, subtile];
   }
 
@@ -153,9 +152,9 @@ export class View extends EventEmitter {
     return;
 
     this.grid.innerHTML = '';
-    
+
     this.grid.style.gridTemplateRows = `repeat(${height}, 1fr)`
-    
+
     this.grid.style.gridTemplateColumns = `repeat(${width}, 1fr)`
 
     for (let row = 0; row < height; row++) {

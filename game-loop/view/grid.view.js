@@ -73,7 +73,6 @@ export class GridView extends EventEmitter {
     const targ = document.elementFromPoint(x, y)
     const curr = targ ? targ.closest('.tile') : null
     const subtile = targ ? targ.closest('.subtile') : null
-console.log('subtile', subtile)
     return [curr, subtile];
   }
 
@@ -115,7 +114,6 @@ console.log('subtile', subtile)
   }
 
   createTile(row, column, options) {
-    console.warn('options', options)
     const t = DOM.createElement({
       templateName: 'tile',
       elementProperties: {

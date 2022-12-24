@@ -3,7 +3,7 @@ import { frameRate } from './lib/frame-rate.js';
 import { mainLoop } from './lib/main-loop.js';
 import { store } from './store.js';
 import { View } from './view.js';
-console.warn('store 4,6', store.grid.tile(4, 4))
+// console.warn('store 4,6', store.grid.tile(4, 4))
 
 
 const { template, utils, DOM } = ham;
@@ -40,10 +40,10 @@ const detectOverlap = (a, b) => {
   // console.log('pt', pt)
   // console.log('bba', bba)
 
-  console.log('bba.right <= bbb.right', bba.right <= bbb.right)
-  return bba.top > bbb.top &&
+  // console.log('bba.right <= bbb.right', bba.right <= bbb.right)
+  return bba.top >= bbb.top &&
     bba.bottom <= bbb.bottom &&
-    bba.left > bbb.left &&
+    bba.left >= bbb.left &&
     bba.right <= bbb.right
 };
 
@@ -84,27 +84,30 @@ const updateActor = (delta) => {
     ui.actorScreenCoordinates.x,
     ui.actorScreenCoordinates.y,
   );
-// console.log('curr, subtile', curr, subtile)
+  
+  console.log('ui.actorScreenCoordinates.x,ui.actorScreenCoordinates.y,', ui.actorScreenCoordinates.x,
+ui.actorScreenCoordinates.y,)
+  console.log('curr, subtile', { curr, subtile })
   if (
     curr &&
     curr.dataset &&
     curr.dataset.row
-    // && detectOverlap(ui.actor, curr)
-    // curr.dataset.traversable !== 'false'
+    // && detectOverlap(ui.actor, curr) 
+    && curr.dataset.traversable !== 'false'
   ) {
     ui.actor.dataset.row = curr.dataset.row;
     ui.actor.dataset.column = curr.dataset.column;
     ui.actor.dataset.moving = true;
     // console.log('INSIDE MOVE', {curr}, {actor:ui.actor});
-    console.assert(detectOverlap(ui.actor, curr), detectOverlap(ui.actor, curr))
+    // console.assert(detectOverlap(ui.actor, curr), detectOverlap(ui.actor, curr))
     ui.setOccupiedTile(curr, subtile)
 
-    if (state.target) {
+    if (state.target ) {
       if (+state.target.dataset.column > +ui.actor.dataset.column) {
-        ui.actor.style.left = ((ui.actor.getBoundingClientRect().left + state.actorVelocity) ) + 'px';
+        ui.actor.style.left = ((ui.actor.getBoundingClientRect().left + state.actorVelocity)) + 'px';
       }
 
-      else if (+state.target.dataset.column < +ui.actor.dataset.column) {
+      else if (+state.target.dataset.column < +ui.actor.dataset.column ) {
         ui.actor.style.left = ((ui.actor.getBoundingClientRect().left - state.actorVelocity)) + 'px';
       }
 
@@ -113,7 +116,7 @@ const updateActor = (delta) => {
       }
 
       else if (+state.target.dataset.row < +ui.actor.dataset.row) {
-        ui.actor.style.top = ((ui.actor.getBoundingClientRect().top - state.actorVelocity) - 60) + 'px'
+        ui.actor.style.top = ((ui.actor.getBoundingClientRect().top - state.actorVelocity) - 70) + 'px'
       }
     }
   }

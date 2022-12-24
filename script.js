@@ -6,10 +6,10 @@ const JSON_URL = './data/playground-git-tree.json';
 const BASEPATH = `https://hamilsauce.github.io/playground`
 
 const blacklist = new Set([
-  'rx-datastore',  
-  'components',  
-  'lib',  
-  'SVG_API',  
+  'rx-datastore',
+  'components',
+  'lib',
+  'SVG_API',
 ])
 
 
@@ -55,3 +55,9 @@ folderList.addEventListener('click', e => {
     target.querySelector('a').click();
   }, 300)
 });
+
+const GCFURL = 'https://us-central1-my-lady-8b48f.cloudfunctions.net/getMiladyBalance'
+
+const gcfRes = await (await fetch(GCFURL)).json();
+
+console.warn('gcfRes', gcfRes)

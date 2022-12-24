@@ -1,11 +1,12 @@
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 import { EventEmitter } from 'https://hamilsauce.github.io/hamhelper/event-emitter.js';
 
-const { template } = ham;
+const { template, utils } = ham;
 
 export class View extends EventEmitter {
-  #self;
+  #id;
   #name;
+  self = new DocumentFragment();
 
   constructor(name) {
     super();
@@ -14,18 +15,35 @@ export class View extends EventEmitter {
 
     this.#name = name;
 
-    this.#self = View.#getTemplate(name);
+    this.#id = View.uuid(name);
+    // this.#self = View.getTemplate();
   };
 
-  get dom() { return this.#self };
+  // get self() { return this.#self };
+
+  get dataset() { return this.self.dataset };
 
   get name() { return this.#name };
 
-  static #getTemplate(name) {
+  get id() { return this.#id };
+
+  static getTemplate(str) {
+    return new DOMParser().parseFromString(str,'text/html').documentElement
+  }
+
+  static #getTemplate2(name) {
     return template(name);
   }
-  
+
+  static uuid(name) {
+    return `${(name||'o').toLowerCase()}${utils.uuid()}`
+  }
+
+  render() {}
+
+  template() {}
+
   append(...els) {
-    this.#self.append(...els)
+    this.self.append(...els)
   }
 };

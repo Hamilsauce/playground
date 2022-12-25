@@ -83,40 +83,45 @@ export class MapSection extends View {
     this.scale = scale;
 
     if (this.#sectionName.includes('row')) {
+      this.self.innerHTML = '';
       const diff = height - this.height;
 
-      if (diff > 0) {
-        const tiles = new Array(diff).fill(null).map((_, i) => this.createTile(i));
+      const tiles = new Array(height).fill(null).map((_, i) => this.createTile(i));
+      // if (diff > 0) {
 
+      //   this.self.append(...tiles);
+      // }
+
+      // else if (diff < 0) {
+      //   for (let i = 0; i < Math.abs(diff); i++) {
+      //     this.self.lastElementChild.remove()
+      //   }
+      // }
         this.self.append(...tiles);
-      }
-
-      else if (diff < 0) {
-        for (let i = 0; i < Math.abs(diff); i++) {
-          this.self.lastElementChild.remove()
-        }
-      }
       this.height = height;
-      
+
       this.self.style.gridTemplateRows = `repeat(${height}, ${scale}px)`;
     }
 
     else if (this.#sectionName.includes('column')) {
+      this.self.innerHTML = '';
       const diff = width - this.width;
 
-      if (diff > 0) {
-        const tiles = new Array(diff).fill(null).map((_, i) => this.createTile(i));
+      const tiles = new Array(width).fill(null).map((_, i) => this.createTile(i));
+      // if (diff > 0) {
+      //   const tiles = new Array(diff).fill(null).map((_, i) => this.createTile(i));
+
+      //   this.self.append(...tiles);
+      // }
+
+      // else if (diff < 0) {
+      //   for (let i = 0; i < Math.abs(diff); i++) {
+      //     this.self.lastElementChild.remove()
+      //   }
+
+      // }
 
         this.self.append(...tiles);
-      }
-
-      else if (diff < 0) {
-        for (let i = 0; i < Math.abs(diff); i++) {
-          this.self.lastElementChild.remove()
-        }
-
-      }
-      
       this.width = width;
 
       this.self.style.gridTemplateColumns = `repeat(${width}, ${scale}px)`;
@@ -124,7 +129,7 @@ export class MapSection extends View {
 
     else if (this.#sectionName.includes('body')) {
       this.self.innerHTML = '';
-      
+
       const tiles = [];
 
       for (let row = 0; row < height; row++) {

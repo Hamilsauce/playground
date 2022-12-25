@@ -21,14 +21,17 @@ let end;
 let line;
 
 
-const pixelEditor = new PixelEditor(document.querySelector('#svg-canvas'), {
-  width: 100,
-  height: 200,
-  scale: 1,
-})
+const pixelEditor = new PixelEditor(
+  document.querySelector('#svg-canvas'), {
+    width: 50,
+    height: 100,
+    scale: 1,
+    pixelColor: '#000000'
+  })
 
 pixelEditor.pixelLayer.addEventListener('pointerdown', e => {
   pixelEditor.isDrawing = true;
+  
   if (pixelEditor.drawMode === DRAW_MODE.point) {
     const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
     pixelEditor.fillPixel(pixel)
@@ -36,8 +39,6 @@ pixelEditor.pixelLayer.addEventListener('pointerdown', e => {
 
   else if (pixelEditor.drawMode === DRAW_MODE.line) {
     const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
-    // console.log('pixel', pixel)
-    let curr
 
     if (!start && pixel) {
       start = pixel
@@ -46,13 +47,12 @@ pixelEditor.pixelLayer.addEventListener('pointerdown', e => {
     else if (pixel) end = { x: pixel.x, y: pixel.y }
 
     line = pixelEditor.line(start, end);
-
-
   }
 });
 
 pixelEditor.pixelLayer.addEventListener('pointermove', e => {
   if (!pixelEditor.isDrawing) return;
+  
   if (pixelEditor.drawMode === DRAW_MODE.point) {
     const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
     pixelEditor.fillPixel(pixel)
@@ -60,8 +60,6 @@ pixelEditor.pixelLayer.addEventListener('pointermove', e => {
 
   else if (pixelEditor.drawMode === DRAW_MODE.line) {
     const pixel = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
-    // console.log('pixel', pixel)
-    let curr
 
     if (!start && pixel) {
       start = pixel
@@ -70,14 +68,11 @@ pixelEditor.pixelLayer.addEventListener('pointermove', e => {
     else if (pixel) end = { x: pixel.x, y: pixel.y }
 
     line = pixelEditor.line(start, end);
-
-
   }
 });
 
 
 pixelEditor.pixelLayer.addEventListener('pointerup', e => {
-
   if (pixelEditor.drawMode === DRAW_MODE.line) {
     end = pixelEditor.getPixelAtPoint(e.clientX, e.clientY)
 

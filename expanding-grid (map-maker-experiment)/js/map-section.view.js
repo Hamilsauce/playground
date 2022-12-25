@@ -35,7 +35,6 @@ export class MapSection extends View {
     super('map-section', options);
 
     this.#sectionName = sectionName;
-
     this.dimensions$ = dimensions$;
 
     this.dimensions$
@@ -87,17 +86,8 @@ export class MapSection extends View {
       const diff = height - this.height;
 
       const tiles = new Array(height).fill(null).map((_, i) => this.createTile(i));
-      // if (diff > 0) {
+      this.self.append(...tiles);
 
-      //   this.self.append(...tiles);
-      // }
-
-      // else if (diff < 0) {
-      //   for (let i = 0; i < Math.abs(diff); i++) {
-      //     this.self.lastElementChild.remove()
-      //   }
-      // }
-        this.self.append(...tiles);
       this.height = height;
 
       this.self.style.gridTemplateRows = `repeat(${height}, ${scale}px)`;
@@ -108,20 +98,7 @@ export class MapSection extends View {
       const diff = width - this.width;
 
       const tiles = new Array(width).fill(null).map((_, i) => this.createTile(i));
-      // if (diff > 0) {
-      //   const tiles = new Array(diff).fill(null).map((_, i) => this.createTile(i));
-
-      //   this.self.append(...tiles);
-      // }
-
-      // else if (diff < 0) {
-      //   for (let i = 0; i < Math.abs(diff); i++) {
-      //     this.self.lastElementChild.remove()
-      //   }
-
-      // }
-
-        this.self.append(...tiles);
+      this.self.append(...tiles);
       this.width = width;
 
       this.self.style.gridTemplateColumns = `repeat(${width}, ${scale}px)`;

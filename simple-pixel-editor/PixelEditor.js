@@ -30,19 +30,12 @@ export class PixelEditor extends EventEmitter {
     this.#width = width;
     this.#height = height;
     this.#scale = scale;
-    this.#pixelColor = pixelColor || '#000000';
+    this.#pixelColor = pixelColor || '#FFFFFF';
     this.#fillColor = fillColor || '#FFFFFF';
+    
     this.render();
-    // for (let x = 0; x < width; x++) {
-    //   for (let y = 0; y < height; y++) {
-    //     const color = ((x % 10 === 0 && x != 0) && (y % 10 === 0 && y != 0)) ? '#DADADA' : '#FFFFFF';
-    //     const p = new Pixel({ x, y, scale, color });
 
-    //     this.#pixels.set(p.render(), p)
-    //   }
-    // }
-    // this.pixelLayer.append(...this.#pixels.keys());
-    // console.log('this.viewbox', this.viewbox)
+    this.clear();
   }
 
   setDrawMode(mode = DRAW_MODE.point) {
@@ -52,8 +45,6 @@ export class PixelEditor extends EventEmitter {
   render() {
     for (let x = 0; x < this.#width; x++) {
       for (let y = 0; y < this.#height; y++) {
-        // const color = ((x % 10 === 0 && x != 0) && (y % 10 === 0 && y != 0)) ? '#DADADA' : '#FFFFFF';
-
         this.createPixel({ x, y, color: this.#pixelColor });
       }
     }
@@ -65,7 +56,6 @@ export class PixelEditor extends EventEmitter {
     return this.#self;
   }
 
-
   createPixel(options) {
     const p = new Pixel(options);
 
@@ -75,7 +65,7 @@ export class PixelEditor extends EventEmitter {
   }
 
   line(p0, p1) {
-    let points = [];
+    const points = [];
     let N = this.diagonal_distance(p0, p1);
     for (let step = 0; step <= N; step++) {
       let t = N === 0 ? 0.0 : step / N;
@@ -135,7 +125,7 @@ export class PixelEditor extends EventEmitter {
 
   fillPixel(pixel) {
     if (!pixel) return;
-    
+
     pixel.fill(this.#pixelColor);
   }
 

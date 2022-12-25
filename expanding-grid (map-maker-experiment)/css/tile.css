@@ -1,7 +1,10 @@
 
 .tile {
-  background: #FFFFFF;
-  border: 0.25px solid #37373750;
+  width: 100%;
+  height: 100%;
+  
+  /* background: #FFFFFF; */
+  border: 0.25px solid #91919187;
   /* transition: 0.075s ease; */
 }
 

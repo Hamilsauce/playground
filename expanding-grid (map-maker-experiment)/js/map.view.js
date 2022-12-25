@@ -4,6 +4,9 @@ import { View } from './view.js';
 import { MapSection } from './map-section.view.js';
 const { template, DOM } = ham;
 
+const { forkJoin, Observable, iif, BehaviorSubject, AsyncSubject, Subject, interval, of , fromEvent, merge, empty, delay, from } = rxjs;
+const { flatMap, reduce, groupBy, toArray, mergeMap, switchMap, scan, map, tap, filter } = rxjs.operators;
+const { fromFetch } = rxjs.fetch;
 
 /*
 
@@ -11,12 +14,16 @@ REQS:
 
 Init
  - Instantiate Sections: Corner, Headers, Body
+
  - Set initial dims: 
     Corner gets unit w and h
     row header gets unit height and map height
     col header gets unit width and map width
     body gets all
     
+Properties
+  dimensions$
+
 
 */
 
@@ -74,20 +81,25 @@ const MapSectionOptions = [
 
 export class MapView extends View {
   #self;
-  #name;
+  #dimensions$;
   #sections = new Map();
 
-  constructor() {
+  constructor(dimensions$) {
     super('map', MapViewOptions);
-
+    this.#dimensions$ = dimensions$;
     this.init(MapSectionOptions);
+
+    // this.#dimensions$.pipe(
+    //   map(x => x),
+    //   tap(x => console.log('TAP', x))
+    // );
   }
 
   init(sectionOptions = []) {
     sectionOptions.forEach((opts, i) => {
       this.#sections.set(
         opts.elementProperties.dataset.mapSection,
-        new MapSection(opts.elementProperties.id, opts)
+        new MapSection(opts.elementProperties.dataset.mapSection, this.#dimensions$, opts)
       );
     });
 

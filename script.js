@@ -1,7 +1,7 @@
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
-const { template, utils } = ham;
+const { template, utils, download } = ham;
 
-const API_URL = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/5861ace89a194d1e48da2b342220a6388a0559dc?recursive=true'
+const API_URL = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/master?recursive=true'
 const JSON_URL = './data/playground-git-tree.json';
 const BASEPATH = `https://hamilsauce.github.io/playground`
 
@@ -15,9 +15,11 @@ const blacklist = new Set([
 
 const getGitTree = async (url) => {
   const response = await (await fetch(url)).json();
-  console.log('response', response)
-  return response.tree.filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
+  // console.log('response', response)
+  return (response.tree ? response.tree : response).filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
 };
+
+// download('playground-git-tree.json', JSON.stringify(await getGitTree(API_URL), null, 2))
 
 const createFolderLink = (folder) => {
   const dom = template('folder');
@@ -44,8 +46,8 @@ const createFolderList = (folders) => {
 
 
 const appBody = document.querySelector('#app-body')
-const folderList = createFolderList(await getGitTree(API_URL))
-console.log('folderList', folderList)
+const folderList = createFolderList(await getGitTree(JSON_URL))
+
 appBody.append(folderList);
 
 folderList.addEventListener('click', e => {
@@ -53,11 +55,5 @@ folderList.addEventListener('click', e => {
 
   setTimeout(() => {
     target.querySelector('a').click();
-  }, 300)
+  }, 0)
 });
-
-const GCFURL = 'https://us-central1-my-lady-8b48f.cloudfunctions.net/getMiladyBalance'
-
-const gcfRes = await (await fetch(GCFURL)).json();
-
-console.warn('gcfRes', gcfRes)

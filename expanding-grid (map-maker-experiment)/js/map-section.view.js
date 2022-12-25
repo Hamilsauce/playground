@@ -73,7 +73,7 @@ export class MapSection extends View {
 
     t.classList.add('tile');
     t.dataset.id = id;
-    t.id = id8
+    t.id = id;
     t.textContent = this.#sectionName.includes('body') ? '' : id;
 
     return t;

@@ -44,8 +44,8 @@ const createFolderList = (folders) => {
 
 
 const appBody = document.querySelector('#app-body')
-const folderList = createFolderList(await getGitTree(JSON_URL))
-
+const folderList = createFolderList(await getGitTree(API_URL))
+console.log('folderList', folderList)
 appBody.append(folderList);
 
 folderList.addEventListener('click', e => {

@@ -2,6 +2,10 @@ const app = document.querySelector('#app');
 const appBody = document.querySelector('#app-body')
 const containers = document.querySelectorAll('.container')
 
+const getSlots = () => {
+  return [...document.querySelectorAll('.slot')]
+}
+
 const geom = {
   domPoint(element, x, y) {
     return new DOMPoint(x, y).matrixTransform(
@@ -73,6 +77,7 @@ export class Graph {
 
   moveVertex(evt) {
     const v = this.activeVertex;
+
     if (!v) return;
 
     let point = geom.domPoint(this.activeVertex, evt.pageX, evt.pageY)
@@ -100,6 +105,8 @@ export class Graph {
         e.y2.baseVal.value = point.y - this.activeVertex.r.baseVal.value
       }
     }
+
+   
   }
 
   handlePointerDown(e) {
@@ -158,7 +165,8 @@ const graph = {
     const v = this.activeVertex;
     if (!v) return;
 
-    let point = geom.domPoint(this.activeVertex, evt.pageX, evt.pageY)
+    // let point = geom.domPoint(this.activeVertex, evt.pageX, evt.pageY)
+    let point = geom.domPoint(graph.self, evt.pageX, evt.pageY)
 
     let epoint = {
       x: point.x + 5.6,
@@ -180,13 +188,34 @@ const graph = {
 
       else {
         e.x2.baseVal.value = point.x - (this.activeVertex.r.baseVal.value)
-        e.y2.baseVal.value = point.y  +(this.activeVertex.r.baseVal.value)
+        e.y2.baseVal.value = point.y + (this.activeVertex.r.baseVal.value)
       }
     }
+  
+     const slots = getSlots();
+    // console.log('slots', slots)
+     slots.forEach((slot, i) => {
+       const r = this.activeVertex.r.baseVal.value
+    let slotP = geom.domPoint(graph.self, slot.cx.baseVal.value, slot.cy.baseVal.value)
+      console.log('slot.cx.baseVal.value, slot.cy.baseVal.value', slot.cx.baseVal.value, slot.cy.baseVal.value)
+      console.log('slotP', slotP)
+      console.log('point', point)
+       const slotbb = slot.getBoundingClientRect();
+       const activebb = slot.getBoundingClientRect();
+      // const isInside =
+       const isInside =
+         activebb.top >= slotbb.top &&
+         activebb.bottom <= slotbb.bottom &&
+         activebb.left >= slotbb.left &&
+         activebb.right <= slotbb.right
+    
+       console.log({i, isInside });
+     });
   }
+  
 }
 
-graph.self.addEventListener('pointerdown', handlePointerDown)
+graph.self.addEventListener('pointerdown', handlePointerDown);
 
 
 // graph.vertices.forEach((v, i) => {

@@ -15,7 +15,7 @@ export class CardView extends View {
     this.#value = value;
 
     const template = View.getTemplate(this.#template());
-    this.self = template;
+    this.self = template.querySelector('.card')
     console.log('template', template)
   }
 
@@ -31,6 +31,11 @@ export class CardView extends View {
 
   get value() { return this.#value };
 
+  get displayValue() {
+    console.log('this.type', this.type)
+    return this.type == 'face' || this.#value == 'ace' ? this.#value.slice(0, 1).toUpperCase() : this.#value;
+  };
+
   render() {
     return this.self;
   }
@@ -40,15 +45,21 @@ export class CardView extends View {
     return `
       <div id="${this.id}" class="${this.name}" data-suit="${this.suitName}" data-value="${this.value}">
         <div class="card-column left">
-          <div class="card-left-top corner">${this.suitSymbol}</div>
-          <div class="card-left-bottom corner">${this.value}</div>
+          <div class="card-left-top corner">
+            <div class="corner-value">${this.displayValue}</div>
+            <div class="corner-symbol">${ this.suitSymbol }</div>
+          </div>
+          <div class="card-left-bottom corner"></div>
         </div>
         <div class="card-column center">
           <div class="card-center-content">${this.createContent()}</div>
         </div>
         <div class="card-column right">
-          <div class="card-right-top corner">${this.value}</div>
-          <div class="card-right-bottom corner">${this.suitSymbol}</div>
+          <div class="card-right-top corner"></div>
+          <div class="card-right-bottom corner">
+            <div class="corner-value">${this.displayValue}</div>
+            <div class="corner-symbol">${this.suitSymbol}</div>
+          </div>
         </div>
       </div>
     `;

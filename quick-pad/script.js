@@ -13,11 +13,8 @@ const app = document.querySelector('#app');
 
 
 
-
-
 app.addEventListener('click', e => {
   console.warn('clicl');
-
 });
 
 toolbar.addEventListener('pointerdown', e => {

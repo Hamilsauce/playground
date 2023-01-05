@@ -15,7 +15,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
 }
 
 .gradient {
@@ -65,16 +64,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 0px;
-  /* 
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  gap: 0px; */
   width: 100%;
   height: 100%;
   overflow: hidden;
   padding: 32px;
-  /* color: #EFEFEF; */
 }
 
 #app-header {
@@ -98,10 +91,6 @@ body {
 }
 
 #controls {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -114,34 +103,16 @@ body {
 }
 
 #table {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(13, 1fr);
   gap: 8px;
-  /* background: #00FF3026; */
   pointer-events: none;
-  /* overflow: scroll; */
   width: 100%;
   height: 100%;
   z-index: 50;
   background: #DEDEDE;
 }
-
-/* #table-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #00FF3026;
-  pointer-events: none;
-  overflow: scroll;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-  z-index: 50;
-} */
 
 .card {
   display: grid;
@@ -149,10 +120,14 @@ body {
   grid-template-columns: 20% 1fr 20%;
   gap: 0px;
   background: #F6F6F6;
-  width: 200px;
+  width: 230px;
   height: 320px;
   border: 2px solid #38393C;
   color: #1C1D20;
+  font-size: 2em;
+  font-weight: 900;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .card-column {
@@ -161,17 +136,22 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  border: 2px solid #1C1D20;
+  padding: 4px;
+  overflow: hidden;
 }
 
 .card .corner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   gap: 0px;
+}
+
+.corner-symbol {
+  font-size: 16px;
 }
 
 .left {}
@@ -180,38 +160,52 @@ body {
 
 .card-left-bottom {}
 
-.center {}
+.card-column.center {
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 32px 0;
+  /* grid-auto-flow: dense; */
+
+  /* background: #B71F6DD4; */
+}
 
 .card-center-content {
   display: grid;
-  /* grid-auto-rows: 1fr; */
-  /* grid-auto-columns: 1fr; */
-  grid-auto-flow: dense;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-columns: repeat(3, minmax(40px, 1fr));
+  justify-self: center;
   justify-content: center;
+  justify-items: center;
+  align-self: center;
+  align-content: center;
   align-items: center;
-  
+  grid-auto-flow: row;
   /* grid */
-  gap: 0px;
-  /* width: 100%; */
-  /* height: 100%; */
-  background: #223672;
+  column-gap: 4px;
+  row-gap: 16px;
+  overflow: hidden;
+  width: min;
+  height: fit-content;
+  /* background: #223672; */
 }
 
 .right {}
 
 .card-right-top {}
 
-.card-right-bottom {}
-
-
+.card-right-bottom {
+  transform: rotate(180deg);
+}
 
 #card-list {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: flex-start; */
-  /* align-items: flex-start; */
-  gap: 16px;
-
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: 1fr;
@@ -223,28 +217,21 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   background: #19191E;
-
 }
+
 
 #drawn-card {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
-  /* align-items: flex-start; */
+  justify-content: center;
+  align-items: center;
   gap: 16px;
-
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: 1fr;
-  gap: 8px;
 
   padding: 16px 8px;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  background: #19191E;
-
 }
 
 .card-json {
@@ -252,13 +239,9 @@ body {
   grid-auto-rows: 1fr;
   grid-auto-flow: dense;
   gap: 4px;
-
-  /* width: fit-content; */
-  /* width: 200px; */
   width: 100%;
   height: 100%;
   padding: 0 16px;
-  /* font-size: 14px; */
   font-size: 22px;
   border: 2px solid #B4B4B4A8;
   border-radius: 8px;
@@ -274,13 +257,8 @@ body {
   justify-content: space-between;
   align-item: center;
   gap: 16px;
-  /* width: 100%; */
-  /* height: fit-content; */
   padding: 0;
-  /* font-size: 14px; */
   line-height: 2;
-  /* background: #2A2A/2F; */
-  /* overflow-x: hidden; */
   height: 100%;
   overflow: hidden;
 }
@@ -288,12 +266,8 @@ body {
 .card-json-line span {
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* width: 50%; */
   overflow: hidden;
-
-  /* height: 100%; */
 }
-
 
 .line-value {
   white-space: pre-line;
@@ -310,18 +284,10 @@ body {
   background: #1300FF6B;
 }
 
-
-
 .selected {
   position: absolute;
   background: #1300FF6B;
 }
-
-/* #controls {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-} */
 
 #move-count {
   font-size: 20px;

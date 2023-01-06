@@ -36,12 +36,12 @@
           </defs>
           
           
-          <g class="background-group" _transform="translate(0)">
+          <g class="background-group" transform="translate(0)">
             <circle id="slot1" class="slot" data-slotted="true" cy="50" cx="200" r="32" />
             <circle id="slot1" class="slot" cy="250" cx="75" r="32" />
           </g>
    
-          <g class="graph-group" _transform="translate(0)">
+          <g class="graph-group" data-group="1" _transform="translate(0)">
             <line marker-end="url(#m)" id="edge1" class="edge" data-vertices="vertex1 vertex2" x1=35 y1="32" x2="120" y2="106" stroke="white" stroke-width="3" />
             <circle id="vertex1" edges="edge1" class="vertex" cy="32" cx="35" r="28" />
             <circle id="vertex2" edges="edge1" class="vertex" cy="106" cx="120" r="28" />
@@ -86,6 +86,10 @@
       </div>
     </footer>
   </div>
+  
+   <script type="text/javascript" charset="utf-8">
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+  </script>
   <script src="./script.js" type="module"></script>
 </body>
 

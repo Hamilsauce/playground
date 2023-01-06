@@ -1,7 +1,13 @@
+import { GraphConfig } from './app.js';
 const app = document.querySelector('#app');
 const appBody = document.querySelector('#app-body')
+const graphGroup1 = document.querySelector('.graph-group')
 const containers = document.querySelectorAll('.container')
 
+const gg1Bbox = graphGroup1.getBoundingClientRect()
+
+
+console.log('gg1Bbox', gg1Bbox)
 const getSlots = () => {
   return [...document.querySelectorAll('.slot')]
 }
@@ -106,7 +112,7 @@ export class Graph {
       }
     }
 
-   
+
   }
 
   handlePointerDown(e) {
@@ -191,32 +197,53 @@ const graph = {
         e.y2.baseVal.value = point.y + (this.activeVertex.r.baseVal.value)
       }
     }
-  
-     const slots = getSlots();
+
+    const slots = getSlots();
     // console.log('slots', slots)
-     slots.forEach((slot, i) => {
-       const r = this.activeVertex.r.baseVal.value
-    let slotP = geom.domPoint(graph.self, slot.cx.baseVal.value, slot.cy.baseVal.value)
+    slots.forEach((slot, i) => {
+      const r = this.activeVertex.r.baseVal.value
+      let slotP = geom.domPoint(graph.self, slot.cx.baseVal.value, slot.cy.baseVal.value)
       console.log('slot.cx.baseVal.value, slot.cy.baseVal.value', slot.cx.baseVal.value, slot.cy.baseVal.value)
       console.log('slotP', slotP)
       console.log('point', point)
-       const slotbb = slot.getBoundingClientRect();
-       const activebb = slot.getBoundingClientRect();
+      const slotbb = slot.getBoundingClientRect();
+      const activebb = slot.getBoundingClientRect();
       // const isInside =
-       const isInside =
-         activebb.top >= slotbb.top &&
-         activebb.bottom <= slotbb.bottom &&
-         activebb.left >= slotbb.left &&
-         activebb.right <= slotbb.right
-    
-       console.log({i, isInside });
-     });
+      const isInside =
+        activebb.top >= slotbb.top &&
+        activebb.bottom <= slotbb.bottom &&
+        activebb.left >= slotbb.left &&
+        activebb.right <= slotbb.right
+
+      console.log({ i, isInside });
+    });
+  },
+  createGroupRect(group, vertexA, vertexB) {
+    const bbox = group.getBoundingClientRect()
+
+    // pt = this.getMarkPoint(pt.x, pt.y)
+    const selectBox = document.createElementNS(SVG_NS, 'rect');
+
+    selectBox.setAttribute('stroke', `lightgrey`);
+    selectBox.setAttribute('stroke-width', `2`);
+    selectBox.setAttribute('fill', `red`);
+    selectBox.setAttribute('width', bbox.width);
+    selectBox.setAttribute('height', bbox.height);
+    selectBox.setAttribute('x', 0) //bbox.x);
+    selectBox.setAttribute('y', 0) //bbox.y);
+    // console.log('bbox.width', bbox.width)
+    // selectBox.style.display = 'none';
+    group.prepend(selectBox)
+
+    return selectBox;
   }
-  
+
+
 }
 
 graph.self.addEventListener('pointerdown', handlePointerDown);
 
+// graph.createGroupRect(graphGroup1)
 
 // graph.vertices.forEach((v, i) => {
 //   v.addEventListener('pointerdown', handlePointerDown)

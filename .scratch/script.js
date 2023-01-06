@@ -23,6 +23,12 @@ const getJenkinsBuild = (index) => {
   return getChildByIndex(jenkinsReportDoc, index)
 }
 
+
+
+
+
+
+
 console.log('getJenkinsBuild\n', )
 const selectedBuild = getJenkinsBuild(5)
 // output.append(sele f  fctedBuild.outerHTML)

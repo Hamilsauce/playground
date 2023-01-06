@@ -4,95 +4,58 @@ const { utils } = ham;
 
 export class MapGraph extends Map {
   #name;
+  #type;
   #edges;
 
-  constructor(name, entries) {
+  constructor(name, type, entries) {
     super();
+    if (entries) {
+      entries.forEach(([value, adjacent], i) => {
 
-    // if (!name) throw new Error('No name passed to constructor for ', this.constructor.name);
-
+        this.addVertex(value, adjacent)
+      });
+    }
     this.#name = name;
+
+    this.#type = type || 'undirected';
+    console.log('this', this)
   }
 
-  set(value, ...adjacents) {
+  get name() { return this.#name };
+
+  get type() { return this.#type };
+
+  set(value, adjacent) {
     if (!this.has(value)) {
-      super.set(value, new Set([...adjacents]));
+    super.set(value, new Set([adjacent]));
     } else {
-      adjacents.forEach((to, i) => {
-        this.get(value).add(to);
-      });
+        this.get(value).add(adjacent);
     }
   }
 
   addEdge(from, to) {
-    if (!this.has(from)) {
-      this.set(from, new Set([to]));
-    } else {
-      this.get(from).add(to);
+    this.set(from, to);
+
+    if (this.type === 'undirected') {
+      this.set(to, from);
     }
   }
 
-  addVertex(value, ...adjacents) {
-    if (!graph.has(value)) {
-      graph.set(value, new Set([...adjacents]));
-    } else {
-      adjacents.forEach((to, i) => {
-        graph.get(from).add(to);
-      });
-    }
+  addVertex(value, adjacent) {
+    this.set(value, adjacent);
+    if (!this.has(value)) {}
   }
-
-  get name() { return this.#name };
 
   static buildGraphMap(edges) {
     let graph = new Map();
 
-    const addEdge = (from, to) => {
-      if (!graph.has(from)) {
-        graph.set(from, new Set([to]));
-      } else {
-        graph.get(from).add(to);
-      }
-    }
-
-    for (let [from, to] of edges.map(r => r.split("-"))) {
-      addEdge(from, to);
-      addEdge(to, from);
-    }
-
-    return graph;
-  }
-
-};
-
-export class Graph extends EventEmitter {
-  #name;
-  #edges;
-
-  constructor(name) {
-    super();
-
-    if (!name) throw new Error('No name passed to constructor for ', this.constructor.name);
-
-    this.#name = name;
-
-  };
-
-
-  get name() { return this.#name };
-
-  static buildGraphMap(edges) {
-    let graph = new Map();
-
-    const addEdge = (from, ...adjacents) => {
-      if (!graph.has(from)) {
-        graph.set(from, new Set([...adjacents]));
-      } else {
-        adjacents.forEach((to, i) => {
-          graph.get(from).add(to);
-        });
-      }
-    }
+    //  const addEdge = (from, to) => {
+    //     if (!graph.has(from)) {
+    //       graph.set(from, new Set([to]));
+    //     } else {
+    //       graph.get(from).add(to);
+    //     }
+    //   }
 
     for (let [from, to] of edges.map(r => r.split("-"))) {
       addEdge(from, to);

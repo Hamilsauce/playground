@@ -1,7 +1,7 @@
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 const { template, utils } = ham;
 console.log('utils.uuid(', 'g' + utils.uuid())
-
+import { MapGraph } from './graph.js';
 export const GraphConfig = {
   id: 'geqxstdc45kqmf1lwfea',
   name: 'network',
@@ -56,6 +56,10 @@ const buildGraphMap = (edges) => {
   return graph;
 }
 
-const roadGraph = buildGraphMap(roads);
 
-console.log('roadGraph', [...roadGraph.get("Alice's House")])
+const makeEdges = (edges) => edges.map(r => r.split("-"))
+// const roadGraph = buildGraphMap(roads);
+
+const mapGraph = new MapGraph('fuck', 'undirected', makeEdges(roads));
+
+console.log('mapGraph', [...mapGraph])

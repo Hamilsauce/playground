@@ -203,21 +203,35 @@ const graph = {
     slots.forEach((slot, i) => {
       const r = this.activeVertex.r.baseVal.value
       let slotP = geom.domPoint(graph.self, slot.cx.baseVal.value, slot.cy.baseVal.value)
+ const pointbb = {
+        top: point.y - r,
+        left: point.x - r,
+        right: point.x + r,
+        bottom: point.y + r,
+      }
+
+      console.group('POINTS');
       console.log('slot.cx.baseVal.value, slot.cy.baseVal.value', slot.cx.baseVal.value, slot.cy.baseVal.value)
       console.log('slotP', slotP)
       console.log('point', point)
+      console.warn('pointbb', pointbb)
+      console.warn('r', r)
+      console.groupEnd('POINTS');
+
+     
       const slotbb = slot.getBoundingClientRect();
       const activebb = slot.getBoundingClientRect();
       // const isInside =
       const isInside =
-        activebb.top >= slotbb.top &&
-        activebb.bottom <= slotbb.bottom &&
-        activebb.left >= slotbb.left &&
-        activebb.right <= slotbb.right
+        pointbb.top >= slotbb.top &&
+        pointbb.bottom <= slotbb.bottom &&
+        pointbb.left >= slotbb.left &&
+        pointbb.right <= slotbb.right
 
       console.log({ i, isInside });
     });
   },
+  
   createGroupRect(group, vertexA, vertexB) {
     const bbox = group.getBoundingClientRect()
 

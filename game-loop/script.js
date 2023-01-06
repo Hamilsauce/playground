@@ -92,7 +92,7 @@ ui.actorScreenCoordinates.y,)
     curr &&
     curr.dataset &&
     curr.dataset.row
-    // && detectOverlap(ui.actor, curr) 
+    && !detectOverlap(ui.actor, curr) 
     && curr.dataset.traversable !== 'false'
   ) {
     ui.actor.dataset.row = curr.dataset.row;

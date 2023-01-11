@@ -1,17 +1,49 @@
 // import { getDeck } from './model/deck-gen.model.js';
-import { getDeck } from './models/deck-array-gen.model.js';
-import { CardView } from './views/card.view.js';
-import { GridCard } from './views/grid-card.js';
+import { getDeck } from './model/deck-array-gen.js';
+import { CardView } from './view/card.view.js';
+
 const deck = getDeck(true);
 const dealer = deck.cardGenerator();
 const topCard = deck.head
 console.warn('topCard', topCard);
-
 const card1 = new CardView(topCard.card.state());
-const gridCard = new GridCard(topCard.card.state());
 
+console.warn('card view', card1)
 const stringify = (obj) => JSON.stringify(obj, null, 2)
 
+const getJson = (topCard) => {
+  let c = topCard
+  let output = []
+
+  while (c) {
+    output.push(stringify(c))
+    c = c.next
+  }
+  return output.join('\n')
+}
+
+const getJson2 = (cards) => {
+  return cards.reduce((json, curr, i) => {
+      return `
+      ${json}
+      <div class="card-json">${
+      stringify(curr).split('\n').map(_=>`<div class="card-json-line"><span class="text-bold">${_.slice(0,_.indexOf(':')-1).trim()}</span><span class="line-value">${_.slice(_.indexOf(':')+1, _.length-1)}</span></div>`).join('\n')
+      }</div>
+    `;
+    }, '')
+    .trim()
+    .replace(/[\{\}\"]/g, '')
+    .replace(/displayName/g, 'name')
+
+  let c = topCard
+  let output = []
+
+  while (c) {
+    output.push(stringify(c))
+    c = c.next
+  }
+  return output.join('\n')
+}
 
 let clickCnt = 0;
 const drawnCards = [];
@@ -53,16 +85,12 @@ app.addEventListener('click', e => {
   //   .replace(/displayName/g, 'name')
   // }`;
   // el.innerHTML = ''
-  console.warn(c);
-
+  // console.warn(c);
   stats.innerHTML = getStatsTemplate({ remaining: c.remaining })
-console.warn('c', c)
-  const card = createCard(c.card)
-console.log('card', card)
-  output.append(card1.render())
+
+  const card = createCard(c.card.state())
+
+  output.append(card.render())
 
   drawnCards.push(c)
 });
-// output.innerHTML = '';
-// output.append(card1.render())
-// console.warn('grid card', card1)

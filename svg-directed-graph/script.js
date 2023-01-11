@@ -203,35 +203,36 @@ const graph = {
     slots.forEach((slot, i) => {
       const r = this.activeVertex.r.baseVal.value
       let slotP = geom.domPoint(graph.self, slot.cx.baseVal.value, slot.cy.baseVal.value)
- const pointbb = {
+      const pointbb = {
         top: point.y - r,
         left: point.x - r,
         right: point.x + r,
         bottom: point.y + r,
       }
-
-      console.group('POINTS');
-      console.log('slot.cx.baseVal.value, slot.cy.baseVal.value', slot.cx.baseVal.value, slot.cy.baseVal.value)
-      console.log('slotP', slotP)
-      console.log('point', point)
-      console.warn('pointbb', pointbb)
-      console.warn('r', r)
-      console.groupEnd('POINTS');
-
      
+      // {
+      //   console.group('POINTS');
+      //   console.log('slot.cx.baseVal.value, slot.cy.baseVal.value', slot.cx.baseVal.value, slot.cy.baseVal.value)
+      //   console.log('slotP', slotP)
+      //   console.log('point', point)
+      //   console.warn('pointbb', pointbb)
+      //   console.warn('r', r)
+      //   console.groupEnd('POINTS');
+      // }
+
       const slotbb = slot.getBoundingClientRect();
       const activebb = slot.getBoundingClientRect();
       // const isInside =
       const isInside =
-        pointbb.top >= slotbb.top &&
-        pointbb.bottom <= slotbb.bottom &&
-        pointbb.left >= slotbb.left &&
+        pointbb.top >= slotbb.top ||
+        pointbb.bottom <= slotbb.bottom ||
+        pointbb.left >= slotbb.left ||
         pointbb.right <= slotbb.right
 
-      console.log({ i, isInside });
+      // console.log({ i, isInside });
     });
   },
-  
+
   createGroupRect(group, vertexA, vertexB) {
     const bbox = group.getBoundingClientRect()
 
@@ -257,6 +258,10 @@ const graph = {
 
 graph.self.addEventListener('pointerdown', handlePointerDown);
 
+const encodedGraph = btoa(graph.self.innerHTML)
+const encodedIcon = 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwMDAwMCI+CiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAzYzEuNjYgMCAzIDEuMzQgMyAzcy0xLjM0IDMtMyAzLTMtMS4zNC0zLTMgMS4zNC0zIDMtM3ptMCAxNC4yYy0yLjUgMC00LjcxLTEuMjgtNi0zLjIyLjAzLTEuOTkgNC0zLjA4IDYtMy4wOCAxLjk5IDAgNS45NyAxLjA5IDYgMy4wOC0xLjI5IDEuOTQtMy41IDMuMjItNiAzLjIyeiIvPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K'
+console.log('encodedGraph.length', encodedGraph.length)
+console.log('encodedGraph.length', encodedGraph.length)
 // graph.createGroupRect(graphGroup1)
 
 // graph.vertices.forEach((v, i) => {

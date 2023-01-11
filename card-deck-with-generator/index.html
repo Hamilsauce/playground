@@ -11,7 +11,6 @@
   <title>OVERLAY</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./grid-card.css" />
 </head>
 
 <body>
@@ -28,26 +27,7 @@
       <section id="app-body">
         <div data-component="table"></div>
         <div id="stats"></div>
-       
-        <div id="drawn-card">
-       
-          <!-- <div class="card" data-suit="" data-value="">
-            <div class="card-cell"></div>
-            
-            <div class="card-column left">
-              <div class="card-left-top"></div>
-              <div class="card-left-bottom"></div>
-            </div>
-            <div class="card-column center">
-              <div class="card-center-content"></div>
-            </div>
-            <div class="card-column right">
-              <div class="card-right-top"></div>
-              <div class="card-right-bottom"></div>
-            </div>
-          </div> -->
-          
-        </div>
+        <div id="drawn-card"></div>
       </section>
     </div>
     <footer id="app-footer">
@@ -65,7 +45,10 @@
   <template id="table-template">
     <div id="table" data-is-component-template="true"></div>
   </template>
-
+.card-left.left 
+.card-column.center 
+.card-center-content 
+.card-column.right 
   <template id="card-template">
     <div class="card" data-suit="" data-value="">
       <div class="card-column left">

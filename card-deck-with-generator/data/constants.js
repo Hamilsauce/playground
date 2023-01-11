@@ -1,4 +1,5 @@
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
+
 const { TwoWayMap, date, array, utils, text } = ham;
 
 export const SUIT_RANK_LOOKUP = new TwoWayMap([

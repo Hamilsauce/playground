@@ -28,5 +28,24 @@
       { "name": "send_as", "type": "flags.13?InputPeer" }
     ],
     "type": "Updates"
+  },
+  
+  
+  
+  {
+  "name": "Milady Moto",
+  "glb": "https://bafybeicq6q5ryfn7ancm5cnwg2xzp5pim2m3ndajbsc7le6crkqajkwu7e.ipfs.nftstorage.link/ipfs/bafybeicq6q5ryfn7ancm5cnwg2xzp5pim2m3ndajbsc7le6crkqajkwu7e/mi777_miladyMotoJersey_animated.glb",
+  "description": "[Model (.glb)](https://bafybeicq6q5ryfn7ancm5cnwg2xzp5pim2m3ndajbsc7le6crkqajkwu7e.ipfs.nftstorage.link/ipfs/bafybeicq6q5ryfn7ancm5cnwg2xzp5pim2m3ndajbsc7le6crkqajkwu7e/mi777_miladyMotoJersey_animated.glb)\n\n[Image (.png)](https://bafybeiff5wcs5nkldomkkla3fazxsuaitxyaz5dnf3f2pp2wmpherwf3my.ipfs.nftstorage.link/?filename=mi777_jersey.png)\n\n",
+  "image": "https://bafybeiff5wcs5nkldomkkla3fazxsuaitxyaz5dnf3f2pp2wmpherwf3my"
+}
+
+  
+
+  {
+    "name": "Milady Moto #" + str(x),
+    "description": "The mi777 MiladyMoto Jersey is >
+    "image": "ipfs://" + cid_hash_image + "/mi777_j>
   }
 ]
+  
+  https://byopills.mypinata.cloud/ipfs/QmX21mS71aJVFBgJubRFzo9tFjaPdSPknVsdc11Tht8eEo%7D

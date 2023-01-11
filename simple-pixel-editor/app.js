@@ -27,7 +27,7 @@ const pixelEditor = new PixelEditor(
     height: 100,
     scale: 1,
     pixelColor: '#000000'
-  })
+  });
 
 pixelEditor.pixelLayer.addEventListener('pointerdown', e => {
   pixelEditor.isDrawing = true;

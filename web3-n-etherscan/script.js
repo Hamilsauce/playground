@@ -27,7 +27,7 @@ const buildTokenHoldingQuery = (wallet, token, apiNetwork = MAINNET_BASE) => {
 const fetchAndDownload = async (url, type = 'text') => {
   const res = await (await fetch(url))[type]();
   console.log({ res });
-  download('./file.' + type === 'text' ? 'txt' : 'json', res)
+  // download('./file.' + type === 'text' ? 'txt' : 'json', res)
 
   return res
 }

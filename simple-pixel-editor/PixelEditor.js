@@ -41,7 +41,7 @@ const encodedEditor = btoa(this.#self.innerHTML)
 console.time('encode');
 console.log('this.#self.outerHTML', this.#self.outerHTML.length)
     console.log({encodeLength: encodedEditor.length});
-    download('innerhtml-pixel-editor.txt', this.#self.outerHTML);
+    // download('innerhtml-pixel-editor.txt', this.#self.outerHTML);
     
     // download('encoded-pixel-editor.json', JSON.stringify({encodedEditor}))
 console.timeEnd('encode');

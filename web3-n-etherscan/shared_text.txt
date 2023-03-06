@@ -1,1 +1,0 @@
-https://raw.githubusercontent.com/Hamilsauce/milady-moto-functions/master/functions/src/index.ts?token=GHSAT0AAAAAAB446E5N7Y2ZH6AOG55FAK6SY6BQ5PQ

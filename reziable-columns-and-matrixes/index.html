@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>matrices</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header id="app-header">
+      <div id="app-header-left">L</div>
+      <div id="app-header-center">
+        <h1>matrices</h1>
+      </div>
+      <div id="app-header-right">R</div>
+    </header>
+    <section id="app-body">
+      <div class="container">
+        <table id="matrix">
+          <thead>
+            <tr>
+              <th style="width:20px" class="header" id="column1">
+                <div>
+                  <span class="column-name">Column 1</span>
+                  <span class="handle"></span>
+                </div>
+              </th>
+              <th class="header last">
+                <div>
+                  <div class="column-name">Column 2</div>
+                  <div class="handle"></div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td _style="width:20px">A1</td>
+              <td>B1</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td>B2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer id="app-footer">
+      <div class="container">
+        footer
+      </div>
+    </footer>
+  </div>
+  <script src="./resizable-columns.js" type="module"></script>
+</body>
+
+</html>

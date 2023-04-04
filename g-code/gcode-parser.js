@@ -4,21 +4,22 @@ export const loadFile = async (path) => {
   return await (await fetch(path)).text();
 };
 
-export class GcodeParser extends Infusible {
+export class GcodeParser {//extends Infusible {
   constructor(target) {
-    super((fusible) => {
-        Object.assign(target, {
-          groupByCommandType: this.groupByCommandType,
-          loadGcode: this.loadGcode //.bind(target), //.bind(target),
-        });
+    // super(
+    //   (fusible) => {
+    //     Object.assign(target, {
+    //       groupByCommandType: this.groupByCommandType,
+    //       loadGcode: this.loadGcode //.bind(target), //.bind(target),
+    //     });
 
-        return () => this.defuse(fusible)
-      },
-      (fusible) => {
-        fusible.groupByCommandType = undefined
-        fusible.loadGcode = undefined
-      }
-    )
+    //     return () => this.defuse(fusible)
+    //   },
+    //   (fusible) => {
+    //     fusible.groupByCommandType = undefined
+    //     fusible.loadGcode = undefined
+    //   }
+    // )
 
     // Object.entries(GcodeParser.prototype);
 

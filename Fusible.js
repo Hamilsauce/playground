@@ -20,24 +20,21 @@
       provided object with new behavior. infuse is called by 
       target fusible
     -defuse(): removes previously fused functionality
-    
-  
-  
 */
 
 export class Infusible {
   constructor(infuseFunction = (fusible) => null, defuseFunction = (fusible) => null) {
     if (!(typeof infuseFunction === 'function' && typeof defuseFunction === 'function')) throw new Error('Missing defuseFunction or infuseFunction');
-    
+
     this.infuse = infuseFunction;
-    
+
     this.defuse = defuseFunction;
   }
 
-  static infusify(target) {
+  static infusify(target, infuseFn, defuseFn) {
     Object.assign(target, {
-      infuse: Infusible.prototype.infuse.bind(target),
-      defuse: Infusible.prototype.defuse.bind(target),
+      infuse: infuseFn.bind(target),
+      defuse: defuseFn.bind(target),
     });
   }
 
@@ -64,6 +61,12 @@ export class Fusible {
 
     infusible.infuse(this, options)
 
-    return () => infusible.defuse(this);
+    return {
+      get infusible() { return infusible },
+      get fusible() { return this },
+      defuse: () => {
+        infusible.defuse(this)
+      },
+    };
   }
 }

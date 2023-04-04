@@ -5,9 +5,9 @@ export const loadFile = async (path) => {
 };
 
 
-export class GcodePrinter extends Fusible {
+export class GcodePrinter {//extends Fusible {
   constructor() {
-    super();
+    // super();
   }
 
   lerp(start, end, t) {

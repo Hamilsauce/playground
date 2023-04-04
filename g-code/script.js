@@ -6,19 +6,35 @@ const app = document.querySelector('#app');
 const appBody = document.querySelector('#app-body');
 const containers = document.querySelectorAll('.container');
 const list = document.querySelector('#list');
-
 const svg = document.querySelector('svg');
 const scene = document.querySelector('#scene');
 
+
 const printer = new GcodePrinter();
+
+Fusible.fusify(printer);
+
 const parser = new GcodeParser(printer);
 
-const defuseFromParser = printer.fuse(parser);
+Infusible.infusify(parser,
+  (fusible) => {
+    Object.assign(fusible, {
+      groupByCommandType: parser.groupByCommandType,
+      loadGcode: parser.loadGcode,
+    });
+
+    return parser.defuse;
+  },
+  (fusible) => {
+    delete fusible.groupByCommandType;
+    delete fusible.loadGcode;
+  }
+)
+const parserFusion = printer.fuse(parser);
 
 const lerped = printer.lerp(0, 10, 0.3);
 console.log('lerped', lerped);
 
-// defuseFromParser()
 
 const rawGcode = await printer.loadGcode('./cable-hook1.gcode');
 

@@ -14,7 +14,8 @@ const blacklist = new Set([
 
 
 const getGitTree = async (url) => {
-  const response = await (await fetch(url)).json();
+  const response = (await (await fetch(url)).json()).sort((a, b) => a.position - b.position);
+  console.log('response', response)
   // console.log('response', response)
   return (response.tree ? response.tree : response).filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
 };

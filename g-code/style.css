@@ -96,9 +96,7 @@ svg {
 
 #scene{
   filter: contrast(1.2);
-  /* transform: translate(50); */
-  transform: 
-    translate(-630px,-520px)
+  transform: translate(-630px,-520px)
 
   scale(6.5);
   

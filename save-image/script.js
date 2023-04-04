@@ -6,8 +6,9 @@ const rotateHue = (ctx, i) => {
   const roto = (Math.random() / 1) * 360;
 
   ctx.filter = `hue-rotate(${roto}deg)`;
-
 };
+
+
 const loadImage = (url) => new Promise((resolve, reject) => {
   const img = new Image(); // alt: document.createElement('img')
   img.addEventListener('load', () => resolve(img));
@@ -56,6 +57,7 @@ img.onload = function() {
 let timesRan = 0;
 let cnt = 0;
 console.log({ svg: window.location.href });
+
 
 
 downloadBtn.addEventListener('click', function(e) {

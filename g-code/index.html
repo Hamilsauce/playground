@@ -18,16 +18,17 @@
     <header id="app-header">
       <div id="app-header-left"></div>
       <div id="app-header-center">
-        <h1>GCODE</h1>
+        <h1 id="app-title">...</h1>
       </div>
       <div id="app-header-right"></div>
     </header>
     <section id="app-body">
-      <div class="container">
-        <button class="app-button" id="loadparse">Load & Parse</button>
+      <div id="controls" class="container">
+        <button class="app-button" id="save-image">Save</button>
       </div>
+      
       <div class="container">
-        <svg id="svg-canvas" _style="background:#2B35A5;" width="412" height="600" viewBox="66 60 100 100" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <svg id="svg-canvas" class="gradient1" _style="background:#FFFFFF;" width="412" height="600" viewBox="185 185 100 100" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <g id="circle-container">
               <circle id="circle-template" fill="teal" cx="0" cy="0" r=" 1" stroke="#000000" stroke-width="1" transform="translate(0,0) rotate(0) scale(1)" />
@@ -42,11 +43,13 @@
     </section>
     <footer id="app-footer">
       <div class="container">
-        footer
+        <canvas></canvas>
+        
       </div>
     </footer>
   </div>
   <script src="./script.js" type="module"></script>
+  <script src="./lib/svgtopng.js" type="module"></script>
 </body>
 
 </html>

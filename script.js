@@ -17,7 +17,7 @@ const getGitTree = async (url) => {
   const response = (await (await fetch(url)).json()).sort((a, b) => a.position - b.position);
   console.log('response', response)
   // console.log('response', response)
-  return (response.tree ? response.tree : response).filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
+  return (response.tree ? response.tree : response).filter((_) => _.position >= 0 && _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
 };
 
 // download('playground-git-tree.json', JSON.stringify(await getGitTree(API_URL), null, 2))

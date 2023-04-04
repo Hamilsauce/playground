@@ -9,16 +9,19 @@ export class MapGraph extends Map {
 
   constructor(name, type, entries) {
     super();
+
     if (entries) {
       entries.forEach(([value, adjacent], i) => {
 
         this.addVertex(value, adjacent)
       });
     }
+
     this.#name = name;
 
     this.#type = type || 'undirected';
-    console.log('this', this)
+
+    console.log('this', this);
   }
 
   get name() { return this.#name };
@@ -27,9 +30,9 @@ export class MapGraph extends Map {
 
   set(value, adjacent) {
     if (!this.has(value)) {
-    super.set(value, new Set([adjacent]));
+      super.set(value, new Set([adjacent]));
     } else {
-        this.get(value).add(adjacent);
+      this.get(value).add(adjacent);
     }
   }
 

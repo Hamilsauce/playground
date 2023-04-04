@@ -24,11 +24,16 @@
     </header>
     <section id="app-body">
       <div class="container">
-        <svg id="svg-canvas" style="background:#2B35A5;" width="400" height="500" viewBox="-0 -0 200 200" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <button class="app-button" id="loadparse">Load & Parse</button>
+      </div>
+      <div class="container">
+        <svg id="svg-canvas" style="background:#2B35A5;" width="412" height="600" viewBox="50 50 100 100" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <g id="circle-container">
               <circle id="circle-template" fill="teal" cx="0" cy="0" r=" 1" stroke="#000000" stroke-width="1" transform="translate(0,0) rotate(0) scale(1)" />
             </g>
+         
+            <circle id="point-template" fill="white" cx="0" cy="0" r="0.25" stroke="none" />
           </defs>
           <g id="scene" transform="translate(0,0) rotate(0) scale(1)"></g>
           <use href="#circle-container"></use>

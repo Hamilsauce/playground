@@ -1,4 +1,5 @@
 import { GraphConfig } from './app.js';
+
 const app = document.querySelector('#app');
 const appBody = document.querySelector('#app-body')
 const graphGroup1 = document.querySelector('.graph-group')

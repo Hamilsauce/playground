@@ -1,3 +1,73 @@
-.point{
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+.app-button {
+  width: fit-content;
+  /* height: 100%; */
+  padding: 4px 8px;
+  color: #1521AA;
+  font-size: 18px;
+  font-weight: 800;
+  background: #FFFFFF;
+  border: 2px solid #1521AA;
+  border-radius: 8px;
+}
+
+.app-button:active {
+  filter: brightness(0.8);
+}
+
+.button-icon {
+  fill: #EAEAEA;
+  color: var(--accent-white);
+}
+
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-y: scroll;
+}
+
+
+
+.point {
   fill: #FFFFFF;
 }

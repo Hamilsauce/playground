@@ -126,7 +126,7 @@ const ui = {
   init() {
     const parentBBox = this.svg.parentElement.getBoundingClientRect();
     this.svg.width.baseVal.value = parentBBox.width - parentBBox.x;
-    this.svg.height.baseVal.value = parentBBox.height-parentBBox.y;
+    this.svg.height.baseVal.value = parentBBox.height - parentBBox.y;
 
     this._svgTransformList = new TransformList(this.svg);
     this._sceneTransformList = new TransformList(this.scene);
@@ -155,36 +155,16 @@ const ui = {
   },
 }
 
-console.warn('ui.svg.width', ui.svg.width)
 
 const appState = new AppState(INITIAL_STATE);
 
-// const fileSelect = createSelect({
-//   id: 'gcode-select',
-//   onchange: (e) => {
-//     e.preventDefault();
-//     e.stopPropagation();
-
-//     const selection = e.target.selectedOptions[0];
-
-//     appState.update('filepath', selection.value)
-//     e.target.dispatchEvent(new CustomEvent('gcodepath:change', { bubbles: true, detail: { filepath: selection.value } }))
-//   },
-//   children: gcodePaths.map((path, i) => DOM.createElement({
-//     tag: 'option',
-//     elementProperties: { textContent: path, value: `./data/${path}` },
-//   }))
-// });
-
 ui.init()
-// ui.controls.append(fileSelect);
 
 
 const printer = new GcodePrinter();
 Fusible.fusify(printer);
 
 const parser = new GcodeParser(printer);
-
 Infusible.infusify(parser,
   (fusible) => {
     Object.assign(fusible, {
@@ -208,24 +188,43 @@ const loadGcodeFile = async (path) => {
 
   const rawGcode = await printer.loadGcode(path)
   const gcodeLines = parser.parse(rawGcode)
-  const gcodeLinesByCommand = printer.groupByCommandType(gcodeLines);
+  // const gcodeLinesByCommand = printer.groupByCommandType(gcodeLines);
+  // console.log('gcodeLinesByCommand', { gcodeLinesByCommand });
 
   const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
-  console.log('gcodeLinesByCommand', { gcodeLinesByCommand });
+
   // download(path.slice(0, path.indexOf('.gcode')) + 'grouped.json', JSON.stringify(gcodeLinesByCommand, null, 2))
 
   ui.scene.innerHTML = '';
 
+  // ui.scene.style.display = 'none'
+  window._times = []
   ui.scene.append(
-    ...gcodeCoords.map(
-      (code, i) => {
-        const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
-        p.r.baseVal.value = 0.15
-        p.cx.baseVal.value = +code.x || 0
-        p.cy.baseVal.value = +code.y || 0
-        return p // Promise.resolve(p)
-      })
-  );
+    ...(await Promise.all(
+      gcodeCoords.map(
+        (async (code, i) => {
+          const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
+          p.r.baseVal.value = 0.15
+          p.cx.baseVal.value = +code.x || 0
+          p.cy.baseVal.value = +code.y || 0
+          // ui.scene.append(p)
+          window._times.push([i, performance.now()])
+          return p // Promise.resolve(p)
+
+        })))));
+
+
+console.log('done');
+  // ui.scene.append(
+  //   ...(await Promise.all(gcodeCoords.map(
+  //     (async (code, i) => {
+  //       const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
+  //       p.r.baseVal.value = 0.15
+  //       p.cx.baseVal.value = +code.x || 0
+  //       p.cy.baseVal.value = +code.y || 0
+  //       return p // Promise.resolve(p)
+  //     }))))
+  // );
 
 
   appState.update('appTitle', 'GCODE');
@@ -261,83 +260,6 @@ const pan$ = addPanAction(ui.svg, ({ x, y }) => {
   ui.svg.viewBox.baseVal.y = y
 })
 pan$.subscribe();
-
-
-
-// ZOOM style 2 - Scale #Scene
-// setTimeout(() => {
-//   const zoom = ui.zoom.container
-//   const scene = ui.svg.querySelector('#scene')
-
-//   // console.log('hud.dom', hud.dom);
-
-//   zoom.addEventListener('click', e => {
-//     e.preventDefault()
-//     e.stopPropagation()
-//     e.stopImmediatePropagation()
-
-//     const zoomId = e.target.closest('.zoom-button').id
-
-//     const sceneTransforms = ui.transformLists.scene
-//     const currSceneScale = sceneTransforms.scale
-//     const currSceneRotate = sceneTransforms.rotation
-
-//     console.log('currSceneScale', currSceneScale)
-//     console.log('currSceneRotate', currSceneRotate)
-//     console.log('sceneTransforms.getMatrixAt(0)', sceneTransforms.getMatrixAt(0))
-//     console.log('sceneTransforms.getMatrixAt(1)', sceneTransforms.getMatrixAt(1))
-//     console.log('sceneTransforms.getMatrixAt(2)', sceneTransforms.getMatrixAt(2))
-//     // console.log('scaleTransform', scaleTransform)
-//     // console.log('svgBBox', svgBBox)
-//     // console.log('svgBCR', svgBCR)
-
-//     if (zoomId === 'zoom-in') {
-//       sceneTransforms.scaleTo(
-//         currSceneScale.x + 0.2,
-//         currSceneScale.y + 0.2,
-//       )
-//       // sceneTransforms.rotateTo(
-//       //   currSceneRotate.x + 20,
-//       // )
-//     }
-
-//     else if (zoomId === 'zoom-out' && currSceneScale.x > 0.2) {
-//       sceneTransforms.scaleTo(
-//         currSceneScale.x - 0.2,
-//         currSceneScale.y - 0.2,
-//       )
-//     }
-
-
-//     // if (isZoomIn && Math.abs(zoom.level) < zoom.limit) {
-//     // if (zoomIn) {
-//     //   // zoom.direction++
-
-//     //   Object.assign(vb, {
-//     //     width: vb.width - vb.width / 6,
-//     //     height: vb.height - vb.height / 4,
-//     //     y: (vb.y - vb.height / -8),
-//     //     x: (vb.x - vb.width / -12),
-//     //   })
-//     // }
-
-//     // else if (isZoomOut && Math.abs(zoom.level) < zoom.limit) {
-//     // else if (zoomOut) {
-//     //   // zoom.direction--
-
-//     //   Object.assign(vb, {
-//     //     width: vb.width + vb.width / 6,
-//     //     height: vb.height + vb.height / 4,
-//     //     y: (vb.y - vb.height / 8),
-//     //     x: (vb.x - vb.width / 12),
-//     //   })
-//     // }
-//   });
-
-
-
-// }, 1000)
-
 
 
 // ZOOM style 1 - Mutate SVG viewBox
@@ -385,51 +307,31 @@ setTimeout(() => {
     e.preventDefault()
     e.stopPropagation()
     e.stopImmediatePropagation()
-    // console.log('scene.getAttribute(transform', scene.getAttribute('transform'));
-    // console.log('zoom');
-    // console.log(zoom);
+
     const vb = svg.viewBox.baseVal
-    // const zoomIn = e.target.closest('#hud-zoomIn')
-    // const zoomOut = e.target.closest('#hud-zoomOut')
-    // const isZoomIn = e.composedPath().some(el => el === hud.zoomIn)
-    // const isZoomOut = e.composedPath().some(el => el === hud.zoomOut)
     const zoomId = e.target.closest('.zoom-button').id
-    const svgTrans = setTransformAttr(svg)
-    const sceneTrans = setTransformAttr(scene)
-    // console.warn({
-    //   svgTrans,
-    //   sceneTrans
-    // });
+    
+    // ui.scene.style.display = 'none'
 
-
-    // if (isZoomIn && Math.abs(zoom.level) < zoom.limit) {
+    const sTime = performance.now()
+  
     if (zoomId === 'zoom-in') {
       zoom.in(svg)
-      // zoom.direction++
-
-      // Object.assign(vb, {
-      //   height: vb.height - vb.height / 4,
-      //   width: vb.width - vb.width / 4,
-      //   x: (vb.x + (-12)),
-      //   // width: vb.width + (vb.x - (vb.width)),
-      //   y: (vb.y - (vb.height / -8)),
-      // })
     }
 
-    // else if (isZoomOut && Math.abs(zoom.level) < zoom.limit) {
     else if (zoomId === 'zoom-out') {
-      // zoom.direction--
       zoom.out(svg)
-
-      // Object.assign(vb, {
-      //   width: vb.width + vb.width / 6,
-      //   height: vb.height + vb.height / 4,
-      //   y: (vb.y - vb.height / 8),
-      //   x: (vb.x - vb.width / 12),
-      // })
     }
+    
+    setTimeout(() => {
+      const eTime = performance.now()
+      const elapsed = ((eTime - sTime) / 1000) / 60
+
+      // ui.scene.style.display = null
+      console.log({ sTime, eTime });
+      console.log('elapsed', elapsed)
+
+    }, 0)
+
   });
-
-
-
 }, 1000)

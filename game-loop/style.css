@@ -181,6 +181,9 @@ body {
   transform: scale(1.2);
 }
 
+
+
+
 @keyframes visit {
   0% {
     transform: scale(1);

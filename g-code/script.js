@@ -65,7 +65,7 @@ export class AppState {
       this.#listeners.set(propName, [handlerFn])
     }
 
-    handlerFn(this.#state[propName])
+    handlerFn(this.#state[propName]);
   }
 
   update(propName, value) {
@@ -112,6 +112,7 @@ const ui = {
       out: this.appBody.querySelector('#zoom-out'),
     }
   },
+
   get svg() { return this.appBody.querySelector('svg') },
   get scene() { return this.svg.querySelector('#scene') },
 
@@ -123,14 +124,16 @@ const ui = {
 
     return sel;
   },
+
   init() {
     const parentBBox = this.svg.parentElement.getBoundingClientRect();
+
     this.svg.width.baseVal.value = parentBBox.width - parentBBox.x;
     this.svg.height.baseVal.value = parentBBox.height - parentBBox.y;
 
     this._svgTransformList = new TransformList(this.svg);
     this._sceneTransformList = new TransformList(this.scene);
-    console.log('this._svgTransformList', this._svgTransformList)
+    // console.log('this._svgTransformList', this._svgTransformList)
 
     this.controls.append(
       this.createSelect({
@@ -141,8 +144,12 @@ const ui = {
 
           const selection = e.target.selectedOptions[0];
 
-          appState.update('filepath', selection.value)
-          e.target.dispatchEvent(new CustomEvent('gcodepath:change', { bubbles: true, detail: { filepath: selection.value } }))
+          appState.update('filepath', selection.value);
+
+          e.target.dispatchEvent(new CustomEvent('gcodepath:change', {
+            bubbles: true,
+            detail: { filepath: selection.value }
+          }));
         },
         children: gcodePaths.map((path, i) => DOM.createElement({
           tag: 'option',
@@ -150,8 +157,6 @@ const ui = {
         }))
       })
     )
-
-
   },
 }
 
@@ -160,19 +165,29 @@ const appState = new AppState(INITIAL_STATE);
 
 ui.init()
 
-
 const printer = new GcodePrinter();
+
+/*  @FUSION - Extend printer with fusibility 
+      allow extension by interfacing with Infusible
+*/
 Fusible.fusify(printer);
 
+
+
+/*  @FUSION - Extend parser with infusibility 
+      allow Fusible to infuse itself with
+      methods and data that parser exposes 
+      via infuse method
+*/
 const parser = new GcodeParser(printer);
 Infusible.infusify(parser,
   (fusible) => {
     Object.assign(fusible, {
-      groupByCommandType: parser.groupByCommandType,
-      loadGcode: parser.loadGcode,
+      groupByCommandType: fusible.prototype.groupByCommandType,
+      loadGcode: fusible.prototype.loadGcode,
     });
 
-    return parser.defuse;
+    return fusible.prototype.defuse;
   },
   (fusible) => {
     delete fusible.groupByCommandType;
@@ -188,8 +203,6 @@ const loadGcodeFile = async (path) => {
 
   const rawGcode = await printer.loadGcode(path)
   const gcodeLines = parser.parse(rawGcode)
-  // const gcodeLinesByCommand = printer.groupByCommandType(gcodeLines);
-  // console.log('gcodeLinesByCommand', { gcodeLinesByCommand });
 
   const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
 
@@ -199,46 +212,23 @@ const loadGcodeFile = async (path) => {
 
   // ui.scene.style.display = 'none'
   window._times = []
-  ui.scene.append(
-    ...(await Promise.all(
-      gcodeCoords.map(
-        (async (code, i) => {
-          const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
-          p.r.baseVal.value = 0.15
-          p.cx.baseVal.value = +code.x || 0
-          p.cy.baseVal.value = +code.y || 0
-          // ui.scene.append(p)
-          window._times.push([i, performance.now()])
-          return p // Promise.resolve(p)
+  ui.scene.append(...(await Promise.all(
+    gcodeCoords.map((async (code, i) => {
+      const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
 
-        })))));
+      p.r.baseVal.value = 0.15;
+      p.cx.baseVal.value = +code.x || 0;
+      p.cy.baseVal.value = +code.y || 0;
 
+      window._times.push([i, performance.now()]);
 
-console.log('done');
-  // ui.scene.append(
-  //   ...(await Promise.all(gcodeCoords.map(
-  //     (async (code, i) => {
-  //       const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
-  //       p.r.baseVal.value = 0.15
-  //       p.cx.baseVal.value = +code.x || 0
-  //       p.cy.baseVal.value = +code.y || 0
-  //       return p // Promise.resolve(p)
-  //     }))))
-  // );
-
+      return p;
+    })))));
 
   appState.update('appTitle', 'GCODE');
 
   return true;
 };
-
-
-// ui.save.addEventListener('click', (e) => {
-//   console.log('click');
-//   SVGPNG(ui.svg, (src, canvas, img) => {
-//     console.log('src, canvas, img', src, canvas, img)
-//   })
-// });
 
 
 appState.listenOn('appTitle', async (title) => {
@@ -252,45 +242,38 @@ appState.listenOn('filepath', async (filepath) => {
 });
 
 
-
-
 const pan$ = addPanAction(ui.svg, ({ x, y }) => {
-  // console.log('e', e)
   ui.svg.viewBox.baseVal.x = x
   ui.svg.viewBox.baseVal.y = y
-})
+});
+
 pan$.subscribe();
 
 
-// ZOOM style 1 - Mutate SVG viewBox
 
+// ZOOM style 1 - Mutate SVG viewBox
 const setTransformAttr = (el, transforMap = {}) => {
   const transformString = el.getAttribute('transform').trim()
-  const poop = transformString.replace(/\(|\)/g, ' ')
-  // console.log('poop', poop);
 
   const tMap = transformString
-    // .replace(/\(*\)/g, 'poop')
     .split(') ')
     .reduce((map, curr, i) => {
-      // console.warn('curr', curr)
 
       const type = curr.slice(0, curr.indexOf('('));
       const valuesString = curr.slice(
         curr.indexOf('(') + 1)
-      // .split(/\s|,/g)
-      // .map(_ => +_);
-      // console.warn({ type, valuesString });
 
       const values = curr.slice(curr.indexOf('('))
         .split(/\s|,/g)
         .map(_ => +_);
+
       return { ...map, [type]: values };
     }, {
       translate: [],
       rotate: [],
       scale: [],
     });
+
   return tMap
 };
 
@@ -301,8 +284,6 @@ setTimeout(() => {
   const svg = ui.svg;
   const scene = svg.querySelector('#scene')
 
-
-
   ui.zoom.container.addEventListener('click', e => {
     e.preventDefault()
     e.stopPropagation()
@@ -310,11 +291,11 @@ setTimeout(() => {
 
     const vb = svg.viewBox.baseVal
     const zoomId = e.target.closest('.zoom-button').id
-    
+
     // ui.scene.style.display = 'none'
 
     const sTime = performance.now()
-  
+
     if (zoomId === 'zoom-in') {
       zoom.in(svg)
     }
@@ -322,16 +303,17 @@ setTimeout(() => {
     else if (zoomId === 'zoom-out') {
       zoom.out(svg)
     }
-    
+
     setTimeout(() => {
       const eTime = performance.now()
       const elapsed = ((eTime - sTime) / 1000) / 60
 
       // ui.scene.style.display = null
+
+      console.group('ZOOM RENDER TIME');
       console.log({ sTime, eTime });
-      console.log('elapsed', elapsed)
-
-    }, 0)
-
+      console.warn('elapsed', elapsed)
+      console.groupEnd('ZOOM RENDER TIME');
+    }, 0);
   });
-}, 1000)
+}, 1000);

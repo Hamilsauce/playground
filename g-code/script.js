@@ -183,11 +183,11 @@ const parser = new GcodeParser(printer);
 Infusible.infusify(parser,
   (fusible) => {
     Object.assign(fusible, {
-      groupByCommandType: fusible.prototype.groupByCommandType,
-      loadGcode: fusible.prototype.loadGcode,
+      groupByCommandType: parser.groupByCommandType,
+      loadGcode: parser.loadGcode,
     });
 
-    return fusible.prototype.defuse;
+    return parser.defuse;
   },
   (fusible) => {
     delete fusible.groupByCommandType;

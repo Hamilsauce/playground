@@ -207,6 +207,7 @@ svg {
 }
 
 #origin {
+  fill: #21B18A91;
   stroke: #505F5B91;
   stroke-width: 0.1px;
 }

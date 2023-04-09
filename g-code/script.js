@@ -19,7 +19,7 @@ const loadGcodeFile = async (path) => {
   const gcodeLines = await parser.parse(rawGcode)
 
   // const grouped = printer.groupByCommandType(gcodeLines)
-  // console.log('grouped', grouped)
+  // consolez.log('grouped', grouped)
 
   const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
 
@@ -108,13 +108,13 @@ appState.listenOn('appTitle', async (title) => {
 
 appState.listenOn('filepath', async (filepath) => {
   console.time('DRAW POINTS');
-  
+
   printer.stop();
-  
+
   await delay(1000);
-  
+
   const res = await loadGcodeFile(filepath);
-  
+
   console.timeEnd('DRAW POINTS');
 });
 
@@ -125,7 +125,7 @@ const pan$ = addPanAction(ui.svg, ({ x, y }) => {
 });
 
 pan$.subscribe();
-
+let rotation = 0
 setTimeout(() => {
   const svg = ui.svg;
   const scene = svg.querySelector('#scene');
@@ -136,10 +136,15 @@ setTimeout(() => {
     e.stopImmediatePropagation();
 
     const vb = svg.viewBox.baseVal;
-    const zoomId = e.target.closest('.zoom-button').id;
+    const zoomId = e.target.closest('.app-button').id;
     const sTime = performance.now();
 
-    if (zoomId === 'zoom-in') {
+    if (zoomId === 'rotate') {
+      // zoom.in(svg);/
+      rotation = rotation + 90
+      ui.scene.querySelector('#printer-path').setAttribute('transform', `rotate(${rotation})`);
+    }
+    else if (zoomId === 'zoom-in') {
       zoom.in(svg);
     }
 

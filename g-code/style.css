@@ -40,6 +40,20 @@ body {
   border-radius: 6px;
 
 }
+svg.app-button {
+  /* width: fit-content; */
+  /* padding: 4px 8px; */
+  width: 40px;
+  height: 40px;
+  color: #F7F7F7;
+  font-size: 20px;
+  font-weight: 800;
+  background: #2F3032;
+  border: 2px solid #FFFFFF;
+  filter: opacity(0.95);
+  border-radius: 6px;
+border-radius: 50%;
+}
 
 
 select {

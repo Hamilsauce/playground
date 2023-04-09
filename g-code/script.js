@@ -1,175 +1,73 @@
-// import { SVGPNG } from './lib/svgsave.js';
-// import { saveSvg } from './lib/save-svg-image.js';
 import { GcodeParser, loadFile } from './gcode-parser.js';
 import { GcodePrinter } from './gcode-printer.js';
 import { Fusible, Infusible } from '../Fusible.js';
 import { gcodePaths } from './data/gcode-paths.js';
-import { addPanAction } from '../lib/pan-viewport.js';
-import { TransformList } from '../lib/TransformList.js';
-import { zoom } from '../lib/zoom.js';
+import { TransformList, TRANSFORM_TYPES, TRANSFORM_TYPE_INDEX } from '../lib/TransformList.js';
+import { Point, delay, zoom, addPanAction } from './lib/index.js';
+import { AppState } from './lib/AppState.js';
+import { ui } from './lib/UI.js';
 
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 
 const { template, utils, DOM, download } = ham;
 
-const TRANSFORM_TYPES = {
-  SVG_TRANSFORM_MATRIX: 1,
-  SVG_TRANSFORM_ROTATE: 4,
-  SVG_TRANSFORM_SCALE: 3,
-  SVG_TRANSFORM_SKEWX: 5,
-  SVG_TRANSFORM_SKEWY: 6,
-  SVG_TRANSFORM_TRANSLATE: 2,
-  SVG_TRANSFORM_UNKNOWN: 0,
-}
+const loadGcodeFile = async (path) => {
+  appState.update('appTitle', 'loading...')
 
-const TRANSFORM_TYPE_INDEX = [
-  'SVG_TRANSFORM_UNKNOWN',
-  'SVG_TRANSFORM_MATRIX',
-  'SVG_TRANSFORM_TRANSLATE',
-  'SVG_TRANSFORM_SCALE',
-  'SVG_TRANSFORM_ROTATE',
-  'SVG_TRANSFORM_SKEWX',
-  'SVG_TRANSFORM_SKEWY',
-];
+  const rawGcode = await printer.loadGcode(path)
+
+  const gcodeLines = await parser.parse(rawGcode)
+
+  // const grouped = printer.groupByCommandType(gcodeLines)
+  // console.log('grouped', grouped)
+
+  const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
+
+  // download(path.slice(0, path.indexOf('.gcode')) + 'grouped.json', JSON.stringify(gcodeLinesByCommand, null, 2))
+
+  ui.scene.innerHTML = '';
+
+  printer.print(gcodeLines);
+
+  // ui.scene.append(...(
+  //   await Promise.all(
+  //     gcodeCoords.map((async (code, i) => {
+  //       // console.log('code', code)
+
+  //       const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
+
+  //       p.r.baseVal.value = 0.15;
+  //       p.cx.baseVal.value = +code.x || 0;
+  //       p.cy.baseVal.value = +code.y || 0;
+  //       if (code.command === 'G0') {
+  //         p.classList.add('G0')
+  //       }
+
+  //       return p;
+  //     })))));
+
+
+  appState.update('appTitle', 'GCODE');
+
+  return true;
+};
+
 
 const INITIAL_STATE = {
   appTitle: 'GCODE',
   filepath: gcodePaths[0],
 }
 
-export class AppState {
-  #listeners = new Map();
-
-  #state = {
-    appTitle: null,
-    filepath: null,
-  }
-
-  constructor(initialState = {}) {
-    this.#state = { ...this.#state, ...initialState }
-  }
-
-  emit(propName, data) {
-    this.#listeners.get(propName).forEach((handler, i) => {
-      handler(data)
-    });
-  }
-
-  select(propName) { return this.#state[propName] }
-
-  listenOn(propName, handlerFn) {
-    if (this.#listeners.has(propName)) {
-      this.#listeners.set(propName, [...this.#listeners.get(propName), handlerFn])
-    }
-    else {
-      this.#listeners.set(propName, [handlerFn])
-    }
-
-    handlerFn(this.#state[propName]);
-  }
-
-  update(propName, value) {
-    const propValue = this.#state[propName];
-    const propType = propValue ? propValue.constructor.name.toLowerCase() : null;
-
-    if (propType === 'array') {
-      this.#state[propName] = [...propValue, ...value];
-    }
-    else if (propType === 'object') {
-      this.#state[propName] = { ...propValue, ...value };
-    }
-    else {
-      this.#state[propName] = value;
-    }
-
-    if (this.#listeners.has(propName)) {
-      this.emit(propName, this.#state[propName])
-    }
-  }
-}
-
-
-const ui = {
-  _svgTransformList: null,
-  _sceneTransformList: null,
-  get transformLists() {
-    return {
-      svg: this._svgTransformList,
-      scene: this._sceneTransformList,
-    }
-  },
-  get app() { return document.querySelector('#app') },
-  get appTitle() { return this.app.querySelector('#app-title') },
-  get appHeader() { return this.app.querySelector('#app-header') },
-  get appBody() { return this.app.querySelector('#app-body') },
-  get save() { return this.app.querySelector('#save-image') },
-  get controls() { return this.appBody.querySelector('#controls') },
-  get fileSelect() { return this.controls.querySelector('#gcode-select') },
-  get zoom() {
-    return {
-      container: this.appBody.querySelector('#zoom-buttons'),
-      in: this.appBody.querySelector('#zoom-in'),
-      out: this.appBody.querySelector('#zoom-out'),
-    }
-  },
-
-  get svg() { return this.appBody.querySelector('svg') },
-  get scene() { return this.svg.querySelector('#scene') },
-
-  createSelect({ id, children, onchange }) {
-    const sel = DOM.createElement({
-      tag: 'select',
-      elementProperties: { id, onchange },
-    }, children);
-
-    return sel;
-  },
-
-  init() {
-    const parentBBox = this.svg.parentElement.getBoundingClientRect();
-
-    this.svg.width.baseVal.value = parentBBox.width - parentBBox.x;
-    this.svg.height.baseVal.value = parentBBox.height - parentBBox.y;
-
-    this._svgTransformList = new TransformList(this.svg);
-    this._sceneTransformList = new TransformList(this.scene);
-    // console.log('this._svgTransformList', this._svgTransformList)
-
-    this.controls.append(
-      this.createSelect({
-        id: 'gcode-select',
-        onchange: (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-
-          const selection = e.target.selectedOptions[0];
-
-          appState.update('filepath', selection.value);
-
-          e.target.dispatchEvent(new CustomEvent('gcodepath:change', {
-            bubbles: true,
-            detail: { filepath: selection.value }
-          }));
-        },
-        children: gcodePaths.map((path, i) => DOM.createElement({
-          tag: 'option',
-          elementProperties: { textContent: path, value: `./data/${path}` },
-        }))
-      })
-    )
-  },
-}
-
 
 const appState = new AppState(INITIAL_STATE);
 
-ui.init()
-
-const printer = new GcodePrinter();
+ui.init(gcodePaths);
 
 /*  @FUSION - Extend printer with fusibility 
       allow extension by interfacing with Infusible
 */
+const printer = new GcodePrinter(ui.svg);
+
 Fusible.fusify(printer);
 
 
@@ -198,117 +96,60 @@ Infusible.infusify(parser,
 
 const parserFusion = printer.fuse(parser);
 
-const loadGcodeFile = async (path) => {
-  appState.update('appTitle', 'loading...')
 
-  const rawGcode = await printer.loadGcode(path)
-  const gcodeLines = parser.parse(rawGcode)
-
-  const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
-
-  // download(path.slice(0, path.indexOf('.gcode')) + 'grouped.json', JSON.stringify(gcodeLinesByCommand, null, 2))
-
-  ui.scene.innerHTML = '';
-
-  // ui.scene.style.display = 'none'
-  window._times = []
-  ui.scene.append(...(await Promise.all(
-    gcodeCoords.map((async (code, i) => {
-      const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
-
-      p.r.baseVal.value = 0.15;
-      p.cx.baseVal.value = +code.x || 0;
-      p.cy.baseVal.value = +code.y || 0;
-
-      window._times.push([i, performance.now()]);
-
-      return p;
-    })))));
-
-  appState.update('appTitle', 'GCODE');
-
-  return true;
-};
+ui.app.addEventListener('gcodepath:change', ({ detail }) => {
+  appState.update('filepath', detail.filepath);
+});
 
 
 appState.listenOn('appTitle', async (title) => {
-  ui.appTitle.textContent = title
+  ui.appTitle.textContent = title;
 });
 
 appState.listenOn('filepath', async (filepath) => {
   console.time('DRAW POINTS');
-  const res = await loadGcodeFile(filepath)
+  
+  printer.stop();
+  
+  await delay(1000);
+  
+  const res = await loadGcodeFile(filepath);
+  
   console.timeEnd('DRAW POINTS');
 });
 
 
 const pan$ = addPanAction(ui.svg, ({ x, y }) => {
-  ui.svg.viewBox.baseVal.x = x
-  ui.svg.viewBox.baseVal.y = y
+  ui.svg.viewBox.baseVal.x = x;
+  ui.svg.viewBox.baseVal.y = y;
 });
 
 pan$.subscribe();
 
-
-
-// ZOOM style 1 - Mutate SVG viewBox
-const setTransformAttr = (el, transforMap = {}) => {
-  const transformString = el.getAttribute('transform').trim()
-
-  const tMap = transformString
-    .split(') ')
-    .reduce((map, curr, i) => {
-
-      const type = curr.slice(0, curr.indexOf('('));
-      const valuesString = curr.slice(
-        curr.indexOf('(') + 1)
-
-      const values = curr.slice(curr.indexOf('('))
-        .split(/\s|,/g)
-        .map(_ => +_);
-
-      return { ...map, [type]: values };
-    }, {
-      translate: [],
-      rotate: [],
-      scale: [],
-    });
-
-  return tMap
-};
-
-
-
 setTimeout(() => {
-  // const zoom = ui.zoom.container
   const svg = ui.svg;
-  const scene = svg.querySelector('#scene')
+  const scene = svg.querySelector('#scene');
 
   ui.zoom.container.addEventListener('click', e => {
-    e.preventDefault()
-    e.stopPropagation()
-    e.stopImmediatePropagation()
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
 
-    const vb = svg.viewBox.baseVal
-    const zoomId = e.target.closest('.zoom-button').id
-
-    // ui.scene.style.display = 'none'
-
-    const sTime = performance.now()
+    const vb = svg.viewBox.baseVal;
+    const zoomId = e.target.closest('.zoom-button').id;
+    const sTime = performance.now();
 
     if (zoomId === 'zoom-in') {
-      zoom.in(svg)
+      zoom.in(svg);
     }
 
     else if (zoomId === 'zoom-out') {
-      zoom.out(svg)
+      zoom.out(svg);
     }
 
     setTimeout(() => {
-      const eTime = performance.now()
-      const elapsed = ((eTime - sTime) / 1000) / 60
-
-      // ui.scene.style.display = null
+      const eTime = performance.now();
+      const elapsed = ((eTime - sTime) / 1000) / 60;
 
       console.group('ZOOM RENDER TIME');
       console.log({ sTime, eTime });
@@ -316,4 +157,8 @@ setTimeout(() => {
       console.groupEnd('ZOOM RENDER TIME');
     }, 0);
   });
+
+  // scene.innerHTML = '<path id="path6" d=" M 30,0 32.3465,15.1847 39.2705,1.4683 36.8099,16.6349 47.6336,5.7295 40.6066,19.3934 54.2705,12.3664 43.3651,23.1901 58.5317,20.7295 44.8153,27.6535 60,30 44.8153,32.3465 58.5317,39.2705 43.3651,36.8099 54.2705,47.6336 40.6066,40.6066 47.6336,54.2705 36.8099,43.3651 39.2705,58.5317 32.3465,44.8153 30,60 27.6535,44.8153 20.7295,58.5317 23.1901,43.3651 12.3664,54.2705 19.3934,40.6066 5.7295,47.6336 16.6349,36.8099 1.4683,39.2705 15.1847,32.3465 0,30 15.1847,27.6535 1.4683,20.7295 16.6349,23.1901 5.7295,12.3664 19.3934,19.3934 12.3664,5.7295 23.1901,16.6349 20.7295,1.4683 27.6535,15.1847 30,0 Z" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dashoffset:0;" />'
 }, 1000);
+
+appState.update('filepath', './data/whistle.gcode');

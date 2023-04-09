@@ -43,15 +43,16 @@ body {
 
 
 select {
-  width: fit-content;
+  width: 300px;
   padding: 4px 8px;
   color: #F7F7F7;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   background: #2F3032;
   border: 3px solid #373434;
   filter: opacity(0.95);
   border-radius: 6px;
+  overflow-x: hidden;
 }
 
 .app-button:active {
@@ -125,7 +126,8 @@ svg {
 
 #scene {
   /* filter: contrast(1.4); */
-  /* transform: translate(-630px, -520px) scale(6.5); */
+  transform:
+    translate(-332px, -332px) scale(4);
 }
 
 
@@ -135,18 +137,30 @@ svg {
   stroke-width: 0.04px;
 }
 
-.gradient1 {
+#scene>.G0 {
+  fill: #F75A5AE6;
+  stroke: #E0E0E0D6;
+  stroke-width: 0.04px;
+}
+
+/* #scene>path {
+  fill: #00000075;
+  stroke: #E0E0E099;
+  stroke-width: 0.04px;
+} */
+
+canvas, .gradient1 {
   background-image:
-    linear-gradient(45deg, rgba(45, 204, 171, 0.89), rgba(247, 90, 90, 0.9));
+    linear-gradient(45deg, rgba(45, 204, 171, 0.89), #F75A5AE6);
   background-repeat: no-repeat,
     no-repeat,
     no-repeat;
   background-position: bottom right,
     left,
     right;
-  filter: hue-rotate(25deg) invert(1) brightness(1.2);
+  filter: hue-rotate(25deg) invert(0.75) brightness(1.2) contrast(2);
 
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #zoom-buttons {
@@ -199,15 +213,30 @@ svg {
 .axis {
   stroke: #5A5656CF;
   stroke-width: 0.5px;
-  filter: invert(1) drop-shadow(0px 0px 0.5px #3E8072A3) contrast(1.8);
+  filter: invert(1) drop-shadow(0px 0px 0.5px #2A2E56) contrast(3.8) opacity(0.5);
 }
 
 .point {
   fill: #18A47E91;
 }
 
+
+
 #origin {
   fill: #21B18A91;
   stroke: #505F5B91;
   stroke-width: 0.1px;
+}
+
+#printer-path {
+  fill: transparent;
+  stroke: #C4DAD096;
+  stroke-width: 0.32px;
+  stroke-opacity: 0.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* stroke-miterlimit: 4; */
+  /* stroke-dashoffset: 0.2px; */
+  filter: brightness(0.1) contrast(1.4) drop-shadow(0 2.5px 0.06px #FFE6C9);
+  transition: 0.5s;
 }

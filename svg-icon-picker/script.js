@@ -2,7 +2,7 @@ const app = document.querySelector('#app');
 const appHeader = document.querySelector('#app-header')
 const appBody = document.querySelector('#app-body')
 const svgs = [...appBody.querySelectorAll('svg')];
-const recentIconContainer = document.querySelector('#icons');
+const recentIconContainer = document.querySelector('#recent-icons');
 const recentIcons = [...recentIconContainer.querySelectorAll('path')]
 console.log('recentIcons', recentIcons)
 const svgCount = svgs.length

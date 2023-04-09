@@ -14,13 +14,15 @@ const blacklist = new Set([
 
 
 const getGitTree = async (url) => {
-  const response = (await (await fetch(url)).json()).sort((a, b) => a.position - b.position);
+  const response =  (await (await fetch(url)).json())
   console.log('response', response)
+  // response.sort((a, b) => a.position - b.position);
   // console.log('response', response)
   return (response.tree ? response.tree : response).filter((_) => _.position >= 0 && _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
 };
-
-// download('playground-git-tree.json', JSON.stringify(await getGitTree(API_URL), null, 2))
+const gitResponse =await getGitTree(API_URL)
+console.log('gitResponse', gitResponse)
+download('playground-git-tree.json', JSON.stringify(await getGitTree(API_URL), null, 2))
 
 const createFolderLink = (folder) => {
   const dom = template('folder');

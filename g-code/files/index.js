@@ -1,5 +1,19 @@
 export const files = [
   {
+    name: 'screw-connecter1.gcode',
+    path: '/files/screw-connecter1.gcode',
+    size: 0.52158,
+    date: '3/30/2023',
+    time: '20:34'
+  },
+  {
+    name: 'screws3.gcode',
+    path: '/files/screws3.gcode',
+    size: 0.52158,
+    date: '3/30/2023',
+    time: '20:34'
+  },
+  {
     name: 'ball2.gcode',
     path: '/files/ball2.gcode',
     size: 0.52158,

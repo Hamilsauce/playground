@@ -19,6 +19,7 @@ export const ui = {
   get save() { return this.app.querySelector('#save-image') },
   get controls() { return this.appBody.querySelector('#controls') },
   get fileSelect() { return this.controls.querySelector('#gcode-select') },
+  get drawPoints() { return this.controls.querySelector('#draw-points') },
   get zoom() {
     return {
       container: this.appBody.querySelector('#zoom-buttons'),
@@ -49,7 +50,7 @@ export const ui = {
     this._sceneTransformList = new TransformList(this.scene);
     // console.log('this._svgTransformList', this._svgTransformList)
 
-    this.controls.append(
+    this.controls.firstElementChild.append(
       this.createSelect({
         id: 'gcode-select',
         onchange: (e) => {
@@ -65,9 +66,17 @@ export const ui = {
         },
         children: fileList.map((path, i) => DOM.createElement({
           tag: 'option',
-          elementProperties: { textContent: path, value: path.startsWith('/') ? `.${path}` : `./data/${path}` },
+          elementProperties: { textContent: path.replace('/files/', '').replace('.gcode', ''), value: path.startsWith('/') ? `.${path}` : `./data/${path}` },
         }))
-      })
-    )
+      }),
+    );
+
+    this.drawPoints.addEventListener('change', ({ target }) => {
+      this.dispatch(this.drawPoints, 'drawpoints:change', { drawPoints: target.checked })
+    });
+  },
+
+  dispatch(target, type, detail = {}) {
+    target.dispatchEvent(new CustomEvent(type, { bubbles: true, detail }));
   },
 }

@@ -19,17 +19,6 @@ body {
 
 .app-button {
   width: fit-content;
-  /* height: 100%; */
-  padding: 4px 8px;
-  color: #F7F7F7;
-  font-size: 20px;
-  font-weight: 800;
-  background: #2F3032;
-  border: 3px solid #F7F7F7;
-  border-radius: 6px;
-
-
-  width: fit-content;
   padding: 4px 8px;
   color: #F7F7F7;
   font-size: 20px;
@@ -38,8 +27,9 @@ body {
   border: 3px solid #373434;
   filter: opacity(0.95);
   border-radius: 6px;
-
 }
+
+
 svg.app-button {
   /* width: fit-content; */
   /* padding: 4px 8px; */
@@ -52,7 +42,7 @@ svg.app-button {
   border: 2px solid #FFFFFF;
   filter: opacity(0.95);
   border-radius: 6px;
-border-radius: 50%;
+  border-radius: 50%;
 }
 
 
@@ -96,7 +86,7 @@ select {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  padding: 4px;
+  padding: 0px;
 }
 
 canvas {
@@ -105,17 +95,9 @@ canvas {
 
 #app-body {
   position: relative;
-  /* 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start; */
-
   display: grid;
-  /* grid-template-rows: auto 1fr auto; */
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
-
   gap: 8px;
   overflow-y: scroll;
 }
@@ -126,22 +108,17 @@ canvas {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 8px;
-  /* overflow-y: scroll; */
   height: 50px;
   display: none;
 }
 
 svg {
   background: #E2D023;
-  /* filter: invert(1); */
   touch-action: none;
-  /* transition: 0.5s; */
 }
 
 #scene {
-  /* filter: contrast(1.4); */
-  transform:
-    translate(-332px, -332px) scale(4);
+  transform: translate(-332px, -332px) rotate(0) scale(4);
 }
 
 
@@ -151,19 +128,14 @@ svg {
   stroke-width: 0.04px;
 }
 
-#scene>.G0 {
+/* #scene>.G0 {
   fill: #F75A5AE6;
   stroke: #E0E0E0D6;
   stroke-width: 0.04px;
-}
-
-/* #scene>path {
-  fill: #00000075;
-  stroke: #E0E0E099;
-  stroke-width: 0.04px;
 } */
 
-canvas, .gradient1 {
+canvas,
+.gradient1 {
   background-image:
     linear-gradient(45deg, rgba(45, 204, 171, 0.89), #F75A5AE6);
   background-repeat: no-repeat,
@@ -173,8 +145,6 @@ canvas, .gradient1 {
     left,
     right;
   filter: hue-rotate(25deg) invert(0.75) brightness(1.2) contrast(2);
-
-  /* overflow: scroll; */
 }
 
 #zoom-buttons {
@@ -186,15 +156,28 @@ canvas, .gradient1 {
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  /* width: 100%; */
-  /* height: 100%; */
   padding: 4px;
 }
 
 #controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
   padding: 4px;
-
 }
+
+.control-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  width: 100%;
+}
+
 
 /* #controls {
   position: absolute;
@@ -242,15 +225,16 @@ canvas, .gradient1 {
   stroke-width: 0.1px;
 }
 
-#printer-path {
+.layer-path {
   fill: transparent;
-  stroke: #C4DAD096;
+  stroke: #C4DAD0;
   stroke-width: 0.32px;
-  stroke-opacity: 0.85;
+  stroke-opacity: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
   /* stroke-miterlimit: 4; */
   /* stroke-dashoffset: 0.2px; */
-  filter: brightness(0.1) contrast(1.4) drop-shadow(0 2.5px 0.06px #FFE6C9);
+  /* filter: brightness(0.1) contrast(1.4) drop-shadow(0 2.5px 0.06px #FFE6C9); */
+  filter: opacity(0.5) invert(1) drop-shadow(0 2.5px 0.06px #FFE6C9);
   transition: 0.5s;
 }

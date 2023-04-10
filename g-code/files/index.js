@@ -28,12 +28,19 @@ export const files = [
     time: '23:32'
   },
   {
-    name: 'budapest-priest.gcode',
-    path: '/files/budapest-priest.gcode',
-    size: 5.868842,
-    date: '4/6/2023',
-    time: '18:35'
+    name: 'screws2.gcode',
+    path: '/files/screws2.gcode',
+    size: 0.11336,
+    date: '4/5/2023',
+    time: '23:32'
   },
+  // {
+  //   name: 'budapest-priest.gcode',
+  //   path: '/files/budapest-priest.gcode',
+  //   size: 5.868842,
+  //   date: '4/6/2023',
+  //   time: '18:35'
+  // },
   {
     name: 'circlething1.gcode',
     path: '/files/circlething1.gcode',

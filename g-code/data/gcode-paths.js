@@ -19,8 +19,11 @@ export const gcodePaths = [
   'spoon.gcode',
   'straw.gcode',
   'whistle.gcode',
+  '/files/screw-connecter1.gcode',
+  '/files/screws3.gcode',
   '/files/ball2.gcode',
   '/files/beam1.gcode',
+  '/files/screws2.gcode',
   '/files/budapest-priest.gcode',
   '/files/circlething1.gcode',
   '/files/dog-scratcher1-low-res.gcode',
@@ -41,4 +44,3 @@ export const gcodePaths = [
   '/files/tray1.gcode',
   '/files/evil-pope-merged.gcode',
 ];
-

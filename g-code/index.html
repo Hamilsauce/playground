@@ -18,13 +18,20 @@
     <header id="app-header">
       <div id="app-header-left"></div>
       <div id="app-header-center">
-        <h1 id="app-title">...</h1>
+        <h2 id="app-title">...</h2>
       </div>
       <div id="app-header-right"></div>
     </header>
     <section id="app-body">
       <div id="controls" class="container">
-        <button class="app-button" id="save-image">Save</button>
+        <div class="control-group">
+          <button class="app-button" id="save-image">Save</button>
+        </div>
+
+        <div class="control-group">
+          <label for="draw-points">Draw Points</label>
+          <input class="app-button" type="checkbox" name="draw-points" id="draw-points"></input>
+        </div>
       </div>
 
       <div class="container">
@@ -34,7 +41,7 @@
               <circle id="circle-template" fill="teal" cx="0" cy="0" r=" 1" stroke="#000000" stroke-width="1" transform="translate(0,0) rotate(0) scale(1)" />
             </g>
 
-            <path id="path-template" transform-origin="center center" d="M 0,0" />
+            <path id="layer-path-template" class="layer-path" transform-origin="center center" d="M 0,0" />
 
             <circle id="point-template" fill="white" cx="0" cy="0" r="0.25" stroke="none" />
           </defs>
@@ -45,7 +52,7 @@
             <circle class="gradient1" transform="translate(0,0)" cx="0" cy="0" r="2" fill="pink" />
           </g>
 
-          <g id="scene" class="_gradient1" transform="translate(0,0) rotate(0) scale(1)"></g>
+          <g id="scene" class="_gradient1" _transform="translate(-5000, -332px) rotate(230deg) scale(4)"></g>
 
           <g id="star-path" transform="translate(200,200) rotate(0) scale(1)">
 
@@ -637,9 +644,9 @@ Z"
         <div id="zoom-buttons">
           <div id="zoom-in" class="app-button zoom-button">+</div>
           <div id="zoom-out" class="app-button zoom-button">-</div>
-            <svg id="rotate" class="app-button rotate-button"  width="24" height="24" viewBox="0 0 24 24">
-              <path fill="#FFFFFF" stroke="white" class="app-button rotate-button" d="M 12,5V1L7,6L12,11V7A6,6 0 0,1 18,13A6,6 0 0,1 12,19A6,6 0 0,1 6,13H4A8,8 0 0,0 12,21A8,8 0 0,0 20,13A8,8 0 0,0 12,5Z"></path>
-            </svg>
+          <svg id="rotate" class="app-button rotate-button" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#FFFFFF" stroke="white" class="app-button rotate-button" d="M 12,5V1L7,6L12,11V7A6,6 0 0,1 18,13A6,6 0 0,1 12,19A6,6 0 0,1 6,13H4A8,8 0 0,0 12,21A8,8 0 0,0 20,13A8,8 0 0,0 12,5Z"></path>
+          </svg>
           <!-- <div id="rotate" class="app-button rotate-button">
             <svg id="svg-canvas" style="background:#2B35A5;" width="412" height="690" viewBox="-50 -50 100 100" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
               

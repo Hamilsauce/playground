@@ -4,16 +4,17 @@ import { Fusible, Infusible } from '../Fusible.js';
 import { gcodePaths } from './data/gcode-paths.js';
 import { TransformList, TRANSFORM_TYPES, TRANSFORM_TYPE_INDEX } from '../lib/TransformList.js';
 import { Point, delay, zoom, addPanAction } from './lib/index.js';
-import { AppState } from './lib/AppState.js';
+import { appState } from './lib/AppState.js';
 import { ui } from './lib/UI.js';
 
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 
 const { template, utils, DOM, download } = ham;
 
-const loadGcodeFile = async (path) => {
-  appState.update('appTitle', 'loading...')
 
+const loadGcodeFile = async (path, printPoints = false) => {
+  appState.update('appTitle', 'loading...')
+  const drawPoints = appState.select('drawPoints')
   const rawGcode = await printer.loadGcode(path)
 
   const gcodeLines = await parser.parse(rawGcode)
@@ -22,30 +23,37 @@ const loadGcodeFile = async (path) => {
   // consolez.log('grouped', grouped)
 
   const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
-
+  console.log('gcodeCoords', gcodeCoords)
   // download(path.slice(0, path.indexOf('.gcode')) + 'grouped.json', JSON.stringify(gcodeLinesByCommand, null, 2))
 
   ui.scene.innerHTML = '';
 
   printer.print(gcodeLines);
 
-  // ui.scene.append(...(
-  //   await Promise.all(
-  //     gcodeCoords.map((async (code, i) => {
-  //       // console.log('code', code)
 
-  //       const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
+  let currentZ = 0;
+  console.log('drawPoints', drawPoints)
+  if (drawPoints) {
+    ui.scene.append(...(
+      await Promise.all(
+        gcodeCoords.map((async (code, i) => {
+          currentZ = +code.z ? +code.z : currentZ;
 
-  //       p.r.baseVal.value = 0.15;
-  //       p.cx.baseVal.value = +code.x || 0;
-  //       p.cy.baseVal.value = +code.y || 0;
-  //       if (code.command === 'G0') {
-  //         p.classList.add('G0')
-  //       }
+          const p = document.createElementNS(ui.svg.namespaceURI, 'circle');
 
-  //       return p;
-  //     })))));
+          p.r.baseVal.value = 0.15;
+          p.cy.baseVal.value = (+code.x || 1);
+          p.cx.baseVal.value = (currentZ || 0);
 
+          if (code.command === 'G0') {
+            p.classList.add('G0')
+          }
+
+          return p;
+        }))
+      )
+    ));
+  }
 
   appState.update('appTitle', 'GCODE');
 
@@ -53,13 +61,8 @@ const loadGcodeFile = async (path) => {
 };
 
 
-const INITIAL_STATE = {
-  appTitle: 'GCODE',
-  filepath: gcodePaths[0],
-}
 
 
-const appState = new AppState(INITIAL_STATE);
 
 ui.init(gcodePaths);
 
@@ -100,10 +103,25 @@ const parserFusion = printer.fuse(parser);
 ui.app.addEventListener('gcodepath:change', ({ detail }) => {
   appState.update('filepath', detail.filepath);
 });
+ui.drawPoints.addEventListener('drawpoints:change', ({ detail }) => {
+  console.log('detail.drawPoints', detail.drawPoints)
+  appState.update('drawPoints', detail.drawPoints);
+});
 
 
 appState.listenOn('appTitle', async (title) => {
   ui.appTitle.textContent = title;
+});
+
+
+appState.listenOn('rotation', async (rotation) => {
+  // const path = ui.scene.querySelector('#printer-path');
+  console.log('rotation', rotation)
+  // if (path) {
+  //   rotation = rotation + 45
+  //   console.log('path', path)
+  //   path.setAttribute('transform', `translate(-332px, -332px) rotate(${rotation}deg) scale(4)`);
+  // }
 });
 
 appState.listenOn('filepath', async (filepath) => {
@@ -113,7 +131,7 @@ appState.listenOn('filepath', async (filepath) => {
 
   await delay(1000);
 
-  const res = await loadGcodeFile(filepath);
+  const res = await loadGcodeFile(filepath, true);
 
   console.timeEnd('DRAW POINTS');
 });
@@ -125,7 +143,10 @@ const pan$ = addPanAction(ui.svg, ({ x, y }) => {
 });
 
 pan$.subscribe();
-let rotation = 0
+
+
+let rotation = 0;
+
 setTimeout(() => {
   const svg = ui.svg;
   const scene = svg.querySelector('#scene');
@@ -140,10 +161,13 @@ setTimeout(() => {
     const sTime = performance.now();
 
     if (zoomId === 'rotate') {
-      // zoom.in(svg);/
-      rotation = rotation + 90
-      ui.scene.querySelector('#printer-path').setAttribute('transform', `rotate(${rotation})`);
+      appState.update('rotation', appState.select('rotation') + 45);
+
+      rotation = rotation + 45
+
+      // ui.scene.querySelector('#printer-path').setAttribute('transform', `rotate(${rotation})`);
     }
+
     else if (zoomId === 'zoom-in') {
       zoom.in(svg);
     }

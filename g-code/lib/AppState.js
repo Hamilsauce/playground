@@ -1,13 +1,16 @@
 import { files } from '../files/index.js';
+import { gcodePaths } from '../data/gcode-paths.js';
 
-export class AppState {
+class AppState {
   #listeners = new Map();
   #fileDir = './files'
 
   #state = {
     appTitle: null,
     filepath: null,
-    files: new Map(files.map(({name,...file}) => [name, file])),
+    drawPoints: false,
+    rotation: 0,
+    files: new Map(files.map(({ name, ...file }) => [name, file])),
   }
 
   constructor(initialState = {}) {
@@ -52,3 +55,11 @@ export class AppState {
     }
   }
 }
+
+
+const INITIAL_STATE = {
+  appTitle: 'GCODE',
+  filepath: gcodePaths[0],
+}
+export const appState = new AppState(INITIAL_STATE);
+

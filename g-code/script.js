@@ -55,7 +55,7 @@ const loadGcodeFile = async (path, printPoints = false) => {
     ));
   }
 
-  appState.update('appTitle', 'GCODE');
+  appState.update('appTitle', '3D Printer');
 
   return true;
 };

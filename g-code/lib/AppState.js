@@ -58,7 +58,7 @@ class AppState {
 
 
 const INITIAL_STATE = {
-  appTitle: 'GCODE',
+  appTitle: '3D Printer',
   filepath: gcodePaths[0],
 }
 export const appState = new AppState(INITIAL_STATE);

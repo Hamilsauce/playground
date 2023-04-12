@@ -33,6 +33,7 @@ const loadGcodeFile = async (path, printPoints = false) => {
 
   let currentZ = 0;
   console.log('drawPoints', drawPoints)
+  
   if (drawPoints) {
     ui.scene.append(...(
       await Promise.all(
@@ -103,6 +104,7 @@ const parserFusion = printer.fuse(parser);
 ui.app.addEventListener('gcodepath:change', ({ detail }) => {
   appState.update('filepath', detail.filepath);
 });
+
 ui.drawPoints.addEventListener('drawpoints:change', ({ detail }) => {
   console.log('detail.drawPoints', detail.drawPoints)
   appState.update('drawPoints', detail.drawPoints);
@@ -135,7 +137,6 @@ appState.listenOn('filepath', async (filepath) => {
 
   console.timeEnd('DRAW POINTS');
 });
-
 
 const pan$ = addPanAction(ui.svg, ({ x, y }) => {
   ui.svg.viewBox.baseVal.x = x;
@@ -176,15 +177,33 @@ setTimeout(() => {
       zoom.out(svg);
     }
 
-    setTimeout(() => {
-      const eTime = performance.now();
-      const elapsed = ((eTime - sTime) / 1000) / 60;
+    // setTimeout(() => {
+    //   const eTime = performance.now();
+    //   const elapsed = ((eTime - sTime) / 1000) / 60;
 
-      console.group('ZOOM RENDER TIME');
-      console.log({ sTime, eTime });
-      console.warn('elapsed', elapsed)
-      console.groupEnd('ZOOM RENDER TIME');
-    }, 0);
+    //   console.group('ZOOM RENDER TIME');
+    //   console.log({ sTime, eTime });
+    //   console.warn('elapsed', elapsed)
+    //   console.groupEnd('ZOOM RENDER TIME');
+    // }, 0);
+  });
+
+  ui.scene.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    ui.zoom.container.style.opacity = 1;
+    ui.origin.style.opacity = 1;
+  });
+
+  ui.zoom.container.addEventListener('dblclick', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    ui.zoom.container.style.opacity = 0;
+    ui.origin.style.opacity = 0;
   });
 
   // scene.innerHTML = '<path id="path6" d=" M 30,0 32.3465,15.1847 39.2705,1.4683 36.8099,16.6349 47.6336,5.7295 40.6066,19.3934 54.2705,12.3664 43.3651,23.1901 58.5317,20.7295 44.8153,27.6535 60,30 44.8153,32.3465 58.5317,39.2705 43.3651,36.8099 54.2705,47.6336 40.6066,40.6066 47.6336,54.2705 36.8099,43.3651 39.2705,58.5317 32.3465,44.8153 30,60 27.6535,44.8153 20.7295,58.5317 23.1901,43.3651 12.3664,54.2705 19.3934,40.6066 5.7295,47.6336 16.6349,36.8099 1.4683,39.2705 15.1847,32.3465 0,30 15.1847,27.6535 1.4683,20.7295 16.6349,23.1901 5.7295,12.3664 19.3934,19.3934 12.3664,5.7295 23.1901,16.6349 20.7295,1.4683 27.6535,15.1847 30,0 Z" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-opacity:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dashoffset:0;" />'

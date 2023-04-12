@@ -17,6 +17,7 @@ export const ui = {
   get appHeader() { return this.app.querySelector('#app-header') },
   get appBody() { return this.app.querySelector('#app-body') },
   get save() { return this.app.querySelector('#save-image') },
+  get origin() { return this.app.querySelector('#origin') },
   get controls() { return this.appBody.querySelector('#controls') },
   get fileSelect() { return this.controls.querySelector('#gcode-select') },
   get drawPoints() { return this.controls.querySelector('#draw-points') },

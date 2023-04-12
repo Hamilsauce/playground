@@ -28,7 +28,7 @@ export class GcodePrinter {
       if (this.#currentLayer) {
         this.#currentLayer.setAttribute('transform', `rotate(${rotation})`);
         // this.#scene.setAttribute('transform', `translate(-332px, -332px) rotate(${rotation}) scale(4)`)
-        
+
         // this.#scene.style.transform = `translate(-332px, -332px) rotate(${rotation}) scale(4)`
       }
     });
@@ -51,7 +51,7 @@ export class GcodePrinter {
   }
 
   moveTo(d = '', command, point = new Point(0, 0)) {
-    return `${d.replace('', '')} ${(command === 'G0' ? 'M ' : '') + point.toString()}`;
+    return `${(command === 'G0' ? 'M ' : '') + point.toString()}`;
   }
 
   peekState() {
@@ -87,16 +87,17 @@ export class GcodePrinter {
     if (!(this.#isPrinting === true || currentPoint)) {
       this.stop();
     }
+    
     else {
 
       const { command, x, y, z, e } = this.currentPoint;
 
       if (this.lastPoint && command === 'G1') {
         const pts = [
-        this.lastPoint,
-        ...pointsBetween(this.lastPoint, { x, y }).map(_ => ({ ..._, command })),
+          this.lastPoint,
+          ...pointsBetween(this.lastPoint, { x, y }).map(_ => ({ ..._, command })),
           { command, x, y }
-      ];
+        ];
 
         const time = this.INTERVAL ? this.INTERVAL / pts.length : 0;
 
@@ -112,11 +113,9 @@ export class GcodePrinter {
       }
 
       else {
-        d = this.appendToPath(d, command, new Point(x, y))
+        d = this.appendToPath(d, command, new Point(x, y));
 
         this.#path.setAttribute('d', d);
-
-        // await delay(this.INTERVAL);
       }
 
       this.lastPoint = this.currentPoint;
@@ -124,7 +123,8 @@ export class GcodePrinter {
       this.#cursor = this.#cursor + 1;
 
       this.currentPoint = this.drawCommands[this.#cursor];
-      this.#frameId = requestAnimationFrame(this.drawPoints.bind(this))
+
+      this.#frameId = requestAnimationFrame(this.drawPoints.bind(this));
     }
 
   }
@@ -132,31 +132,28 @@ export class GcodePrinter {
   async print(commands = [], onCompleteHandler = () => null) {
     this.#commands = commands;
 
-    this.drawCommands = commands.filter(({ command, x, y }) => !(isNaN(x) || isNaN(y)) && ['G0', 'G1'].includes(command))
+    this.drawCommands = commands.filter(({ command, x, y }) => !(isNaN(x) || isNaN(y)) && ['G0', 'G1'].includes(command));
 
     this.#layers = new Map(
       [
         [0, this.createLayerPath(0)],
         ...commands
           .filter(({ z }) => z)
-          .map(({ z, ...cmd }) => [z, this.createLayerPath(z)])
+          .map(({ z, ...cmd }) => [z, this.createLayerPath(z)]),
       ]
     );
 
-    this.#currentLayer = this.#layers.get(0)
+    this.#currentLayer = this.#layers.get(0);
 
-    // console.log('this.layers', [...this.#layers])
-    // console.warn('++++[PRINTER STARTED]');
-
-    const cmds = this.drawCommands
+    const cmds = this.drawCommands;
 
     if (cmds[0] && cmds[0].x && cmds[0].y) {
-      let frameId = null
+      let frameId = null;
       let lastPoint = null;
       let currentPoint = null;
       let d = 'M ';
 
-      this.#scene.append(this.#currentLayer)
+      this.#scene.append(this.#currentLayer);
       this.#isPrinting = true;
       this.#cursor = 0;
       currentPoint = cmds[this.#cursor];
@@ -168,7 +165,6 @@ export class GcodePrinter {
 
         if (z) {
           d = '';
-          console.warn('~~~~ Z ~~~~', { z, index: this.#cursor });
           this.#currentLayer = this.#layers.get(z);
           this.#scene.append(this.#currentLayer)
         }
@@ -195,7 +191,7 @@ export class GcodePrinter {
         }
 
         else {
-          d = this.appendToPath(d, command, new Point(x, y))
+          d = this.appendToPath(d, command, new Point(x, y));
           this.#currentLayer.setAttribute('d', d);
 
           await delay(INTERVAL);
@@ -213,116 +209,4 @@ export class GcodePrinter {
       return this;
     }
   }
-
-  // async print(commands = [], onCompleteHandler = () => null) {
-  //   console.warn('++++[PRINTER STARTED]');
-  //   this.#commands = commands;
-  //   this.drawCommands = commands.filter(({ command, x, y }) => !(isNaN(x) || isNaN(y)) && ['G0', 'G1'].includes(command));
-  //   const cmds = this.drawCommands
-
-  //   if (cmds[0] && cmds[0].x && cmds[0].y) {
-  //     let frameId = null;
-  //     let lastPoint = null;
-  //     let currentPoint = null;
-  //     let d = 'M ';
-
-  //     this.#scene.append(this.#path)
-  //     this.#isPrinting = true;
-  //     this.#cursor = 0;
-  //     this.currentPoint = cmds[this.#cursor];
-
-  //     const INTERVAL = 0
-
-
-  //     this.#frameId = requestAnimationFrame((frameTime) => this.drawPoints.bind(this))
-  //     // this.#frameId = requestAnimationFrame((frameTime) => {
-  //     //   if (!(this.#isPrinting === true || currentPoint)) {
-  //     //     this.stop();
-  //     //     // cancelAnimationFrame(frameId)
-  //     //   }
-
-  //     //   const { command, x, y, z, e } = currentPoint;
-
-  //     //   if (lastPoint && command === 'G1') {
-  //     //     const pts = [
-  //     //       lastPoint,
-  //     //       ...pointsBetween(lastPoint, { x, y }).map(_ => ({ ..._, command })),
-  //     //       { command, x, y }
-  //     //     ];
-
-  //     //     const time = INTERVAL ? INTERVAL / pts.length : 0;
-
-  //     //     for (let n = 0; n < pts.length; n++) {
-  //     //       const pt = pts[n];
-
-  //     //       d = this.appendToPath(d, command, new Point(pt.x, pt.y));
-
-  //     //       this.#path.setAttribute('d', d);
-
-  //     //       await delay(time);
-  //     //     }
-  //     //   }
-
-  //     //   else {
-  //     //     d = this.appendToPath(d, command, new Point(x, y))
-
-  //     //     this.#path.setAttribute('d', d);
-
-  //     //     await delay(INTERVAL);
-  //     //   }
-
-  //     //   lastPoint = currentPoint;
-
-  //     //   this.#cursor = this.#cursor + 1;
-
-  //     //   currentPoint = cmds[this.#cursor];
-
-  //     // });
-  //     // while (this.#isPrinting === true && currentPoint) {
-  //     //   const { command, x, y, z, e } = currentPoint;
-
-  //     //   if (lastPoint && command === 'G1') {
-  //     //     const pts = [
-  //     //       lastPoint,
-  //     //       ...pointsBetween(lastPoint, { x, y }).map(_ => ({ ..._, command })),
-  //     //       { command, x, y }
-  //     //     ];
-
-  //     //     const time = INTERVAL ? INTERVAL / pts.length : 0;
-
-  //     //     for (let n = 0; n < pts.length; n++) {
-  //     //       const pt = pts[n];
-
-  //     //       d = this.appendToPath(d, command, new Point(pt.x, pt.y));
-
-  //     //       this.#path.setAttribute('d', d);
-
-  //     //       await delay(time);
-  //     //     }
-  //     //   }
-
-  //     //   else {
-  //     //     d = this.appendToPath(d, command, new Point(x, y))
-
-  //     //     this.#path.setAttribute('d', d);
-
-  //     //     await delay(INTERVAL);
-  //     //   }
-
-  //     //   lastPoint = currentPoint;
-
-  //     //   this.#cursor = this.#cursor + 1;
-
-  //     //   currentPoint = cmds[this.#cursor];
-  //     // }
-
-  //     this.stop();
-
-  //     return this;
-  //   }
-  // }
-
 }
-
-
-// requestAnimationFrame()

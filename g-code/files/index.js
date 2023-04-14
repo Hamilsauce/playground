@@ -1,4 +1,47 @@
-export const files = [
+export const GCODE_FILES = [
+  {
+    name: 'bolt-and-block.gcode',
+    path: '/files/bolt-and-block.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+  {
+    name: 'circle-grid.gcode',
+    path: '/files/circle-grid.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+  {
+    name: 'cup1.gcode',
+    path: '/files/cup1.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+  {
+    name: 'hook.gcode',
+    path: '/files/hook.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+  {
+    name: 'spoon.gcode',
+    path: '/files/spoon.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+  {
+    name: 'straw.gcode',
+    path: '/files/straw.gcode',
+    size: 5.6,
+    date: '4/07/2023',
+    time: '7:08'
+},
+
   {
     name: 'screw-connecter1.gcode',
     path: '/files/screw-connecter1.gcode',
@@ -28,19 +71,33 @@ export const files = [
     time: '23:32'
   },
   {
+    name: 'gear1.gcode',
+    path: '/files/gear1.gcode',
+    size: 0.11336,
+    date: '4/14/2023',
+    time: '14:32'
+  },
+  {
     name: 'screws2.gcode',
     path: '/files/screws2.gcode',
     size: 0.11336,
     date: '4/5/2023',
     time: '23:32'
   },
-  // {
-  //   name: 'budapest-priest.gcode',
-  //   path: '/files/budapest-priest.gcode',
-  //   size: 5.868842,
-  //   date: '4/6/2023',
-  //   time: '18:35'
-  // },
+  {
+    name: 'tv-button.gcode',
+    path: '/files/tv-button.gcode',
+    size: 5.868842,
+    date: '4/6/2023',
+    time: '18:35'
+  },
+  {
+    name: 'thing-holder1.gcode',
+    path: '/files/thing-holder1.gcode',
+    size: 5.868842,
+    date: '4/6/2023',
+    time: '18:35'
+  },
   {
     name: 'circlething1.gcode',
     path: '/files/circlething1.gcode',
@@ -84,8 +141,8 @@ export const files = [
     time: '18:15'
   },
   {
-    name: 'king-pick1-Pick_1.gcode',
-    path: '/files/king-pick1-Pick_1.gcode',
+    name: 'king-pick1.gcode',
+    path: '/files/king-pick1.gcode',
     size: 0.267904,
     date: '3/23/2023',
     time: '00:43'
@@ -139,13 +196,13 @@ export const files = [
     date: '4/6/2023',
     time: '16:43'
   },
-  {
-    name: 'recorder.gcode',
-    path: '/files/recorder.gcode',
-    size: 11.545724,
-    date: '3/7/2023',
-    time: '13:51'
-  },
+  // {
+  //   name: 'recorder.gcode',
+  //   path: '/files/recorder.gcode',
+  //   size: 11.545724,
+  //   date: '3/7/2023',
+  //   time: '13:51'
+  // },
   {
     name: 'torus-ring2.gcode',
     path: '/files/torus-ring2.gcode',
@@ -160,11 +217,4 @@ export const files = [
     date: '3/27/2023',
     time: '01:08'
   },
-  {
-    name: 'evil-pope-merged.gcode',
-    path: '/files/evil-pope-merged.gcode',
-    size: 5.6,
-    date: '4/07/2023',
-    time: '7:08'
-  }
 ];

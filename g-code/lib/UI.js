@@ -59,15 +59,18 @@ export const ui = {
           e.stopPropagation();
 
           const selection = e.target.selectedOptions[0];
-
+          console.log('selection.value', selection.value)
           e.target.dispatchEvent(new CustomEvent('gcodepath:change', {
             bubbles: true,
             detail: { filepath: selection.value }
           }));
         },
-        children: fileList.map((path, i) => DOM.createElement({
+        children: fileList.map(({ path, name }, i) => DOM.createElement({
           tag: 'option',
-          elementProperties: { textContent: path.replace('/files/', '').replace('.gcode', ''), value: path.startsWith('/') ? `.${path}` : `./data/${path}` },
+          elementProperties: {
+            textContent: name,
+            value: path.startsWith('/') ? `.${path}` : `./data/${path}`
+          },
         }))
       }),
     );

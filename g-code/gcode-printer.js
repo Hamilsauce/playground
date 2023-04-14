@@ -43,6 +43,7 @@ export class GcodePrinter {
     const p = this.#canvas.querySelector('#layer-path-template').cloneNode(true);
     p.dataset.z = z;
     p.dataset.id = 'layer' + z;
+
     return p;
   }
 
@@ -60,7 +61,7 @@ export class GcodePrinter {
       commands: this.#commands,
       cursor: this.#cursor,
       layers: this.#layers,
-      d: this.#currentLayer.getAttribute('d'),
+      // d: this.#currentLayer.getAttribute('d'),
       drawCommands: this.drawCommands,
     }
   }
@@ -87,7 +88,7 @@ export class GcodePrinter {
     if (!(this.#isPrinting === true || currentPoint)) {
       this.stop();
     }
-    
+
     else {
 
       const { command, x, y, z, e } = this.currentPoint;
@@ -131,7 +132,6 @@ export class GcodePrinter {
 
   async print(commands = [], onCompleteHandler = () => null) {
     this.#commands = commands;
-
     this.drawCommands = commands.filter(({ command, x, y }) => !(isNaN(x) || isNaN(y)) && ['G0', 'G1'].includes(command));
 
     this.#layers = new Map(
@@ -163,6 +163,17 @@ export class GcodePrinter {
       while (this.#isPrinting === true && currentPoint) {
         const { command, x, y, z, e } = currentPoint;
 
+        if (command == 'G0') {
+          const p = document.createElementNS(this.#canvas.namespaceURI, 'circle');
+
+          p.r.baseVal.value = 0.15;
+          p.cy.baseVal.value = (+y || 1);
+          p.cx.baseVal.value = (+x || 1);
+          p.classList.add('G0')
+
+          this.#scene.append(p);
+        }
+        
         if (z) {
           d = '';
           this.#currentLayer = this.#layers.get(z);

@@ -2,11 +2,12 @@ import { GcodeParser, loadFile } from './gcode-parser.js';
 import { GcodePrinter } from './gcode-printer.js';
 import { Fusible, Infusible } from '../Fusible.js';
 import { gcodePaths } from './data/gcode-paths.js';
+import { GCODE_FILES } from './files/index.js';
 import { TransformList, TRANSFORM_TYPES, TRANSFORM_TYPE_INDEX } from '../lib/TransformList.js';
 import { Point, delay, zoom, addPanAction } from './lib/index.js';
 import { appState } from './lib/AppState.js';
 import { ui } from './lib/UI.js';
-
+import { ReadableFile } from './lib/File.js';
 import ham from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 
 const { template, utils, DOM, download } = ham;
@@ -14,26 +15,21 @@ const { template, utils, DOM, download } = ham;
 
 const loadGcodeFile = async (path, printPoints = false) => {
   appState.update('appTitle', 'loading...')
+
   const drawPoints = appState.select('drawPoints')
   const rawGcode = await printer.loadGcode(path)
-
   const gcodeLines = await parser.parse(rawGcode)
 
-  // const grouped = printer.groupByCommandType(gcodeLines)
-  // consolez.log('grouped', grouped)
-
   const gcodeCoords = gcodeLines.filter(_ => !!_.x && !!_.y);
-  console.log('gcodeCoords', gcodeCoords)
+  // console.log('gcodeCoords', gcodeCoords)
   // download(path.slice(0, path.indexOf('.gcode')) + 'grouped.json', JSON.stringify(gcodeLinesByCommand, null, 2))
 
   ui.scene.innerHTML = '';
 
   printer.print(gcodeLines);
 
-
   let currentZ = 0;
-  console.log('drawPoints', drawPoints)
-  
+
   if (drawPoints) {
     ui.scene.append(...(
       await Promise.all(
@@ -61,11 +57,7 @@ const loadGcodeFile = async (path, printPoints = false) => {
   return true;
 };
 
-
-
-
-
-ui.init(gcodePaths);
+ui.init(GCODE_FILES);
 
 /*  @FUSION - Extend printer with fusibility 
       allow extension by interfacing with Infusible
@@ -131,10 +123,10 @@ appState.listenOn('filepath', async (filepath) => {
 
   printer.stop();
 
-  await delay(1000);
+  await delay(500);
 
   const res = await loadGcodeFile(filepath, true);
-
+  console.warn('res', res)
   console.timeEnd('DRAW POINTS');
 });
 

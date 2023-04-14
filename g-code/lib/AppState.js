@@ -1,4 +1,4 @@
-import { files } from '../files/index.js';
+import { GCODE_FILES } from '../files/index.js';
 import { gcodePaths } from '../data/gcode-paths.js';
 
 class AppState {
@@ -10,7 +10,7 @@ class AppState {
     filepath: null,
     drawPoints: false,
     rotation: 0,
-    files: new Map(files.map(({ name, ...file }) => [name, file])),
+    files: new Map(GCODE_FILES.map(({ name, ...file }) => [name, file])),
   }
 
   constructor(initialState = {}) {

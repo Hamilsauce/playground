@@ -67,22 +67,26 @@ const pointerUp$ = fromEvent(listItems, 'pointerup');
 
 const swipe$ = pointerDown$
   .pipe(
-    map(({ clientX, clientY }) => ({ x: clientX, y: clientY })),
+    map(({ target, clientX, clientY }) => ({ x: (parseInt(getComputedStyle(target).width) / 2), y: clientY })),
     tap(startPoint => start = startPoint),
     tap(() => isSwiping = true),
     switchMap(startPoint => pointerMove$
       .pipe(
-        map(({ clientX, clientY, target }) => ({ x: clientX, y: clientY, target })),
+        map(({ clientX, clientY, target }) => ({
+          x: clientX, // + (parseInt(getComputedStyle(target).width) / 2),
+          y: clientY,
+          target
+        })),
         // scan((prevPoint, currPoint) => {
         //   console.log('prevPoint, currPoint', prevPoint, currPoint)
         //   Points.dragStartPoint = prevPoint ? Points.dragStartPoint : currPoint;
-
+        
         //   if (!currPoint) {
         //     Points.lastDragPoint = Points.basePoint;
-
+        
         //     return Points.basePoint;
         //   }
-
+        
         //   return {
         //     target: currPoint.target,
         //     x: Points.lastDragPoint.x + (currPoint.x - Points.dragStartPoint.x),
@@ -90,7 +94,7 @@ const swipe$ = pointerDown$
         //   }
         // }, Points.basePoint),
         tap(dragItem),
-
+        
         switchMap(curr => pointerUp$
           .pipe(
             tap(() => Points.basePoint = curr),
@@ -101,7 +105,7 @@ const swipe$ = pointerDown$
             tap(x => console.log('startPoint.x - curr.x', Math.abs(startPoint.x - curr.x))),
             tap(x => console.log('startPoint.x - curr.x', Math.abs(curr.x - startPoint.x) > 200)),
             filter(x => Math.abs(curr.x - startPoint.x) > 200),
-            tap(({target})=> {
+            tap(({ target }) => {
               target.remove()
             }),
           )

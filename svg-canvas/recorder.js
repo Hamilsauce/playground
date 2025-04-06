@@ -15,11 +15,8 @@ const createSVGPoint = (targ, x, y) => {
   const pt = new DOMPoint(x, y);
   pt.x = Math.round(x);
   pt.y = Math.round(y);
-  console.warn('pt pre CTM', pt.x, pt.y)
 
   pt.matrixTransform(targ.getScreenCTM().inverse());
-  console.warn('pt post CTM', pt.x, pt.y)
-  
   points.push(pt);
   
   return pt;

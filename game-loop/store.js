@@ -159,7 +159,7 @@ export class Store extends EventEmitter {
 
     this.#grid = gridModel;
     
-    console.log(this.#grid);
+    // console.log(this.#grid);
   }
 
   get grid() { return this.#grid };

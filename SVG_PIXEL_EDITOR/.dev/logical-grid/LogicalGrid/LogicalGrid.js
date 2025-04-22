@@ -1,7 +1,7 @@
 const { forkJoin, Observable, iif, BehaviorSubject, AsyncSubject, Subject, interval, of , fromEvent, merge, empty, delay, from } = rxjs;
 const { flatMap, reduce, groupBy, toArray, mergeMap, switchMap, scan, map, tap, filter } = rxjs.operators;
 const { fromFetch } = rxjs.fetch;
-import { draggable } from '/utils/draggable.service.js'
+import { draggable } from '../utils/draggable.service.js'
 
 import { Tile } from '/logical-grid/Tile.js'
 import { LogicalTile } from '../LogicalTile.js'

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>app</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+  
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header id="app-header">
+      <div id="app-header-left">L</div>
+      <div id="app-header-center">
+        <h1>Title</h1>
+      </div>
+      <div id="app-header-right">R</div>
+    </header>
+    <section id="app-body">
+      <canvas id="gameCanvas" width="400" height="300" style="border:1px solid black;"></canvas>
+      <div id="key-controls">
+        <input id="arrow-left" data-arrow="left" value="<" type="button" class="arrow-button">
+        <input id="arrow-right" data-arrow="right" value=">" type="button" class="arrow-button">
+        <input id="arrow-up" data-arrow="up" value="^" type="button" class="arrow-button">
+        <input id="arrow-down" data-arrow="down" value="v" type="button" class="arrow-button">
+      </div>
+    </section>
+    <footer id="app-footer">
+      <div class="container">
+        footer
+      </div>
+    </footer>
+  </div>
+  <!-- <script src="./script.js" type="module"></script> -->
+  <script type="module">
+    import { keyControls } from '../gpt-game-loop/key-controls.js';
+    
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Game state
+    let lastTime = 0;
+    let x = 100;
+    let y = 150;
+    const speed = 200; // pixels per second
+    const size = 50;
+    
+    // Sprite animation state
+    let frame = 0;
+    let frameTimer = 0;
+    const totalFrames = 4;
+    const frameDuration = 100; // ms per frame
+    
+    // Input state
+    const keys = {};
+    
+    // FPS tracking
+    let fps = 0;
+    let fpsTimer = 0;
+    let fpsCounter = 0;
+    
+    // Listen for input
+    window.addEventListener('keydown', (e) => keys[e.key] = true);
+    window.addEventListener('keyup', (e) => keys[e.key] = false);
+    
+    const handleArrowEvents = (arrowKey) => {
+      // console.log('HANDLE ALL ARROWS')
+    };
+    
+    const handleArrowStart = (arrowKey) => {
+      keys[arrowKey] = true
+      
+      // console.log('HANDLE START ARROWS')
+    };
+    
+    const handleArrowEnd = (arrowKey) => {
+      keys[arrowKey] = false
+      
+      // console.log('HANDLE END ARROWS')
+    };
+    
+    keyControls.registerListener('arrow:start', handleArrowStart)
+    keyControls.registerListener('arrow:end', handleArrowEnd)
+    
+    keyControls.registerListener('*', handleArrowEvents)
+    
+    // keyControls.registerListener('arrow:end', (arrowKey) => {
+    //   keys[arrowKey] = false
+    // })
+    
+    function gameLoop(timestamp) {
+      const deltaTime = timestamp - lastTime;
+      lastTime = timestamp;
+      
+      update(deltaTime);
+      render();
+      
+      requestAnimationFrame(gameLoop);
+    }
+    
+    function update(deltaTime) {
+      const dt = deltaTime / 1000;
+      
+      // Movement input
+      if (keys['right']) x += speed * dt;
+      if (keys['left']) x -= speed * dt;
+      if (keys['up']) y -= speed * dt;
+      if (keys['down']) y += speed * dt;
+      
+      // Sprite animation frame update
+      frameTimer += deltaTime;
+      if (frameTimer >= frameDuration) {
+        frameTimer -= frameDuration;
+        frame = (frame + 1) % totalFrames;
+      }
+      
+      // FPS tracking
+      fpsTimer += deltaTime;
+      fpsCounter++;
+      if (fpsTimer >= 1000) {
+        fps = fpsCounter;
+        fpsCounter = 0;
+        fpsTimer -= 1000;
+      }
+    }
+    
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw animated sprite (simulate with color cycling)
+      const colors = ['red', 'orange', 'yellow', 'green'];
+      ctx.fillStyle = colors[frame];
+      ctx.fillRect(x, y, size, size);
+      
+      // Draw FPS
+      ctx.fillStyle = 'black';
+      ctx.font = '16px monospace';
+      ctx.fillText(`FPS: ${fps}`, 10, 20);
+    }
+    
+    // Start loop
+    requestAnimationFrame(gameLoop);
+  </script>
+  
+</body>
+
+</html>

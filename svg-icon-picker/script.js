@@ -1,7 +1,9 @@
 const app = document.querySelector('#app');
 const appHeader = document.querySelector('#app-header')
 const appBody = document.querySelector('#app-body')
-const svgs = [...appBody.querySelectorAll('svg')];
+const headerStats = document.querySelector('#header-stats')
+const svgs = appBody.querySelectorAll('svg')
+const svgArray = [...svgs]
 const recentIconContainer = document.querySelector('#recent-icons');
 const recentIcons = [...recentIconContainer.querySelectorAll('path')]
 console.log('recentIcons', recentIcons)
@@ -9,6 +11,7 @@ const svgCount = svgs.length
 
 appHeader.querySelector('#header-stats').textContent = `Icons: ${svgCount}`
 
+  // headerStats.innerHTML = `Icons: ${svgs.length}`
 
 
 const selectAllText = (e) => { window.getSelection().selectAllChildren(e.target) };
@@ -51,13 +54,10 @@ app.addEventListener('click', async (e) => {
   await writeToClipboard2(e.target.outerHTML)
 
   alert('Copied!');
+  
 });
 
 
 
 
-svgs.forEach((svg, i) => {
-
-
-
-});
+// svgs.forEach((svg, i) => );

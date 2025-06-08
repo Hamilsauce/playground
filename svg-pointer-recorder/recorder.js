@@ -9,6 +9,7 @@ export class PenMark {
     this.layer = layer;
     
     this.createPath(downPoint);
+    console.warn('this penmark', this)
   }
   
   get boundingBox() {
@@ -153,30 +154,19 @@ const createSelectBox = (boundingBox) => {
   const selectBox = document.createElementNS(SVG_NS, 'rect');
   selectBox.classList.add('select-box')
   
-  // selectBox.setAttribute('stroke', `grey`);
-  // selectBox.setAttribute('stroke-width', `2`);
-  // selectBox.setAttribute('fill', `lightgrey`);
   selectBox.setAttribute('width', boundingBox.width + 10);
   selectBox.setAttribute('height', boundingBox.height + 10);
   selectBox.setAttribute('x', boundingBox.x - 5);
   selectBox.setAttribute('y', boundingBox.y - 5);
-  // console.log('boundingBox.width', boundingBox.width)
   
   return selectBox;
 };
 
 const updateSelectBox = (selectBox, boundingBox) => {
-  // pt = this.getMarkPoint(pt.x, pt.y)
-  
-  // selectBox.setAttribute('stroke', `lightgrey`);
-  // selectBox.setAttribute('stroke-width', `2`);
-  // selectBox.setAttribute('fill', `red`);
   selectBox.setAttribute('width', boundingBox.width + 10);
   selectBox.setAttribute('height', boundingBox.height + 10);
   selectBox.setAttribute('x', boundingBox.x - 5);
   selectBox.setAttribute('y', boundingBox.y - 5);
-  // console.log('boundingBox.width', boundingBox.width)
-  // selectBox.style.display = 'none';
   
   return selectBox;
 };

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>app</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.3.0/rxjs.umd.min.js" integrity="sha512-y3JTS47nnpKORJX8Jn1Rlm+QgRIIZHtu3hWxal0e81avPrqUH48yk+aCi+gprT0RMAcpYa0WCkapxe+bpBHD6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      z-index: 0;
+    }
+    
+    html {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+    }
+    
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    
+    #app {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr;
+      gap: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    #app-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+    }
+    
+    #app-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header id="app-header">
+      <div id="app-header-left">L</div>
+      <div id="app-header-center">
+        <h1>Title</h1>
+      </div>
+      <div id="app-header-right">R</div>
+    </header>
+    <section id="app-body">
+      <canvas id="gameCanvas" height="200" style="border:1px solid black;"></canvas>
+      
+    </section>
+    <footer id="app-footer">
+      <div class="container">
+        footer
+      </div>
+    </footer>
+  </div>
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let lastTime = 0;
+    let x = 0;
+    const speed = 150; // pixels per second
+    
+    function gameLoop(timestamp) {
+      const deltaTime = timestamp - lastTime;
+      lastTime = timestamp;
+      
+      update(deltaTime);
+      render();
+      
+      requestAnimationFrame(gameLoop);
+    }
+    
+    function update(deltaTime) {
+      // Move square to the right based on time
+      x += speed * (deltaTime / 1000);
+      
+      // Wrap around if it goes off screen
+      if (x > canvas.width) {
+        x = -50; // reset to left side
+      }
+    }
+    
+    function render() {
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw a square
+      ctx.fillStyle = 'blue';
+      ctx.fillRect(x, 75, 50, 50);
+    }
+    
+    const windowWidth = window.innerWidth
+    const parentWidth2 = +(getComputedStyle(canvas.parentElement).innerWidth)
+    // console.warn('parentWidth', parentWidth)
+    canvas.style.width = windowWidth + 'px'
+    
+    // Start the loop
+    requestAnimationFrame(gameLoop);
+  </script>
+  
+  <!-- <script src="./script.js" type="module"></script> -->
+</body>
+
+</html>

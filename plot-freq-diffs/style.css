@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #27272A;
+  color: #F2F2F2;
+}
+
+#app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+  overflow-y: scroll;
+}
+
+#svg-canvas {
+  background: #791856;
+  width: 100%;
+  height: 100%;
+  /* min-width:100vw;min-height:100vh; */
+}
+
+#surface {
+  fill: #27272A;
+  
+  /* width: 100%; */
+  /* height: 100%; */
+  /* min-width:100vw;min-height:100vh; */
+}
+
+.origin {
+  fill: #F2F2F2;
+  stroke: #27272A;
+  stroke-width: 0.75;
+  r: 1;
+  
+}
+
+.axis-line {
+  stroke: #F2F2F2;
+  stroke-width: 0.25;
+}
+
+.plot-point {
+  fill: #F41818;
+  stroke: #F2F2F2;
+  stroke-width: 0.25;
+  r: 1;
+}
+
+.plot-point[data-key=diff] {
+  fill: #F41818;
+}
+
+.plot-point[data-key=freq] {
+  fill: #278FE6;
+  
+}
+
+.plot-point[data-key=myfreq] {
+  fill: #AAE627;
+  
+}

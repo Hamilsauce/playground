@@ -5,22 +5,12 @@ const events = new Map([
 ])
 
 const fireEvent = (evt, data) => {
-  const listeners = events.get(evt)
-  const globalListeners = events.get('*')
+  const listeners = [...(events.get(evt) ?? [])];
+  const globalListeners = [...(events.get('*') ?? [])];
   
-  const combined = new Set([...listeners, ...globalListeners])
-  
-  console.group(`[ ${evt}: ${data} ] `)
-  
-  console.warn(`listeners:  `, [...listeners])
-  console.warn(`Global listeners:  `, [...globalListeners])
-  console.warn('combined listeners', [...combined])
-  
-  console.groupEnd(`[ ${evt}: ${data} ] `)
-
-  combined.forEach((listener, i) => {
-    listener(data)
-  });
+  for (const listener of [...listeners, ...globalListeners]) {
+    listener(data, evt);
+  }
 }
 
 const registerListener = (evt, listener) => {

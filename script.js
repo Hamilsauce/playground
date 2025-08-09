@@ -4,7 +4,7 @@ const { template, utils, download } = ham;
 const todayDateForFilename = (dateString) => {
   const splitDate = new Date(dateString || Date.now()).toLocaleDateString()
     .split('/');
-
+  
   return `${splitDate[2]}${splitDate[0].length === 1 ? '0' + splitDate[0] : splitDate[0]}${splitDate[1].length === 1 ? '0' + splitDate[1] : splitDate[1]}`;
 };
 
@@ -39,9 +39,13 @@ const blacklist = new Set([
 
 const getGitTree = async (url) => {
   const response = (await (await fetch(url)).json())
+  
+  const responseTree = (response.tree ? response.tree : response)
+    .filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path));
+  console.warn('responseT', responseTree)
+  
   response.sort((a, b) => a.position - b.position);
-
-  return (response.tree ? response.tree : response).filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path))
+  return responseTree
 };
 
 /*
@@ -56,20 +60,20 @@ const createFolderLink = (folder) => {
   const link = dom.firstElementChild;
   link.href = `${BASEPATH}/${folder.path}`;
   link.textContent = folder.path;
-
+  
   return dom;
 };
 
 const createFolderList = (folders) => {
   const list = template('folders');
-
+  
   const doc = folders.reduce((frag, curr, i) => {
     frag.append(createFolderLink(curr));
     return frag;
   }, new DocumentFragment());
-
+  
   list.append(doc);
-
+  
   return list;
 };
 
@@ -82,7 +86,7 @@ appBody.append(folderList);
 
 folderList.addEventListener('click', e => {
   const target = e.target.closest('.folder');
-
+  
   setTimeout(() => {
     target.querySelector('a').click();
   }, 0)

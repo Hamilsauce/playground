@@ -77,30 +77,33 @@ body {
 
 .plot-point {
   fill: #F41818;
-  stroke: #F2F2F2;
-  stroke-width: 0.25;
-  r: 1;
-  filter: opacity(0) blur(2px);
-}
+  stroke: #FFFFFFA6;
+  stroke-width: 2;
+  r: 4;
+  filter: opacity(0.15) blur(1.25px) contrast(1) brightness(1.75);
 
-.plot-point.show {
-  filter: opacity(1) blur(0);
-}
-
-.plot-point[data-key=diff] {
-  fill: #F41818;
-  transition: 0.25s ease;
-
-}
-
-.plot-point[data-key=freq] {
-  fill: #278FE6;
-  transition: 0.25s ease-in;
-
+  transition: 0.25s ease-out;  
   
 }
 
+.plot-point.show {
+  stroke-width: 0.01;
+  stroke: #008BFF8F;
+  r: 0.75;
+  filter: opacity(0.8) blur(0.2px) contrast(2) brightness(2.25);
+  transition: 0.1s ease-in;
+}
+
+.plot-point[data-key=diff] {
+  fill: #D92F2FDE;
+  transition: 0.25s ease;
+}
+
+.plot-point[data-key=freq] {
+  fill: #278FE690;
+}
+
 .plot-point[data-key=myfreq] {
-  fill: #AAE627;
+  fill: #AAE62780;
   transition: 0.5s ease-in;
 }

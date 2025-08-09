@@ -38,15 +38,24 @@ const toSvgPoint = (svg, x, y) => {
 // const svgCanvas = document.querySelector('#svg-canvas')
 // const scene = svgCanvas.querySelector('#scene')
 
+const pointNameDelayMap = {
+  diff: 2,
+  freq: 5,
+  myfreq: 3,
+}
+
 const renderPoint = async (svg, point, freqDiff, freqKey = 'diff') => {
   const { time, diff, myFreq, freq } = freqDiff
-  // const point = toSvgPoint(svg, time, freqDiff[freqKey]);
   const circ = useTemplate('plot-point');
+  const delay = pointNameDelayMap[freqKey]
   
   Object.assign(circ.dataset, { key: freqKey })
+  
   circ.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(0) scale(1)`)
+  
   objectLayer.append(circ)
-  await sleep(2)
+  
+  await sleep(delay / 10)
   return circ;
 };
 
@@ -73,52 +82,40 @@ svgCanvas.addEventListener('dblclick', e => {
   
 });
 
-svgCanvas.addEventListener('contextmenu', e => {
+svgCanvas.addEventListener('_contextmenu', e => {
   appState.zoomOut()
   const input = viewport.getAttribute('transform')
   const output = input.replace(/scale\(([^)]*)\)/g, `scale(${appState.currentViewportScale})`);
   viewport.setAttribute('transform', output)
-  
-  
 });
 
-// const plotPoint = renderPoint(svgCanvas, frequencyDiffs[0])
 let perf = {
   start: 0,
   end: 0,
 }
 
-// perf.start = performance.now()
-// frequencyDiffs.forEach((d, i) => {
-//   const {
-//     myfreq,
-//     freq,
-//     time,
-//     diff,
-//   } = d;
-//   d.myfreq = Math.round(myfreq)
-//   d.freq = Math.round(freq)
-//   d.time = Math.round(time)
-//   d.diff = Math.round(diff)
-
-//   renderPoint(svgCanvas, d, 'freq')
-// });
 let shouldFollow = true;
-svgCanvas.addEventListener('pointerdown', e => {
+let pressDuration = 500;
+let pressCount = 500;
+let longPressIntervalId = null;
+
+viewport.addEventListener('pointerdown', e => {
   shouldFollow = false;
+  
+  longPressIntervalId = setTimeout(() => {}, pressDuration)
 });
 
-svgCanvas.addEventListener('pointerup', e => {
+viewport.addEventListener('pointerup', e => {
   shouldFollow = true;
+  clearTimeout(longPressIntervalId)
+  longPressIntervalId = null
 });
 
-let diffKey = 'myfreq'
+let diffKey = 'myfreq';
+
 frequencyDiffs.reduce(async (acc, d, i) => {
   acc = await acc
   perf.start = performance.now()
-  if (i === 0) {
-    
-  }
   
   const {
     myfreq,
@@ -126,52 +123,61 @@ frequencyDiffs.reduce(async (acc, d, i) => {
     time,
     diff,
   } = d;
+  
   d.myfreq = Math.round(myfreq)
   d.freq = Math.round(freq)
   d.time = (Math.round(time) / 3)
-  d.diff = Math.round(diff)
+  d.diff = Math.round(diff);
+  
   const point = toSvgPoint(svgCanvas, d.time, d['freq'], );
   const point2 = toSvgPoint(svgCanvas, d.time, d['myfreq']);
   const point3 = toSvgPoint(svgCanvas, d.time, d['diff'], );
   
-  
   const p = await renderPoint(svgCanvas, point, d, 'freq')
-  setTimeout(() => {
-    p.classList.add('show');
-    setTimeout(() => {
-      // p.classList.remove('show');
-      p.remove()
-    }, 700)
-    
-  }, 8.5)
   
   const p2 = await renderPoint(svgCanvas, point2, d, 'myfreq')
+  // p2.classList.add('show');
+  
+  const p3 = await renderPoint(svgCanvas, point3, d, 'diff')
+  // p3.classList.add('show');
+  
+  
+  setTimeout(() => {
+    p.classList.add('show');
+    
+    setTimeout(() => {
+      p.classList.remove('show');
+      
+      setTimeout(() => {
+        p.remove()
+      }, 500)
+    }, 750)
+  }, 50)
   
   setTimeout(() => {
     p2.classList.add('show');
-    setTimeout(() => {
-      // p2.classList.remove('show');
-      p.remove()
-    }, 1000)
     
-  }, 200)
+    setTimeout(() => {
+      p2.classList.remove('show');
+      
+      setTimeout(() => {
+        p2.remove()
+      }, 1000)
+    }, 500)
+  }, 75)
   
-  p.classList.remove('show');
-  const p3 = await renderPoint(svgCanvas, point3, d, 'diff')
-  // p3.classList.add('show');
   setTimeout(() => {
     p3.classList.add('show');
-    setTimeout(() => {
-      // p3.classList.remove('show');
-      p.remove()
-      
-    }, 750)
     
-  }, 250)
+    setTimeout(() => {
+      p3.classList.remove('show');
+      
+      setTimeout(() => {
+        p3.remove()
+      }, 50)
+    }, 1000)
+  }, 0)
   
-  // p2.classList.remove('show');
-  // await sleep(2);
-  // p3.classList.remove('show');
   
   const vpTrans = viewport.getAttribute('transform')
   // const vpTrans = viewport.getAttribute('transform')
@@ -184,7 +190,8 @@ frequencyDiffs.reduce(async (acc, d, i) => {
     const point2 = toSvgPoint(svgCanvas, x, y);
     
     // console.log(values); // => [2.5, 3.5]
-    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${point3.y+100})`);
+    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${y})`);
+    // output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${point3.y+100})`);
     if (shouldFollow) {
       viewport.setAttribute('transform', output)
       
@@ -195,10 +202,9 @@ frequencyDiffs.reduce(async (acc, d, i) => {
   
   
   
-  perf.end = performance.now()
-  console.warn(' perf',
-    
-  )
+  perf.end = performance.now();
+  
+  
   const fps = 1000 / (perf.end - perf.start);
   
   appHeaderRight.textContent = `FPS ${Math.round(fps)}`

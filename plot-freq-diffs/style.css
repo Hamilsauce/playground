@@ -80,18 +80,27 @@ body {
   stroke: #F2F2F2;
   stroke-width: 0.25;
   r: 1;
+  filter: opacity(0) blur(2px);
+}
+
+.plot-point.show {
+  filter: opacity(1) blur(0);
 }
 
 .plot-point[data-key=diff] {
   fill: #F41818;
+  transition: 0.25s ease;
+
 }
 
 .plot-point[data-key=freq] {
   fill: #278FE6;
+  transition: 0.75s ease-in-out;
+
   
 }
 
 .plot-point[data-key=myfreq] {
   fill: #AAE627;
-  
+  transition: 0.5s ease-in;
 }

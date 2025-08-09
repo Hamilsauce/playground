@@ -42,7 +42,7 @@ const renderPoint = async (svg, point, freqDiff, freqKey = 'diff') => {
   // const point = toSvgPoint(svg, time, freqDiff[freqKey]);
   const circ = useTemplate('plot-point');
   
-  Object.assign(circ.dataset, {  key: freqKey })
+  Object.assign(circ.dataset, { key: freqKey })
   circ.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(0) scale(1)`)
   objectLayer.append(circ)
   await sleep(2)
@@ -121,13 +121,44 @@ frequencyDiffs.reduce(async (acc, d, i) => {
   d.freq = Math.round(freq)
   d.time = (Math.round(time) / 3)
   d.diff = Math.round(diff)
-  const point = toSvgPoint(svgCanvas, d.time, d['freq'],);
+  const point = toSvgPoint(svgCanvas, d.time, d['freq'], );
   const point2 = toSvgPoint(svgCanvas, d.time, d['myfreq']);
-  const point3 = toSvgPoint(svgCanvas, d.time, d['diff'],);
+  const point3 = toSvgPoint(svgCanvas, d.time, d['diff'], );
+  
   
   const p = await renderPoint(svgCanvas, point, d, 'freq')
+  setTimeout(() => {
+    p.classList.add('show');
+    setTimeout(() => {
+      p.classList.remove('show');
+    }, 500)
+    
+  }, 8.5)
+  
   const p2 = await renderPoint(svgCanvas, point2, d, 'myfreq')
+  
+  setTimeout(() => {
+    p2.classList.add('show');
+    setTimeout(() => {
+      p2.classList.remove('show');
+    }, 500)
+    
+  }, 200)
+  
+  // p.classList.remove('show');
   const p3 = await renderPoint(svgCanvas, point3, d, 'diff')
+  // p3.classList.add('show');
+  setTimeout(() => {
+    p3.classList.add('show');
+    setTimeout(() => {
+      p3.classList.remove('show');
+    }, 500)
+    
+  }, 0)
+  
+  // p2.classList.remove('show');
+  // await sleep(2);
+  // p3.classList.remove('show');
   
   const vpTrans = viewport.getAttribute('transform')
   // const vpTrans = viewport.getAttribute('transform')
@@ -140,7 +171,7 @@ frequencyDiffs.reduce(async (acc, d, i) => {
     const point2 = toSvgPoint(svgCanvas, x, y);
     
     // console.log(values); // => [2.5, 3.5]
-    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-500},${point.y+100})`);
+    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-500},${point3.y+100})`);
     viewport.setAttribute('transform', output)
     
   }
@@ -153,4 +184,4 @@ frequencyDiffs.reduce(async (acc, d, i) => {
 }, Promise.resolve([]));
 
 // perf.end = performance.now()
-// console.warn('perf', perf.end - perf.start)
+// console.warn(' perf', perf.end - perf.start)

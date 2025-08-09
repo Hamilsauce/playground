@@ -5,6 +5,7 @@ const { template, utils, sleep } = ham;
 
 const app = document.querySelector('#app');
 const appBody = app.querySelector('#app-body')
+const appHeaderRight = app.querySelector('#app-header-right')
 const svgCanvas = appBody.querySelector('#svg-canvas')
 const viewport = svgCanvas.querySelector('#viewport')
 const scene = viewport.querySelector('#scene')
@@ -102,12 +103,20 @@ let perf = {
 
 //   renderPoint(svgCanvas, d, 'freq')
 // });
+let shouldFollow = true;
+svgCanvas.addEventListener('pointerdown', e => {
+  shouldFollow = false;
+});
+
+svgCanvas.addEventListener('pointerup', e => {
+  shouldFollow = true;
+});
 
 let diffKey = 'myfreq'
 frequencyDiffs.reduce(async (acc, d, i) => {
   acc = await acc
+  perf.start = performance.now()
   if (i === 0) {
-    perf.start = performance.now()
     
   }
   
@@ -130,8 +139,9 @@ frequencyDiffs.reduce(async (acc, d, i) => {
   setTimeout(() => {
     p.classList.add('show');
     setTimeout(() => {
-      p.classList.remove('show');
-    }, 500)
+      // p.classList.remove('show');
+      p.remove()
+    }, 700)
     
   }, 8.5)
   
@@ -140,21 +150,24 @@ frequencyDiffs.reduce(async (acc, d, i) => {
   setTimeout(() => {
     p2.classList.add('show');
     setTimeout(() => {
-      p2.classList.remove('show');
-    }, 500)
+      // p2.classList.remove('show');
+      p.remove()
+    }, 1000)
     
   }, 200)
   
-  // p.classList.remove('show');
+  p.classList.remove('show');
   const p3 = await renderPoint(svgCanvas, point3, d, 'diff')
   // p3.classList.add('show');
   setTimeout(() => {
     p3.classList.add('show');
     setTimeout(() => {
-      p3.classList.remove('show');
-    }, 500)
+      // p3.classList.remove('show');
+      p.remove()
+      
+    }, 750)
     
-  }, 0)
+  }, 250)
   
   // p2.classList.remove('show');
   // await sleep(2);
@@ -171,14 +184,24 @@ frequencyDiffs.reduce(async (acc, d, i) => {
     const point2 = toSvgPoint(svgCanvas, x, y);
     
     // console.log(values); // => [2.5, 3.5]
-    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-500},${point3.y+100})`);
-    viewport.setAttribute('transform', output)
+    output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${point3.y+100})`);
+    if (shouldFollow) {
+      viewport.setAttribute('transform', output)
+      
+    }
     
   }
   
   
   
   
+  perf.end = performance.now()
+  console.warn(' perf',
+    
+  )
+  const fps = 1000 / (perf.end - perf.start);
+  
+  appHeaderRight.textContent = `FPS ${Math.round(fps)}`
   
   return [...acc, p]
 }, Promise.resolve([]));

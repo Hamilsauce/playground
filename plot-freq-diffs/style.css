@@ -95,7 +95,7 @@ body {
 
 .plot-point[data-key=freq] {
   fill: #278FE6;
-  transition: 0.75s ease-in-out;
+  transition: 0.25s ease-in;
 
   
 }

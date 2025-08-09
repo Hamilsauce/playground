@@ -1,0 +1,184 @@
+[
+  {
+    "path": ".macro-recorder",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "fc3ec686d1a03c87230b696fe403cdea4ba285bf",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/fc3ec686d1a03c87230b696fe403cdea4ba285bf"
+  },
+  {
+    "path": ".scratch",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "826f58ffd8bc5528950a23337ab033d4b02b06b9",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/826f58ffd8bc5528950a23337ab033d4b02b06b9"
+  },
+  {
+    "path": "SVG_PIXEL_EDITOR",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b411e93b6a2d952bed913f74e77246e931df765a",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/b411e93b6a2d952bed913f74e77246e931df765a"
+  },
+  {
+    "path": "card-deck-with-generator",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "f2d1bfc077ca8ed260519a01f0c60fcb918541e7",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/f2d1bfc077ca8ed260519a01f0c60fcb918541e7"
+  },
+  {
+    "path": "data-experiements",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "9f03e1b3504f957107f4954a3c1248d5f37011ac",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/9f03e1b3504f957107f4954a3c1248d5f37011ac"
+  },
+  {
+    "path": "data",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "0f66e7cc825511432ad82cd6690281d49b7ce1fe",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/0f66e7cc825511432ad82cd6690281d49b7ce1fe"
+  },
+  {
+    "path": "drag-displace",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ec0b6bc7a5cc60392b0f15d6fa74b96bdb9ef18e",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/ec0b6bc7a5cc60392b0f15d6fa74b96bdb9ef18e"
+  },
+  {
+    "path": "expanding-grid (map-maker-experiment)",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "24f2bbb9bb4e32e7202032224846c7e35917f608",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/24f2bbb9bb4e32e7202032224846c7e35917f608"
+  },
+  {
+    "path": "game-loop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "fcd17432780758e5de27fb4b9e1172bc711a3ff0",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/fcd17432780758e5de27fb4b9e1172bc711a3ff0"
+  },
+  {
+    "path": "gpt-game-loop",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "b68b87999f949c4e4d8a696e2eef8ee895eb3f3d",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/b68b87999f949c4e4d8a696e2eef8ee895eb3f3d"
+  },
+  {
+    "path": "plot-freq-diffs",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "43ef3165998cf35a60a6ad9cb3e8b073df935015",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/43ef3165998cf35a60a6ad9cb3e8b073df935015"
+  },
+  {
+    "path": "pointers-and-gestures",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "45ea6b502162ed87d1fe72d0b46a74e9110c1c48",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/45ea6b502162ed87d1fe72d0b46a74e9110c1c48"
+  },
+  {
+    "path": "poker",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a90decbda1d2f1c2c57cbe350577ca195bb06707",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/a90decbda1d2f1c2c57cbe350577ca195bb06707"
+  },
+  {
+    "path": "quick-pad",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "eb65162787162830deff4352307662fa21c8fc9a",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/eb65162787162830deff4352307662fa21c8fc9a"
+  },
+  {
+    "path": "reactive-cells",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2dade31920a0e7c415a396d3450a0d9eb731641e",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/2dade31920a0e7c415a396d3450a0d9eb731641e"
+  },
+  {
+    "path": "request-animation-frame",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "a7d6ace74f0745a51e69d6a1c29651523298a49b",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/a7d6ace74f0745a51e69d6a1c29651523298a49b"
+  },
+  {
+    "path": "reziable-columns-and-matrixes",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "943aee2583f1b9eb48e780cc86266ae1f2cb0c66",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/943aee2583f1b9eb48e780cc86266ae1f2cb0c66"
+  },
+  {
+    "path": "save-image",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "e7cd803ba6b4f79044faf679b072540bfd8009be",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/e7cd803ba6b4f79044faf679b072540bfd8009be"
+  },
+  {
+    "path": "selection-overlay",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "3d3305d9390b981f42db5031f9565adbc3596d7c",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/3d3305d9390b981f42db5031f9565adbc3596d7c"
+  },
+  {
+    "path": "simple-pixel-editor",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8e6b2bbdb33d9d60284f8835dd57ada09e9495df",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/8e6b2bbdb33d9d60284f8835dd57ada09e9495df"
+  },
+  {
+    "path": "svg-api-bundle",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "8dcdb3884f0ab06a4d74770aca2212823d1590c6",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/8dcdb3884f0ab06a4d74770aca2212823d1590c6"
+  },
+  {
+    "path": "svg-canvas",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "4699041c457a319aea2f4dd93e88651062a65981",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/4699041c457a319aea2f4dd93e88651062a65981"
+  },
+  {
+    "path": "svg-directed-graph",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "ffd730971c9273104a082664b32244e5527c5fae",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/ffd730971c9273104a082664b32244e5527c5fae"
+  },
+  {
+    "path": "svg-icon-picker",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "3f92b2f34b5b79633e3f800d8246b07f3427ca0d",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/3f92b2f34b5b79633e3f800d8246b07f3427ca0d"
+  },
+  {
+    "path": "svg-pointer-recorder",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "cbbb8de0aeec8273a10f7682eb28a1a083c0bb28",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/cbbb8de0aeec8273a10f7682eb28a1a083c0bb28"
+  },
+  {
+    "path": "swipe",
+    "mode": "040000",
+    "type": "tree",
+    "sha": "2a7d4e4d01d4a24af9f1bb00d5ea9fd6394795ee",
+    "url": "https://api.github.com/repos/Hamilsauce/playground/git/trees/2a7d4e4d01d4a24af9f1bb00d5ea9fd6394795ee"
+  }
+]

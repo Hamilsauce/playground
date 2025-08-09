@@ -4,17 +4,15 @@ const { template, utils, download } = ham;
 const todayDateForFilename = (dateString) => {
   const splitDate = new Date(dateString || Date.now()).toLocaleDateString()
     .split('/');
-  
   return `${splitDate[2]}${splitDate[0].length === 1 ? '0' + splitDate[0] : splitDate[0]}${splitDate[1].length === 1 ? '0' + splitDate[1] : splitDate[1]}`;
 };
 
 
-const GIT_TREE_DATE_STRING = '04/09/2023'
+const GIT_TREE_DATE_STRING = '08/01/2025'
 
 const API_URL = 'https://api.github.com/repos/Hamilsauce/playground/git/trees/master?recursive=true'
-const JSON_URL = `./data/playground-git-tree_${todayDateForFilename('04/09/2023')}.json`;
+const JSON_URL = `./data/playground-git-tree_${todayDateForFilename(GIT_TREE_DATE_STRING)}.json`;
 const BASEPATH = `https://hamilsauce.github.io/playground`
-console.log('JSON_URL', JSON_URL)
 // const DATE = new Date(Date.now());
 // console.log('toString', DATE.toString());
 // console.log('toLocaleString', DATE.toLocaleString())
@@ -26,7 +24,6 @@ console.log('JSON_URL', JSON_URL)
 
 
 const TODAY_DATE = todayDateForFilename()
-console.log('TODAY_DATE', TODAY_DATE)
 
 const blacklist = new Set([
   'rx-datastore',
@@ -35,25 +32,35 @@ const blacklist = new Set([
   'SVG_API',
 ])
 
+const whitelist = new Set([
+  'plot-freq-diffs',
+  'card-deck-with-generator',
+  'lib',
+  'SVG_API',
+])
+
 /* ~~~~~ DOWNLOAD GIT TREE ~~~~~ */
 
 const getGitTree = async (url) => {
-  const response = (await (await fetch(url)).json())
-  
-  const responseTree = (response.tree ? response.tree : response)
-    .filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path));
-  console.warn('responseT', responseTree)
-  
-  response.sort((a, b) => a.position - b.position);
-  return responseTree
+  try {
+    const response = (await (await fetch(url)).json())
+    
+    const responseTree = (response.tree ? response.tree : response)
+      .filter((_) => _.type === 'tree' && !_.path.includes('/') && !blacklist.has(_.path));
+    
+    responseTree.sort((a, b) => a.position - b.position);
+    
+    return {
+      folders: [
+        ...responseTree,
+      ],
+      lastUpdated: new Date(Date.now()).toLocaleDateString(),
+    }
+    
+  } catch (e) {
+    console.error(e)
+  }
 };
-
-/*
-// const gitResponse =await getGitTree(API_URL)
-// console.warn('gitResponse', gitResponse)
-download('playground-git-tree.json', JSON.stringify(await getGitTree(API_URL), null, 2))
-*/
-
 
 const createFolderLink = (folder) => {
   const dom = template('folder');
@@ -78,16 +85,42 @@ const createFolderList = (folders) => {
 };
 
 
-
-const appBody = document.querySelector('#app-body')
-const folderList = createFolderList(await getGitTree(JSON_URL))
-
-appBody.append(folderList);
-
-folderList.addEventListener('click', e => {
-  const target = e.target.closest('.folder');
+const init = async (url) => {
+  let localFolders = JSON.parse(localStorage.getItem('playgroundFolders'));
+  let gitResponse
+  let monthsDiff
   
-  setTimeout(() => {
-    target.querySelector('a').click();
-  }, 0)
-});
+  if (localFolders) {
+    const today = new Date(Date.now()).getMonth()
+    const recentPast = new Date(Date.parse(localFolders.lastUpdated)).getMonth()
+    const elapsed = +today - +recentPast;
+    
+    if (elapsed >= 1) {
+      gitResponse = await getGitTree(API_URL)
+      localStorage.setItem('playgroundFolders', JSON.stringify(gitResponse))
+      localFolders = JSON.parse(localStorage.getItem('playgroundFolders'));
+    }
+  }
+  else {
+      gitResponse = await getGitTree(API_URL)
+      localStorage.setItem('playgroundFolders', JSON.stringify(gitResponse))
+      localFolders = JSON.parse(localStorage.getItem('playgroundFolders'));
+  }
+  
+  download('playground-git-tree.json', JSON.stringify(localFolders, null, 2))
+  
+  const appBody = document.querySelector('#app-body')
+  const folderList = createFolderList(localFolders.folders)
+  
+  appBody.append(folderList);
+  
+  folderList.addEventListener('click', e => {
+    const target = e.target.closest('.folder');
+    
+    setTimeout(() => {
+      target.querySelector('a').click();
+    }, 0)
+  });
+}
+
+init()

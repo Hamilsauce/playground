@@ -7,6 +7,16 @@ import { draggable } from 'https://hamilsauce.github.io/hamhelper/draggable.js';
 // import draggable from 'https://hamilsauce.github.io/hamhelper/hamhelper1.0.0.js';
 const { template, utils, addDragAction } = ham;
 
+
+const toSvgPoint = (svg, x, y) => {
+  const svgPoint = svg.createSVGPoint();
+  svgPoint.x = x
+  svgPoint.y = y
+  
+  return svgPoint.matrixTransform(svg.getScreenCTM().inverse());
+  
+}
+
 const app = document.querySelector('#app');
 const appBody = app.querySelector('#app-body')
 const svgCanvas = appBody.querySelector('#svg-canvas')
@@ -72,14 +82,41 @@ block1.addEventListener('drag', e => {
   e.target.dataset.selected = true;
 });
 
-svgCanvas.addEventListener('dragstart', ({detail}) => {
+svgCanvas.addEventListener('dragstart', ({ detail }) => {
   const targ = detail.target.closest('.block-group')
+  let targTrans = targ.getAttribute('transform')
+targTrans = targTrans.replace(/, /g, ',');
+  const transSplit = targTrans.split(' ');
+  console.warn('transSplit', transSplit)
+  const transMap = transSplit .reduce((map, string, i) => {
+
+return map
+    
+  }, {});
+  
   targ.dataset.selected = true;
   scene.appendChild(targ)
   
+  // const regex = /scale\(([\d.]+)\)/;
+  const regex = /scale\(([\d.]+)\)/;
+
+// Replace the matched number with the new value
+// const newString = originalString.replace(regex, `scale(${newScaleValue})`);
+
+// console.log(newString)
+  let output
+  output = targTrans.replace(regex, `scale(${1.5})`)
+  // output = targTrans.replace(/scale\(([^)]*)\)/g, `scale(${1.26})`);
+   console.warn('output', output)
+    targ.setAttribute('transform', output)
+
+  // const match = targTrans.match(/scale\(([^)]*)\)/);
+
+  
+  
 });
 
-svgCanvas.addEventListener('dragend', ({detail}) => {
+svgCanvas.addEventListener('dragend', ({ detail }) => {
   
   const targ = detail.target.closest('.block-group')
   targ.dataset.selected = false;

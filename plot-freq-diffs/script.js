@@ -180,27 +180,18 @@ frequencyDiffs.reduce(async (acc, d, i) => {
   
   
   const vpTrans = viewport.getAttribute('transform')
-  // const vpTrans = viewport.getAttribute('transform')
   let output
-  // const input = 'scale(2.5, 3.5)';
   const match = vpTrans.match(/translate\(([^)]*)\)/);
   
   if (match) {
     const [x, y] = match[1].split(',').map(Number);
     const point2 = toSvgPoint(svgCanvas, x, y);
-    
-    // console.log(values); // => [2.5, 3.5]
     output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${y})`);
-    // output = vpTrans.replace(/translate\(([^)]*)\)/g, `translate(-${point3.x-450},${point3.y+100})`);
+ 
     if (shouldFollow) {
       viewport.setAttribute('transform', output)
-      
     }
-    
   }
-  
-  
-  
   
   perf.end = performance.now();
   
